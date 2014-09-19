@@ -26,6 +26,8 @@
 	function html5reset_scripts_styles() {
 		global $wp_styles;
 
+		wp_enqueue_style( 'proper-bear-styles', get_stylesheet_uri() );
+
 		// Load Comments
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 			wp_enqueue_script( 'comment-reply' );
