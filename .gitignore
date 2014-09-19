@@ -1,0 +1,7 @@
+.DS_Store
+
+# SASS
+
+*.sass-cache/
+
+sftp-config.json
