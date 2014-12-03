@@ -43,7 +43,7 @@ gulp.task('sass', function() {
 // Browsersync
 gulp.task('browser-sync', function() {
     browserSync({
-        proxy: "localhost/diack",
+        proxy: "localhost",
         files: ["style.css", "_/js/*.js", "*.php", "*.html"]
     });
 });
