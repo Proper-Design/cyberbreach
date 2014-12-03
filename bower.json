@@ -1,0 +1,19 @@
+{
+  "name": "proper-bear",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "latest"
+  },
+  "private": true,
+  "authors": [
+    "hello@properdesign.rs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
