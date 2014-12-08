@@ -1,21 +1,23 @@
-// Include gulp
-var gulp = require('gulp');
+// Include gulp and plugins
+var gulp = require('gulp'),
+
+    rename = require('gulp-rename'),
+    bower = require('gulp-bower'),
+    browserSync = require('browser-sync'),
+    filter = require('gulp-filter'),
+    mainBowerFiles = require('main-bower-files'),
+
+// Scripts
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglifyjs'),
+    jshint = require('gulp-jshint'),
+
+// Styles
+    compass = require('gulp-compass'),
+    minifyCSS = require('gulp-minify-css'),
+    autoprefixer = require('gulp-autoprefixer');
 
 module.exports = gulp;
-
-// Include Our Plugins
-var jshint = require('gulp-jshint');
-var compass = require('gulp-compass');
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
-var bower = require('gulp-bower');
-var browserSync = require('browser-sync');
-var filter = require('gulp-filter');
-var mainBowerFiles = require('main-bower-files');
-var uglify = require('gulp-uglifyjs');
-var minifyCSS = require('gulp-minify-css');
-
-
 
 // Lint Task
 gulp.task('lint', function() {
@@ -37,13 +39,15 @@ gulp.task('sass', function() {
             config_file: './config.rb',
             css: '.',
             sass: '_/scss'
-        }));
+        }))
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+        .pipe(notify({ message: 'Bing!  Styles are cooked.' }));
 });
 
 // Browsersync
 gulp.task('browser-sync', function() {
     browserSync({
-        proxy: "localhost",
+        proxy: "localhost/diack",
         files: ["style.css", "_/js/*.js", "*.php", "*.html"]
     });
 });
@@ -80,6 +84,7 @@ gulp.task('bower-minify-css', function() {
         .pipe(minifyCSS())
         .pipe(gulp.dest('_/dist/'));
 });
+
 
 // Watch Files For Changes
 gulp.task('watch', function() {
