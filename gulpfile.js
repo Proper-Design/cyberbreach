@@ -47,21 +47,30 @@ gulp.task('sass', function() {
 // Browsersync
 gulp.task('browser-sync', function() {
     browserSync({
-        proxy: "localhost/diack",
+        proxy: "localhost/",
         files: ["style.css", "_/js/*.js", "*.php", "*.html"]
     });
 });
 
 // Concatenate & Minify JS
-gulp.task('scripts', function() {
-    return gulp.src(['_/js-source/*.js'])
-        .pipe(concat('theme.js'))
-        .pipe(gulp.dest('_/dist'))
-        .pipe(rename('theme.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('_/dist/'));
-});
+// gulp.task('scripts', function() {
+//     return gulp.src(['_/js-source/*.js'])
+//         .pipe(concat('theme.js'))
+//         .pipe(gulp.dest('_/dist'))
+//         .pipe(rename('theme.min.js'))
+//         .pipe(uglify())
+//         .pipe(gulp.dest('_/dist/'));
+// });
 
+// Uglify, minify and sourcemap our scripts
+gulp.task('scripts', function() {
+  gulp.src('_/src/*.js')
+    .pipe(uglify('theme.min.js', {
+      outSourceMap: true,
+      sourceRoot: '../'
+    }))
+    .pipe(gulp.dest('_/dist/'));
+});
 
 // Concatenate and minify third-party Bower scripts using main-bower-files
 gulp.task('bower-minify-js', function() {
