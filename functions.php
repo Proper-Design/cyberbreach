@@ -5,6 +5,13 @@
  * @since HTML5 Reset 2.0
  */
 
+// Include all PHP files in the inc folder
+
+foreach (glob( get_template_directory() . '/_/inc/php/*.php') as $filename)
+{
+    require_once $filename;
+}
+
 // Options Framework (https://github.com/devinsays/options-framework-plugin)
 if ( !function_exists( 'optionsframework_init' ) ) {
 	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/_/inc/' );
