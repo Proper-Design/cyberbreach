@@ -11,7 +11,7 @@
 ?>
 
 <?php if ( have_comments() ) : ?>
-	
+
 	<h2 id="comments"><?php comments_number(__('No Responses','properbear'), __('One Response','properbear'), __('% Responses','properbear') );?></h2>
 
 	<div class="navigation">
@@ -27,7 +27,7 @@
 		<div class="next-posts"><?php previous_comments_link() ?></div>
 		<div class="prev-posts"><?php next_comments_link() ?></div>
 	</div>
-	
+
  <?php else : // this is displayed if there are no comments so far ?>
 
 	<?php if ( comments_open() ) : ?>
@@ -37,7 +37,7 @@
 		<p><?php _e('Comments are closed.','properbear'); ?></p>
 
 	<?php endif; ?>
-	
+
 <?php endif; ?>
 
 <?php if ( comments_open() ) : ?>
