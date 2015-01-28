@@ -1,10 +1,12 @@
 <?php
 /**
  * @package WordPress
- * @subpackage HTML5-Reset-WordPress-Theme
- * @since HTML5 Reset 2.0
+ * @subpackage Proper-Bear-WordPress-Theme
+ * @since Proper Bear 1.0
  */
  get_header(); ?>
+
+ <div class="site-content">
 
 		<?php if (have_posts()) : ?>
 
@@ -30,17 +32,17 @@
 
 			<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 				<h2 class="pagetitle"><?php _e('Blog Archives','properbear'); ?></h2>
-			
+
 			<?php } ?>
 
 			<?php post_navigation(); ?>
 
 			<?php while (have_posts()) : the_post(); ?>
-			
+
 				<article <?php post_class() ?>>
-				
+
 						<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-					
+
 						<?php posted_on(); ?>
 
 						<div class="entry">
@@ -52,13 +54,13 @@
 			<?php endwhile; ?>
 
 			<?php post_navigation(); ?>
-			
+
 	<?php else : ?>
 
 		<h2><?php _e('Nothing Found','properbear'); ?></h2>
 
 	<?php endif; ?>
 
-<?php get_sidebar(); ?>
+</div>
 
 <?php get_footer(); ?>

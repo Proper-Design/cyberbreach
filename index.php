@@ -1,10 +1,12 @@
 <?php
 /**
  * @package WordPress
- * @subpackage HTML5-Reset-WordPress-Theme
- * @since HTML5 Reset 2.0
+ * @subpackage Proper-Bear-WordPress-Theme
+ * @since Proper Bear 1.0
  */
  get_header(); ?>
+
+ <div class="site-content">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -35,5 +37,7 @@
 		<h2><?php _e('Nothing Found','properbear'); ?></h2>
 
 	<?php endif; ?>
+
+</div>
 
 <?php get_footer(); ?>

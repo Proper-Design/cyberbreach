@@ -1,32 +1,25 @@
 <?php
 /**
  * @package WordPress
- * @subpackage HTML5-Reset-WordPress-Theme
- * @since HTML5 Reset 2.0
+ * @subpackage Proper-Bear-WordPress-Theme
+ * @since Proper Bear 1.0
  */
 ?>
-		<footer id="footer" class="source-org vcard copyright" role="contentinfo">
-			<small>&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></small>
-		</footer>
+
+    </div>
+    <?php //Closes .site-content-wrapper ?>
+
+		<div class="site-footer-wrapper">
+      <footer id="footer" class="site-footer">
+        <div class="source-org vcard copyright" role="contentinfo">
+          &copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?>
+        </div>
+      </footer>
+    </div>
 
 	</div>
 
 	<?php wp_footer(); ?>
-
-<!-- Asynchronous google analytics; this is the official snippet.
-         Replace UA-XXXXXX-XX with your site's ID and domainname.com with your domain, then uncomment to enable.
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-XXXXXX-XX', 'domainname.com');
-  ga('send', 'pageview');
-
-</script>
--->
 
 </body>
 

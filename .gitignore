@@ -7,11 +7,8 @@
 sftp-config.json
 
 page-test.php
-
-# Node
-
 bower_components/
 node_modules/
 npm-debug.log
 sublime-gulp.log
-*.cache
+.sublime-gulp.cache

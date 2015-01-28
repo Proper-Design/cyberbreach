@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "proper-bear",
   "version": "0.0.1",
   "dependencies": {
@@ -9,6 +10,18 @@
     "hello@properdesign.rs"
   ],
   "license": "MIT",
+=======
+  "name": "properbear",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Bones5/Proper-Bear",
+  "authors": [
+    "TheHeat <marc@properdesign.rs>"
+  ],
+  "description": "WordPress Starter theme",
+  "main": "style.css",
+  "license": "MIT",
+  "private": true,
+>>>>>>> f1535225217d7ae02a90e9e3b9f164530a5cdf9f
   "ignore": [
     "**/.*",
     "node_modules",

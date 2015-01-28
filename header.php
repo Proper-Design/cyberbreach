@@ -1,8 +1,8 @@
 <?php
 /**
  * @package WordPress
- * @subpackage HTML5-Reset-WordPress-Theme
- * @since HTML5 Reset 2.0
+ * @subpackage Proper-Bear-WordPress-Theme
+ * @since Proper Bear 1.0
  */
 ?>
 <!doctype html>
@@ -13,38 +13,33 @@
 <!--[if gt IE 9]>  <html class="no-js" <?php language_attributes(); ?>><![endif]-->
 <!-- the "no-js" class is for Modernizr. -->
 
-<head id="<?php echo of_get_option('meta_headid'); ?>" data-template-set="html5-reset-wordpress-theme">
-	
+<head>
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>">
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">	
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	
-	<?php get_template_part( 'head' , 'options' ); ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<?php if (is_search()) echo '<meta name="robots" content="noindex, nofollow" />';?>
-
 	<?php wp_head(); ?>
-
 </head>
 
 <body <?php body_class(); ?>>
 
-	<div id="wrapper">
-		<header id="header" role="banner">
-			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		</header>
+	<div class="site-wrapper">
 
-		<nav id="nav" role="navigation">
+		<div class="site-header-wrapper">
+			<header class="site-header" role="banner">
+				<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			</header>
+		</div>
 
-		<?php 	$args = array(
+		<div class="site-nav-wrapper">
+			<?php 	$args = array(
 					'theme_location' => 'primary',
-					'menu' => '',
 					'container' => 'nav',
-					'container_class' => 'menu-{menu-slug}-container',
+					'container_class' => 'site-nav menu-{menu-slug}-container',
 					'container_id' => '',
 					'menu_class' => 'menu',
 					'menu_id' => '',
@@ -59,5 +54,7 @@
 					'walker' => ''
 				);
 				wp_nav_menu( $args ); ?>
-				
-		</nav>
+		</div>
+
+		<div class="site-content-wrapper">
+
