@@ -8,7 +8,7 @@
 
 	<?php if (have_posts()) : ?>
 
-		<h2><?php _e('Search Results','html5reset'); ?></h2>
+		<h2><?php _e('Search Results','properbear'); ?></h2>
 
 		<?php post_navigation(); ?>
 
@@ -34,7 +34,7 @@
 
 	<?php else : ?>
 
-		<h2><?php _e('Nothing Found','html5reset'); ?></h2>
+		<h2><?php _e('Nothing Found','properbear'); ?></h2>
 
 	<?php endif; ?>
 

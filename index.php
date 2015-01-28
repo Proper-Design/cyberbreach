@@ -19,9 +19,9 @@
 			</div>
 
 			<footer class="postmetadata">
-				<?php the_tags(__('Tags: ','html5reset'), ', ', '<br />'); ?>
-				<?php _e('Posted in','html5reset'); ?> <?php the_category(', ') ?> | 
-				<?php comments_popup_link(__('No Comments &#187;','html5reset'), __('1 Comment &#187;','html5reset'), __('% Comments &#187;','html5reset')); ?>
+				<?php the_tags(__('Tags: ','properbear'), ', ', '<br />'); ?>
+				<?php _e('Posted in','properbear'); ?> <?php the_category(', ') ?> | 
+				<?php comments_popup_link(__('No Comments &#187;','properbear'), __('1 Comment &#187;','properbear'), __('% Comments &#187;','properbear')); ?>
 			</footer>
 
 		</article>
@@ -32,7 +32,7 @@
 
 	<?php else : ?>
 
-		<h2><?php _e('Nothing Found','html5reset'); ?></h2>
+		<h2><?php _e('Nothing Found','properbear'); ?></h2>
 
 	<?php endif; ?>
 
