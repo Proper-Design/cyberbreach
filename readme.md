@@ -19,3 +19,13 @@ HTML5 Reset is a simple set of *WordPress* best practices to get web projects of
 ## Get the plain HTML theme:
 
 https://github.com/murtaugh/HTML5-Reset
+
+## Proper Bear specifics
+
+We've built this theme to suit our front-end workflow, which uses Bower for package control and Gulp for build task running. To get this up and running:
+
+- Ensure that you have node.js installed
+- Install Gulp and the set of plugins we use `npm install -g gulp browser-sync gulp-bower gulp-compass gulp-concat gulp-filter gulp-jshint gulp-notify gulp-rename main-bower-files gulp-uglifyjs gulp-minify-css`
+- Symlink the plugins to your theme directory `npm link gulp browser-sync gulp-bower gulp-compass gulp-concat gulp-filter gulp-jshint gulp-notify gulp-rename main-bower-files gulp-uglifyjs gulp-minify-css`
+- Add your third party packages to `bower.json`
+- Run Gulp! We recommend the Sublime Text package

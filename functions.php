@@ -5,6 +5,13 @@
  * @since HTML5 Reset 2.0
  */
 
+// Include all PHP files in the inc folder
+
+foreach (glob( get_template_directory() . '/_/inc/php/*.php') as $filename)
+{
+    require_once $filename;
+}
+
 // Options Framework (https://github.com/devinsays/options-framework-plugin)
 if ( !function_exists( 'optionsframework_init' ) ) {
 	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/_/inc/' );
@@ -32,9 +39,14 @@ function proper_bear_scripts_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 
-	// Modernizr
-	// This is an un-minified, complete version of Modernizr. Before you move to production, you should generate a custom build that only has the detects you need.
-	wp_enqueue_script( 'proper_bear-modernizr', get_template_directory_uri() . '/_/js/modernizr-2.8.0.dev.js' );
+	// Third party scripts – a single minified scripts file based on bower_components (bower.json)
+	wp_enqueue_script( 'proper-bear-thirdparty', get_template_directory_uri() . '/_/dist/thirdparty.min.js' );
+
+	//Third party styles
+	wp_enqueue_style( 'proper-bear-thirdparty-styles', get_template_directory_uri() . '/_/dist/thirdparty.min.css' );	
+
+	// Theme scripts - anything that's in _/js-source gets minified into theme.min.js
+	wp_enqueue_script( 'proper-bear-theme', get_template_directory_uri() . '/_/dist/theme.min.js' );
 
 }
 add_action( 'wp_enqueue_scripts', 'proper_bear_scripts_styles' );
@@ -61,18 +73,6 @@ function proper_bear_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'proper_bear_wp_title', 10, 2 );
-
-// Load jQuery
-if ( !function_exists( 'core_mods' ) ) {
-	function core_mods() {
-		if ( !is_admin() ) {
-			wp_deregister_script( 'jquery' );
-			wp_register_script( 'jquery', ( "http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ), false);
-			wp_enqueue_script( 'jquery' );
-		}
-	}
-	add_action( 'wp_enqueue_scripts', 'core_mods' );
-}
 
 //Clean up the <head>	
 function removeHeadLinks() {
