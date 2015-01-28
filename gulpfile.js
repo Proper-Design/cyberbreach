@@ -27,22 +27,22 @@ gulp.task('bower', function() { 
 
 // Lint Task
 gulp.task('lint', function() {
-    return gulp.src('_/js/src/*.js')
+    return gulp.src('_/js/src/**/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
 
-
 // Compile Our Sass/Compass
 gulp.task('sass', function() {
-    return gulp.src('_/scss/**/*.scss')
+    return gulp.src('_/scss/*.scss')
         .pipe(compass({
             config_file: './config.rb',
             css: '.',
-            sass: 'scss'
+            sass: '_/scss'
         }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'ff 17', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(gulp.dest('./'));
+
 });
 
 // Uglify, minify and sourcemap our scripts
