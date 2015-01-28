@@ -1,10 +1,12 @@
 <?php
 /**
  * @package WordPress
- * @subpackage HTML5-Reset-WordPress-Theme
- * @since HTML5 Reset 2.0
+ * @subpackage Proper-Bear-WordPress-Theme
+ * @since Proper Bear 1.0
  */
  get_header(); ?>
+
+ <div class="site-content">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
@@ -18,16 +20,16 @@
 
 				<?php the_content(); ?>
 
-				<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
+				<?php wp_link_pages(array('before' => __('Pages: ','properbear'), 'next_or_number' => 'number')); ?>
 
 			</div>
 
-			<?php edit_post_link(__('Edit this entry','html5reset'), '<p>', '</p>'); ?>
+			<?php edit_post_link(__('Edit this entry','properbear'), '<p>', '</p>'); ?>
 
 		</article>
-		
-		<?php comments_template(); ?>
 
 		<?php endwhile; endif; ?>
+
+</div>
 
 <?php get_footer(); ?>

@@ -21,7 +21,7 @@ msgstr ""
 "X-Textdomain-Support: yes"
 
 #: 404.php:9
-#@ html5reset
+#@ properbear
 msgid "Error 404 - Page Not Found"
 msgstr "404 Fout - Pagina niet gevonden"
 
@@ -194,134 +194,134 @@ msgid "Bold Italic"
 msgstr ""
 
 #: archive.php:14
-#@ html5reset
+#@ properbear
 msgid "Archive for the"
 msgstr "Archief voor"
 
 #: archive.php:14
-#@ html5reset
+#@ properbear
 msgid "Category"
 msgstr "Categorie"
 
 #: archive.php:17
-#@ html5reset
+#@ properbear
 msgid "Posts Tagged"
 msgstr "Berichte getagged"
 
 #: archive.php:20
 #: archive.php:23
 #: archive.php:26
-#@ html5reset
+#@ properbear
 msgid "Archive for"
 msgstr "Archief voor"
 
 #: archive.php:29
-#@ html5reset
+#@ properbear
 msgid "Author Archive"
 msgstr "Auteurs archief"
 
 #: archive.php:32
-#@ html5reset
+#@ properbear
 msgid "Blog Archives"
 msgstr "Blog archief"
 
 #: archive.php:58
 #: index.php:35
 #: search.php:37
-#@ html5reset
+#@ properbear
 msgid "Nothing Found"
 msgstr "Niets gevonden"
 
 #: comments.php:7
-#@ html5reset
+#@ properbear
 msgid "This post is password protected. Enter the password to view comments."
 msgstr "Dit bericht is beveiligd met een wachtwoord. Voer het wachtwoord in om de reacties te bekijken."
 
 #: comments.php:15
-#@ html5reset
+#@ properbear
 msgid "No Responses"
 msgstr "Geen reacties"
 
 #: comments.php:15
-#@ html5reset
+#@ properbear
 msgid "One Response"
 msgstr "Één reactie"
 
 #: comments.php:15
-#@ html5reset
+#@ properbear
 msgid "% Responses"
 msgstr "% Reacties"
 
 #: comments.php:37
-#@ html5reset
+#@ properbear
 msgid "Comments are closed."
 msgstr "Reageren is uitgeschakeld."
 
 #: comments.php:47
 #, php-format
-#@ html5reset
+#@ properbear
 msgid "Leave a Reply to %s"
 msgstr "Reageer op %s"
 
 #: comments.php:54
-#@ html5reset
+#@ properbear
 msgid "You must be"
 msgstr "Om te kunnen reageren moet u"
 
 #: comments.php:54
-#@ html5reset
+#@ properbear
 msgid "logged in"
 msgstr "ingelogd zijn"
 
 #: comments.php:54
-#@ html5reset
+#@ properbear
 msgid "to post a comment."
 msgstr "."
 
 #: comments.php:61
-#@ html5reset
+#@ properbear
 msgid "Logged in as"
 msgstr "Ingelogd als"
 
 #: comments.php:61
-#@ html5reset
+#@ properbear
 msgid "Log out"
 msgstr "Uitloggen"
 
 #: comments.php:67
-#@ html5reset
+#@ properbear
 msgid "Name"
 msgstr "Naam"
 
 #: comments.php:72
-#@ html5reset
+#@ properbear
 msgid "Mail (will not be published)"
 msgstr "E-mail (zal niet worden getoond)"
 
 #: comments.php:77
-#@ html5reset
+#@ properbear
 msgid "Website"
 msgstr "Website"
 
 #: comments.php:89
-#@ html5reset
+#@ properbear
 msgid "Submit Comment"
 msgstr "Plaats reactie"
 
 #: functions.php:20
 #: functions.php:114
-#@ html5reset
+#@ properbear
 msgid "Navigation Menu"
 msgstr "Navigatie menu"
 
 #: functions.php:65
 #, php-format
-#@ html5reset
+#@ properbear
 msgid "Page %s"
 msgstr "Pagina %s"
 
 #: functions.php:120
-#@ html5reset
+#@ properbear
 msgid "Sidebar Widgets"
 msgstr "Zijbalk widgets"
 
@@ -332,219 +332,219 @@ msgstr ""
 
 #: index.php:22
 #: single.php:21
-#@ html5reset
+#@ properbear
 msgid "Tags: "
 msgstr "Tags:"
 
 #: index.php:23
-#@ html5reset
+#@ properbear
 msgid "Posted in"
 msgstr "Geplaatst in"
 
 #: index.php:24
-#@ html5reset
+#@ properbear
 msgid "No Comments &#187;"
 msgstr "Geen reacties &#187;"
 
 #: index.php:24
-#@ html5reset
+#@ properbear
 msgid "1 Comment &#187;"
 msgstr "1 reactie &#187;"
 
 #: index.php:24
-#@ html5reset
+#@ properbear
 msgid "% Comments &#187;"
 msgstr "% reacties &#187;"
 
 #: options.php:55
-#@ html5reset
+#@ properbear
 msgid "Header Meta"
 msgstr ""
 
 #: options.php:60
-#@ html5reset
+#@ properbear
 msgid "Head ID"
 msgstr ""
 
 #: options.php:66
-#@ html5reset
+#@ properbear
 msgid "Google Webmasters"
 msgstr ""
 
 #: options.php:67
-#@ html5reset
+#@ properbear
 msgid "Speaking of Google, don't forget to set your site up: <a href='http://google.com/webmasters' target='_blank'>http://google.com/webmasters</a>"
 msgstr "Over Google gesproken, vergeet je site niet in te stellen op: <a href='http://google.com/webmasters' target='_blank'>http://google.com/webmasters</a>"
 
 #: options.php:72
-#@ html5reset
+#@ properbear
 msgid "Author Name"
 msgstr "Naam auteur"
 
 #: options.php:73
-#@ html5reset
+#@ properbear
 msgid "Populates meta author tag."
 msgstr "Vul meta auteur tag."
 
 #: options.php:78
-#@ html5reset
+#@ properbear
 msgid "Mobile Viewport"
 msgstr "Viewport voor mobiel"
 
 #: options.php:79
-#@ html5reset
+#@ properbear
 msgid "Uncomment to use; use thoughtfully!"
 msgstr "Verwijder het commentaar om te gebruiken; doe dit niet zonder na te denken!"
 
 #: options.php:86
-#@ html5reset
+#@ properbear
 msgid "Site Favicon"
 msgstr "Website favicon"
 
 #: options.php:91
-#@ html5reset
+#@ properbear
 msgid "Apple Touch Icon"
 msgstr "Apple Touch afbeelding"
 
 #: options.php:98
-#@ html5reset
+#@ properbear
 msgid "App: Windows 8"
 msgstr ""
 
 #: options.php:99
-#@ html5reset
+#@ properbear
 msgid "Application Name"
 msgstr "Applicatie naam"
 
 #: options.php:105
-#@ html5reset
+#@ properbear
 msgid "Tile Color"
 msgstr "Tile kleur"
 
 #: options.php:111
-#@ html5reset
+#@ properbear
 msgid "Tile Image"
 msgstr "Tile afbeelding"
 
 #: options.php:118
-#@ html5reset
+#@ properbear
 msgid "App: Twitter Card"
 msgstr ""
 
 #: options.php:119
-#@ html5reset
+#@ properbear
 msgid "twitter:card (summary, photo, gallery, product, app, player)"
 msgstr "twitter:card (samenvatting, foto, galerij, produkt, app, player)"
 
 #: options.php:125
-#@ html5reset
+#@ properbear
 msgid "twitter:site (@username of website)"
 msgstr "twitter:site (@gebruikersnaam van website)"
 
 #: options.php:131
-#@ html5reset
+#@ properbear
 msgid "twitter:title (the user's Twitter ID)"
 msgstr "twitter:title (Twitter ID van gebruiker)"
 
 #: options.php:137
-#@ html5reset
+#@ properbear
 msgid "twitter:description (maximum 200 characters)"
 msgstr "twitter:description (omschrijving, maximum 200 karakters)"
 
 #: options.php:143
-#@ html5reset
+#@ properbear
 msgid "twitter:url (url for the content)"
 msgstr "twitter:url (URL naar de inhoud)"
 
 #: options.php:150
-#@ html5reset
+#@ properbear
 msgid "App: Facebook"
 msgstr ""
 
 #: options.php:151
-#@ html5reset
+#@ properbear
 msgid "og:title"
 msgstr ""
 
 #: options.php:157
-#@ html5reset
+#@ properbear
 msgid "og:description"
 msgstr ""
 
 #: options.php:163
-#@ html5reset
+#@ properbear
 msgid "og:url"
 msgstr ""
 
 #: options.php:169
-#@ html5reset
+#@ properbear
 msgid "og:image"
 msgstr ""
 
 #: page.php:21
 #: single.php:19
-#@ html5reset
+#@ properbear
 msgid "Pages: "
 msgstr "Pagina's: "
 
 #: search.php:11
-#@ html5reset
+#@ properbear
 msgid "Search Results"
 msgstr "Zoek resultaten"
 
 #: searchform.php:3
-#@ html5reset
+#@ properbear
 msgid "Search for:"
 msgstr "Zoeken naar:"
 
 #: searchform.php:6
-#@ html5reset
+#@ properbear
 msgid "Search"
 msgstr "Zoeken"
 
 #: sidebar.php:16
-#@ html5reset
+#@ properbear
 msgid "Archives"
 msgstr "Archieven"
 
 #: sidebar.php:21
-#@ html5reset
+#@ properbear
 msgid "Meta"
 msgstr ""
 
 #: sidebar.php:25
-#@ html5reset
+#@ properbear
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 msgstr "Mogelijk gemaakt door WordPress, een modern semantisch persoonlijk publicatie platform."
 
 #: sidebar.php:25
-#@ html5reset
+#@ properbear
 msgid "WordPress"
 msgstr ""
 
 #: sidebar.php:29
-#@ html5reset
+#@ properbear
 msgid "Subscribe"
 msgstr "Inschrijven"
 
 #: sidebar.php:31
-#@ html5reset
+#@ properbear
 msgid "Entries (RSS)"
 msgstr "Toevoegingen (RSS)"
 
 #: sidebar.php:32
-#@ html5reset
+#@ properbear
 msgid "Comments (RSS)"
 msgstr "Reacties (RSS)"
 
 #: page.php:25
 #: single.php:27
-#@ html5reset
+#@ properbear
 msgid "Edit this entry"
 msgstr "Bewerk dit item"
 
 #: comments.php:47
-#@ html5reset
+#@ properbear
 msgid "Leave a Reply"
 msgstr "Reageer"
 
