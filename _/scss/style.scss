@@ -1,4 +1,14 @@
-@import "theme-header";
+// WordPress theme header and image fixes
+@import "wordpress/theme-header";
+@import "wordpress/wordpress";
+
+// Normalize
 @import "reset";
-@import "wordpress";
-@import "global";
+
+// Site wide globals
+@import "global/variables";
+@import "global/global";
+@import "global/links";
+
+// Layout and structure
+@import "layout/structures.scss";

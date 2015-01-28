@@ -19,5 +19,6 @@ html {
 
 }
 
-/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
-body {font: 1em Helmet, Freesans, sans-serif;}
+body{
+	font: $font-body;
+}
