@@ -36,7 +36,9 @@
 		</div>
 
 		<div class="site-nav-wrapper">
-			<?php 	$args = array(
+			<?php
+				// Limits the menu to one level by default.
+				$args = array(
 					'theme_location' => 'primary',
 					'container' => 'nav',
 					'container_class' => 'site-nav menu-{menu-slug}-container',
