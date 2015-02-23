@@ -100,3 +100,15 @@ function fix_img_caption_shortcode($val, $attr, $content = null) {
 
     return '<div id="' . $id . '" class="wp-caption ' . esc_attr($align) . '" style="width: ' . (0 + (int) $width) . 'px">' . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
+
+add_filter('acf/settings/save_json', 'proper_bear_acf_save_point');
+ 
+function proper_bear_acf_save_point( $path ) {
+    
+    // update path
+    $path = get_stylesheet_directory() . '_/acf-json';
+    
+    // return
+    return $path;
+    
+}
