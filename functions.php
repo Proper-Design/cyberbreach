@@ -108,7 +108,7 @@ add_filter('acf/settings/save_json', 'proper_bear_acf_save_point');
 function proper_bear_acf_save_point( $path ) {
     
     // update path
-    $path = get_stylesheet_directory() . '_/acf-json';
+    $path = get_stylesheet_directory() . '/_/acf-json';
     
     // return
     return $path;
@@ -123,7 +123,7 @@ function proper_bear_json_load_point( $paths ) {
     unset($paths[0]);
     
     // append path
-    $paths[] = get_stylesheet_directory() . '_/acf-json';
+    $paths[] = get_stylesheet_directory() . '/_/acf-json';
     
     // return
     return $paths;
