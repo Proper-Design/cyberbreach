@@ -115,9 +115,9 @@ function proper_bear_acf_save_point( $path ) {
     
 }
 
-add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+add_filter('acf/settings/load_json', 'proper_bear_json_load_point');
 
-function my_acf_json_load_point( $paths ) {
+function proper_bear_json_load_point( $paths ) {
     
     // remove original path (optional)
     unset($paths[0]);
