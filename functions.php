@@ -101,6 +101,8 @@ function fix_img_caption_shortcode($val, $attr, $content = null) {
     return '<div id="' . $id . '" class="wp-caption ' . esc_attr($align) . '" style="width: ' . (0 + (int) $width) . 'px">' . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
 
+// Add custom load and save points for Advanced Custom Fields
+
 add_filter('acf/settings/save_json', 'proper_bear_acf_save_point');
  
 function proper_bear_acf_save_point( $path ) {
@@ -110,5 +112,20 @@ function proper_bear_acf_save_point( $path ) {
     
     // return
     return $path;
+    
+}
+
+add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+
+function my_acf_json_load_point( $paths ) {
+    
+    // remove original path (optional)
+    unset($paths[0]);
+    
+    // append path
+    $paths[] = get_stylesheet_directory() . '_/acf-json';
+    
+    // return
+    return $paths;
     
 }
