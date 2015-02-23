@@ -30,6 +30,13 @@ function proper_bear_scripts_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'proper_bear_scripts_styles' );
 
+// Include all PHP files in the inc folder
+
+foreach (glob( get_template_directory() . '/_/inc/php/*.php') as $filename)
+{
+    require_once $filename;
+}
+
 // WP Title (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
 function proper_bear_wp_title( $title, $sep ) {
 	global $paged, $page;
