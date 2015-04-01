@@ -5,7 +5,15 @@ var gulp = require('gulp'),
     bower = require('gulp-bower'),
     browserSync = require('browser-sync'),
     filter = require('gulp-filter'),
+    plumber = require('gulp-plumber'),
+    onError = function (err) {  
+      console.log(err);
+      this.emit('end')
+    },
+
+// Assets
     mainBowerFiles = require('main-bower-files'),
+    svgSprite = require('gulp-svg-sprite'),
 
 // Scripts
     concat = require('gulp-concat'),
@@ -19,53 +27,15 @@ var gulp = require('gulp'),
 
 module.exports = gulp;
 
+
+/**************
+ * Assets
+ **************/
+
 // Bower task
 gulp.task('bower', function() { 
     return bower()
          .pipe(gulp.dest('bower_components/')) 
-});
-
-// Lint Task
-gulp.task('lint', function() {
-    return gulp.src('_/js/src/**/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-});
-
-// Compile Our Sass/Compass
-gulp.task('sass', function() {
-    return gulp.src('_/scss/*.scss')
-        .pipe(compass({
-            config_file: './config.rb',
-            css: '.',
-            sass: '_/scss'
-        }))
-        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'ff 17', 'opera 12.1', 'ios 6', 'android 4'))
-        .pipe(gulp.dest('./'));
-
-});
-
-// Uglify, minify and sourcemap our scripts
-gulp.task('scripts', function() {
-  return gulp.src('_/js/src/**/*.js')
-    .pipe(uglify('themefunctions.min.js', {
-      outSourceMap: true,
-      sourceRoot: '../'
-    }))
-    .pipe(gulp.dest('_/js/'));
-});
-
-
-
-// Concatenate and minify third-party Bower scripts using main-bower-files
-gulp.task('bower-minify-js', function() {
-    return gulp.src(mainBowerFiles())
-        .pipe(filter('*.js'))
-        .pipe(concat('thirdparty.js'))
-        .pipe(gulp.dest('_/js/'))
-        .pipe(rename('thirdparty.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('_/js/'));
 });
 
 // Concatenate and minify third-party Bower css using main-bower-files
@@ -79,21 +49,104 @@ gulp.task('bower-minify-css', function() {
         .pipe(gulp.dest('_/css/'));
 });
 
-
-
-// Watch Files For Changes
-gulp.task('watch', function() {
-    gulp.watch('_/js/src/**/*.js', [ 'scripts']);
-    gulp.watch('_/scss/**/*.scss', ['sass']);
+// Concatenate and minify third-party Bower scripts using main-bower-files
+gulp.task('bower-minify-js', function() {
+    return gulp.src(mainBowerFiles())
+        .pipe(filter('*.js'))
+        .pipe(concat('thirdparty.js'))
+        .pipe(gulp.dest('_/js/'))
+        .pipe(rename('thirdparty.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('_/js/'));
 });
+
+// Concatenate SVGs
+gulp.task('svg', function(){
+
+    svgConfig = {
+        mode: {
+            symbol: {
+                prefix: 'svg-$s',
+                inline: true,
+                dest: './'
+            }
+        }
+};
+    return gulp.src('./_/svg/src/**/*.svg')
+    .pipe(svgSprite( svgConfig ))
+    .pipe(gulp.dest('_/'));
+});
+
+/**************
+ * Scripts
+ **************/
+
+// Lint Task
+gulp.task('lint', function() {
+    return gulp.src(['_/js/src/map.js', '_/js/src/themefunctions.js' ])
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'));
+});
+
+// Concatenate & Minify JS
+gulp.task('scripts', function() {
+    return gulp.src(['_/js/src/**/*.js'])
+        .pipe(plumber({
+              errorHandler: onError
+            }))
+        .pipe(concat('themefunctions.js'))
+        .pipe(gulp.dest('_/js/'))
+        .pipe(uglify('themefunctions.min.js', {
+          outSourceMap: true,
+          sourceRoot: '../../'
+        }))
+        .pipe(gulp.dest('_/js/'));
+});
+
+
+/**************
+ * Styles
+ **************/
+
+// Compile Our Sass/Compass
+gulp.task('sass', function() {
+    return gulp.src('_/scss/**/*.scss')
+        .pipe(plumber({
+              errorHandler: onError
+            }))
+        .pipe(compass({
+            config_file: './config.rb',
+            css: '.',
+            sass: '_/scss'
+        }))
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'ff 17', 'opera 12.1', 'ios 6', 'android 4'))
+        .pipe(gulp.dest('./'));
+
+});
+
+
+/**************
+ * BrowserSync & Watcher
+ **************/
 
 // Browsersync
 gulp.task('browser-sync', function() {
     browserSync({
         proxy: "localhost/properbear",
-        files: ["style.css", "_/js/**/*.js", "*.php", "*.html"]
+        files: ["style.css", "*.js", "*.php", "*.html"]
     });
 });
 
+// Watch Files For Changes
+gulp.task('watch', function() {
+    gulp.watch('_/js/src/**/*.js', ['lint', 'scripts']);
+    gulp.watch('_/scss/**/*.scss', ['sass']);
+    gulp.watch('_/svg/src/**/*.svg', ['svg']);
+});
+
+// Default without browser sync
+gulp.task('_default_nosync', ['lint', 'sass', 'scripts', 'svg', 'watch']);
+
+
 // Default Task
-gulp.task('default', [ 'bower-minify-js', 'bower-minify-css', 'sass', 'scripts', 'watch', 'browser-sync' ]);
+gulp.task('default', ['lint', 'sass', 'scripts', 'svg', 'watch', 'browser-sync']);
