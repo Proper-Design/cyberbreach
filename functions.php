@@ -19,13 +19,6 @@ add_action( 'after_setup_theme', 'proper_bear_setup' );
 // Scripts & Styles (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
 function proper_bear_scripts_styles() {
 
-	// Load Stylesheet
-	wp_enqueue_style( 'proper-bear-styles', get_stylesheet_uri() );
-
-	// Load Comments
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
-		wp_enqueue_script( 'comment-reply' );
-
 	// Third party scripts – a single minified scripts file based on bower_components (bower.json)
 	// wp_enqueue_script( 'proper-bear-thirdparty', get_template_directory_uri() . '/_/js/thirdparty.min.js' );
 	
@@ -34,6 +27,13 @@ function proper_bear_scripts_styles() {
 
 	// Theme scripts
 	// wp_enqueue_script('theme-functions', get_stylesheet_directory_uri() . '/_/js/themefunctions.min.js');
+
+	// Load Stylesheet
+	wp_enqueue_style( 'proper-bear-styles', get_stylesheet_uri() );
+
+	// Load Comments
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
+		wp_enqueue_script( 'comment-reply' );
 
 }
 add_action( 'wp_enqueue_scripts', 'proper_bear_scripts_styles' );
