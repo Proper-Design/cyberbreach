@@ -18,7 +18,6 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>">
-	<meta name="description" content="<?php bloginfo('description'); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<?php if (is_search()) echo '<meta name="robots" content="noindex, nofollow" />';?>
