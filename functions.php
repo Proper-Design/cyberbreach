@@ -8,7 +8,7 @@
 
 // Theme Setup (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
 function proper_bear_setup() {
-	load_theme_textdomain( 'proper_bear', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'properbear', get_template_directory() . '/languages' );
 	register_nav_menu( 'primary', __( 'Navigation Menu', 'proper_bear' ) );
 	add_theme_support( 'post-thumbnails' );
 	// Enable support for HTML5 markup.
