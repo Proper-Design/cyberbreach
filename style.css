@@ -450,10 +450,24 @@ table {
   width: 100%;
   table-layout: fixed;
   margin: 1rem 0;
+  text-align: left;
 }
 
-tr:nth-child(odd) {
-  background: #dedede;
+thead {
+  background: #252525;
+  color: #F0EFEB;
+}
+
+tr:nth-child(even) {
+  background: #e4e3df;
+}
+
+td, th {
+  vertical-align: top;
+  padding: 0.5em 0 0.5em 0.75em;
+}
+td:last-child, th:last-child {
+  padding-right: 0.75em;
 }
 
 .site-wrapper {
