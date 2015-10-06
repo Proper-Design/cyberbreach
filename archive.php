@@ -46,7 +46,7 @@
 						<?php posted_on(); ?>
 
 						<div class="entry">
-							<?php the_content(); ?>
+							<?php the_excerpt(); ?>
 						</div>
 
 				</article>

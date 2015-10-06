@@ -442,6 +442,24 @@ a:visited {
   color: #652D90;
 }
 
+.site-content {
+  line-height: 1.5;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  margin: 1rem 0;
+}
+
+tr:nth-child(odd) {
+  background: #dedede;
+}
+
+.site-wrapper {
+  padding: 2rem;
+}
+
 img[class*='wp-image-'], .wp-caption {
   display: block;
   max-width: 100%;
