@@ -13,28 +13,21 @@
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 			<h1 class="entry-title"><?php the_title(); ?></h1>
-
 			<div class="entry-content">
-
 				<?php the_content(); ?>
-
 				<?php wp_link_pages(array('before' => __('Pages: ','properbear'), 'next_or_number' => 'number')); ?>
-
 				<?php the_tags( __('Tags: ','properbear'), ', ', ''); ?>
-
 				<?php posted_on(); ?>
-
+				<?php edit_post_link(__('Edit this entry','properbear'),'','.'); ?>
 			</div>
-
-			<?php edit_post_link(__('Edit this entry','properbear'),'','.'); ?>
 
 		</article>
 
-	<?php comments_template(); ?>
+		<?php comments_template(); ?>
 
 	<?php endwhile; endif; ?>
 
-<?php post_navigation(); ?>
+	<?php post_navigation(); ?>
 
 </div>
 
