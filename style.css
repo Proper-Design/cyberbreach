@@ -488,6 +488,10 @@ img[class*='wp-image-'], .wp-caption {
   float: right;
 }
 
+.featured-image {
+  max-width: 100%;
+  height: auto;
+}
 .menu-link, .menu-item a, .menu-toggle {
   display: block;
 }
