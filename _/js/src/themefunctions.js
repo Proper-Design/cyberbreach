@@ -15,6 +15,7 @@
 	$(document).ready(function (){
 
 		$('.site-nav-wrapper').squishMenu();
+		$('.site-content-wrapper').fitVids();
 
 	});
 

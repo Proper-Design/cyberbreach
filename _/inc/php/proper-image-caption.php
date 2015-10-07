@@ -14,7 +14,7 @@ function proper_image_caption($val, $attr, $content = null) {
 
     if ( 1 > (int) $width || empty($caption) ) return $val;
 
-    return '<figure id="' . $id . '" class="wp-img-caption ' . esc_attr($align) . '" style="width: ' . (0 + (int) $width) . 'px">' . do_shortcode( $content ) . '<figcaption class="wp-caption-text">' . $caption . '</figcation></figure>';
+    return '<figure id="' . $id . '" class="wp-caption ' . esc_attr($align) . '" style="width: ' . (0 + (int) $width) . 'px">' . do_shortcode( $content ) . '<figcaption class="wp-caption-text">' . $caption . '</figcation></figure>';
 }
 
 

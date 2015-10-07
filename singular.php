@@ -19,7 +19,7 @@
 
 	<?php endwhile; endif; ?>
 
-	<?php post_navigation(); ?>
+	<?php proper_post_navigation(); ?>
 
 </div>
 

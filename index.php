@@ -16,7 +16,7 @@
 
 	<?php endwhile; ?>
 
-	<?php post_navigation(); ?>
+	<?php proper_post_navigation(); ?>
 
 	<?php else : ?>
 

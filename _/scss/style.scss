@@ -15,5 +15,9 @@
 // Style classes from the WP WYSIWYG
 @import "wordpress/wordpress";
 
+// Media elements
+@import "media/images";
+
 // SquishMenu default styles
-@import "squish-menu";
+@import "navigation/navigation";
+@import "navigation/squish-menu";

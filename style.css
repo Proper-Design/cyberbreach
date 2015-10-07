@@ -492,6 +492,11 @@ img[class*='wp-image-'], .wp-caption {
   max-width: 100%;
   height: auto;
 }
+
+.site-nav-wrapper {
+  margin-bottom: 1rem;
+}
+
 .menu-link, .menu-item a, .menu-toggle {
   display: block;
 }

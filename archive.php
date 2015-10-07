@@ -35,7 +35,7 @@
 
 			<?php } ?>
 
-			<?php post_navigation(); ?>
+			<?php proper_post_navigation(); ?>
 
 			<?php while (have_posts()) : the_post(); ?>
 
@@ -53,7 +53,7 @@
 
 			<?php endwhile; ?>
 
-			<?php post_navigation(); ?>
+			<?php proper_post_navigation(); ?>
 
 	<?php else : ?>
 
