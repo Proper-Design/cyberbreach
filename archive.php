@@ -35,7 +35,7 @@
 
 			<?php } ?>
 
-			<?php post_navigation(); ?>
+			<?php proper_post_navigation(); ?>
 
 			<?php while (have_posts()) : the_post(); ?>
 
@@ -46,14 +46,14 @@
 						<?php posted_on(); ?>
 
 						<div class="entry">
-							<?php the_content(); ?>
+							<?php the_excerpt(); ?>
 						</div>
 
 				</article>
 
 			<?php endwhile; ?>
 
-			<?php post_navigation(); ?>
+			<?php proper_post_navigation(); ?>
 
 	<?php else : ?>
 

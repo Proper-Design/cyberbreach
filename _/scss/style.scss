@@ -1,14 +1,23 @@
-// WordPress theme header and image fixes
+// WordPress theme header
 @import "wordpress/theme-header";
-@import "wordpress/wordpress";
 
 // Normalize
-@import "reset";
+@import "global/normalize";
 
 // Site wide globals
 @import "global/variables";
 @import "global/global";
 @import "global/links";
+@import "global/typography";
+@import "global/tables";
+@import "global/scaffold";
 
-// Layout and structure
-@import "layout/structures.scss";
+// Style classes from the WP WYSIWYG
+@import "wordpress/wordpress";
+
+// Media elements
+@import "media/images";
+
+// SquishMenu default styles
+@import "navigation/navigation";
+@import "navigation/squish-menu";

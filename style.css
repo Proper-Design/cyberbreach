@@ -9,20 +9,6 @@ Tags:
 
 Based on HTML5 Reset Theme by Monkey Do! + @ckhicks http://monkeydo.biz
 */
-img[class*='wp-image-'], .wp-caption {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.alignleft {
-  float: left;
-}
-
-.alignright {
-  float: right;
-}
-
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -456,6 +442,112 @@ a:visited {
   color: #652D90;
 }
 
+.site-content {
+  line-height: 1.5;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+thead {
+  background: #252525;
+  color: #F0EFEB;
+}
+
+tr:nth-child(even) {
+  background: #e4e3df;
+}
+
+td, th {
+  vertical-align: top;
+  padding: 0.5em 0 0.5em 0.75em;
+}
+td:last-child, th:last-child {
+  padding-right: 0.75em;
+}
+
 .site-wrapper {
-  padding: 1rem;
+  padding: 2rem;
+}
+
+img[class*='wp-image-'], .wp-caption {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.featured-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.site-nav-wrapper {
+  margin-bottom: 1rem;
+}
+
+.menu-link, .menu-item a, .menu-toggle {
+  display: block;
+}
+
+nav .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.menu-item {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+.menu-item + .menu-item {
+  margin-left: 0.5em;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: none;
+}
+
+.too-small .menu-toggle {
+  display: block;
+}
+
+.too-small ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
+}
+
+.too-small .menu-item {
+  margin: 0;
+}
+
+.too-small.is-open ul {
+  max-height: 60em;
+  -webkit-transition: 1s;
+          transition: 1s;
 }

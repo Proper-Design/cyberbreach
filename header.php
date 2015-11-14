@@ -37,28 +37,7 @@
 			</header>
 		</div>
 
-		<div class="site-nav-wrapper">
-			<?php
-				// Limits the menu to one level by default.
-				$args = array(
-					'theme_location' => 'primary',
-					'container' => 'nav',
-					'container_class' => 'site-nav menu-{menu-slug}-container',
-					'container_id' => '',
-					'menu_class' => 'menu',
-					'menu_id' => '',
-					'echo' => true,
-					'fallback_cb' => 'wp_page_menu',
-					'before' => '',
-					'after' => '',
-					'link_before' => '',
-					'link_after' => '',
-					'items_wrap' => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
-					'depth' => 1,
-					'walker' => ''
-				);
-				wp_nav_menu( $args ); ?>
-		</div>
+		<?php get_template_part('menu', 'primary' ); ?>
 
 		<div class="site-content-wrapper">
 
