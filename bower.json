@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "squishMenu": "latest",
-    "FitVids": "latest"
+    "FitVids": "latest",
+    "jquery.cookie": "~1.4.1"
   }
 }
