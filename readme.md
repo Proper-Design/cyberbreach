@@ -1,31 +1,80 @@
-#  HTML5 Reset WordPress Theme
+#Proper Bear
 
-HTML5 Reset is a simple set of *WordPress* best practices to get web projects off on the right foot.
+ProperDesign.rs (almost) completely bare starter theme.
 
-## Some of the features:
+##First things first - writing this readme.md
 
-1. A style sheet designed to strip initial styles from browsers, starting your development off with a blank slate.
-2. Easy to customize — remove whatever you don't need, keep what you do.
-3. Google Analytics and jQuery calls
-4. Meta tags ready for population
-5. Empty print and small-screen media queries
-6. Modernizr.js [http://www.modernizr.com/](http://www.modernizr.com/) enables HTML5 compatibility with IE (and a dozen other great features)
-7. [Prefix-free.js](http://leaverou.github.io/prefixfree/) allowing us to only use un-prefixed styles in our CSS
-8. IE-specific classes for simple CSS-targeting
-9. Google's Chrome Frame prompt for IE6 users
-10. iPhone/iPad/iTouch icon snippets, plus social/app meta tags for Twitter, Facebook, Windows 8
-11. Lots of other keen stuff
+This readme.md file should exist as a living manual and todo list for the development of the theme. Structured in the following way.
 
-## Get the plain HTML theme:
+1. introduction
+2. types & taxes
+	* custom-post-type defs
+	* custom-taxonomy defs
+3. site map
+4. templates
+	* specific template file defs
+	* specific template file defs
+	* ...
+5. additional requirements & functionality
 
-https://github.com/murtaugh/HTML5-Reset
+Each item should have a brief description of its purpose and functionality, followed by a list of its composite parts.
 
-## Proper Bear specifics
+The idea is to map out where template developent should start and identify common template parts.
 
-We've built this theme to suit our front-end workflow, which uses Bower for package control and Gulp for build task running. To get this up and running:
+Below is a brief version of this structure for a basic site with a static front page and blog.
 
-- Ensure that you have node.js installed
-- Install Gulp and the set of plugins we use `npm install -g gulp browser-sync gulp-bower gulp-compass gulp-concat gulp-filter gulp-jshint gulp-notify gulp-rename main-bower-files gulp-uglifyjs gulp-minify-css`
-- Symlink the plugins to your theme directory `npm link gulp browser-sync gulp-bower gulp-compass gulp-concat gulp-filter gulp-jshint gulp-notify gulp-rename main-bower-files gulp-uglifyjs gulp-minify-css`
-- Add your third party packages to `bower.json`
-- Run Gulp! We recommend the Sublime Text package
+##Types & Taxes
+
+###Pages (type)
+
+General page content
+
+###Post (type)
+
+Blog posts
+
+##Site Map
+
+* Home (front-page.php)
+	* About (page.php)
+	* Contact (page.php)
+	* Blog (home.php)
+		* Post (single.php)
+
+##Templates
+
+###front-page.php
+
+Front page of the site
+
+###page.php
+
+Standard WP page
+
+* title
+* content
+* media (images/video)
+
+###template-contact.php
+
+Standard page template with contact form
+
+* title
+* content
+* contact form
+
+###home.php
+
+List of posts
+
+* title
+* posts
+* pagination
+
+###single.php
+
+Standard WP post
+
+* title
+* content
+* media (images/video)
