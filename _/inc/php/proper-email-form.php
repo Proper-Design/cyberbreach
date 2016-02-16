@@ -5,7 +5,7 @@
 
 function proper_email_form() { 
 
-	// Deliver mail if we are returning to the page after submitting the form
+	// Process mail if we are returning to the page after submitting the form
 	proper_deliver_mail();
 
 	?>
