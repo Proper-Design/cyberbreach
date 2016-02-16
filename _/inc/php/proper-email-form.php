@@ -3,7 +3,12 @@
  Displays a simple contact form
  */
 
-function proper_email_form() { ?>
+function proper_email_form() { 
+
+	// Deliver mail if we are returning to the page after submitting the form
+	proper_deliver_mail();
+
+	?>
 
 	<form action="<?php esc_url( $_SERVER['REQUEST_URI'] ) ?>" method="post">
 
@@ -34,7 +39,6 @@ function proper_email_form() { ?>
 				type="select" 
 				name="email-recipient" 
 				value="<?php echo ( isset( $_POST["email-recipient"] ) ? esc_attr( $_POST["email-recipient"] ) : '' ) ?>" 
-				size="40" 
 			>
 				<option value="ben@properdesign.rs">Ben Proper</option>
 			</select>
@@ -43,8 +47,6 @@ function proper_email_form() { ?>
 		<div class="email-message">
 			<label for="email-message">Your Message</label>
 			<textarea 
-				rows="10" 
-				cols="35" 
 				name="email-message">
 				<?php echo ( isset( $_POST["email-message"] ) ? esc_attr( $_POST["email-message"] ) : '' ) ?>
 			</textarea>
