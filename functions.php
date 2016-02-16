@@ -105,18 +105,3 @@ function properbear_json_load_point( $paths ) {
     return $paths;
     
 }
-
-function properbear_get_image_url_by_size($post_id, $image_size = null){
-
-  $attachment_id = get_post_thumbnail_id( $post_id );
-  
-  if ( $src = wp_get_attachment_image_src( $attachment_id, $image_size ) ) {
-      // echo $src[0]; // URL
-      // echo $src[1]; // Width
-      // echo $src[2]; // Height
-      return $src[0];
-  }
-  else{
-    return null;
-  }
-}
