@@ -19,6 +19,15 @@ html {
 
 }
 
+// Clearfix
+.group{
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 body{
 	font-family: $font-body;
 }
