@@ -94,7 +94,7 @@ $ sudo gem install -n /usr/local/bin hologram
 Now that hologram is installed, you can add the SCSS components in /_/scss/styleguide_components/
 
 
-To (manually) build the styleguide, navigate to:
+Finally, to build the styleguide (manually), navigate to:
 
 ````
 $ {theme_folder}/_/styleguide_templates
