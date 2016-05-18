@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 // Scripts
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglifyjs'),
+    uglify = require('gulp-uglify'),
     jshint = require('gulp-jshint'),
 
 // Styles
@@ -61,14 +61,19 @@ gulp.task('bower-minify-js', function() {
 });
 
 // Concatenate SVGs
+// for some reason this guy needs double quotes
 gulp.task('svg', function(){
 
     svgConfig = {
-        mode: {
+        "log": "verbose",
+        "svg": {
+            xmlDeclaration      : true,
+            doctypeDeclaration  : true
+        },
+        "mode": {
             symbol: {
-                prefix: 'svg-$s',
-                inline: true,
-                dest: './'
+                sprite  : "svg/symbols.svg",
+                dest    : './'
             }
         }
 };
@@ -132,7 +137,7 @@ gulp.task('sass', function() {
 // Browsersync
 gulp.task('browser-sync', function() {
     browserSync({
-        proxy: "localhost/properbear",
+        proxy: "localhost/groundwork",
         files: ["style.css", "*.js", "*.php", "*.html"]
     });
 });
