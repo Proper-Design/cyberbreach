@@ -78,3 +78,38 @@ Standard WP post
 * title
 * content
 * media (images/video)
+
+##Hologram style guide
+
+https://github.com/trulia/hologram
+
+###Installation
+
+In terminal execute:
+
+````
+$ gem install hologram
+````
+
+or
+
+````
+$ sudo gem install -n /usr/local/bin hologram
+````
+
+Navigate to:
+
+````
+$ {theme_folder}/_/styleguide_templates
+````
+
+Then execute:
+
+````
+$ hologram -c hologram_config.yml
+````
+This will create a 'styleguide' folder in the root of your theme. You can then access your styleguide at:
+###your_site_url/styleguide
+
+For more information on setting up Hologram visit: https://github.com/trulia/hologram
+
