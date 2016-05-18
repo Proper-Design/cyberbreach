@@ -443,13 +443,69 @@ a:visited {
   color: #652D90;
 }
 
-.site-content {
+/*doc
+---
+name: Typography
+title: Typography
+category: Typography
+---
+*/
+/*doc
+---
+parent: Typography
+name: Headings
+title: Headings
+---
+
+```html_example
+<h1>This is a h1</h1>
+<h2>This is a h2</h2>
+<h3>This is a h3</h3>
+<h4>This is a h4</h4>
+<h5>This is a h5</h5>
+<h6>This is a h6</h6>
+```
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-wrap: break-word;
+}
+
+/*doc
+---
+parent: Typography
+name: Paragraph
+title: Paragraph Text
+---
+
+Basic paragraph text within the site in a system sans-serif font.
+
+```html_example
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti fugiat, natus velit voluptas animi laborum rerum eligendi, iusto, temporibus minima quis ipsa reiciendis sequi minus saepe dolorem consequuntur quasi, magnam.</p>
+```
+
+*/
+p {
+  word-wrap: break-word;
   line-height: 1.5;
 }
 
+/*doc
+---
+parent: Typography
+name: Blockquote
+title: Blockquote
+---
+
+```html_example
+<blockquote>This is an example of a blockquote</blockquote>
+```
+*/
 table {
-  width: 100%;
-  table-layout: fixed;
   margin: 1rem 0;
   text-align: left;
 }
@@ -489,6 +545,63 @@ img[class*='wp-image-'], .wp-caption {
 .alignright {
   float: right;
   margin: 0 0 1em 1em;
+}
+
+.gallery {
+  margin: 1em -0.5em;
+}
+
+.gallery-item {
+  padding: 0.5em;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.gallery-item figcaption {
+  margin-top: 0.5em;
+}
+
+.gallery-columns-1 .gallery-item {
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  width: 33.33333%;
+}
+
+.gallery-columns-4 .gallery-item {
+  width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+  width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+  width: 16.66667%;
+}
+
+.gallery-columns-7 .gallery-item {
+  width: 14.28571%;
+}
+
+.gallery-columns-8 .gallery-item {
+  width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+  width: 11.11111%;
 }
 
 .featured-image {

@@ -1,5 +1,6 @@
 <?php
 /**
+ *
  * @package WordPress
  * @subpackage Proper-Bear-WordPress-Theme
  * @since Proper Bear 1.0
