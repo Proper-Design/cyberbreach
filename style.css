@@ -483,10 +483,12 @@ img[class*='wp-image-'], .wp-caption {
 
 .alignleft {
   float: left;
+  margin: 0 1em 1em 0;
 }
 
 .alignright {
   float: right;
+  margin: 0 0 1em 1em;
 }
 
 .featured-image {
@@ -507,14 +509,16 @@ nav .menu {
   margin: 0;
   padding: 0;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
 .menu-item {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 .menu-item + .menu-item {
   margin-left: 0.5em;
@@ -532,6 +536,7 @@ nav .menu {
 .too-small ul {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   max-height: 0;

@@ -19,8 +19,10 @@ img[class*='wp-image-'], .wp-caption{
 
 .alignleft{
 	float:left;
+  margin:0 1em 1em 0;
 }
 
 .alignright{
 	float:right;
+  margin:0 0 1em 1em;
 }
