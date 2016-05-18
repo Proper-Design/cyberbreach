@@ -88,16 +88,13 @@ https://github.com/trulia/hologram
 In terminal execute:
 
 ````
-$ gem install hologram
-````
-
-or
-
-````
 $ sudo gem install -n /usr/local/bin hologram
 ````
 
-Navigate to:
+Now that hologram is installed, you can add the SCSS components in /_/scss/styleguide_components/
+
+
+To (manually) build the styleguide, navigate to:
 
 ````
 $ {theme_folder}/_/styleguide_templates
@@ -109,7 +106,7 @@ Then execute:
 $ hologram -c hologram_config.yml
 ````
 This will create a 'styleguide' folder in the root of your theme. You can then access your styleguide at:
-###your_site_url/styleguide
+####your_site_url/styleguide
 
 For more information on setting up Hologram visit: https://github.com/trulia/hologram
 
