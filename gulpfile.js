@@ -137,7 +137,7 @@ gulp.task('sass', function() {
 // Browsersync
 gulp.task('browser-sync', function() {
     browserSync({
-        proxy: "localhost/groundwork",
+        proxy: "localhost/proper-bear",
         files: ["style.css", "*.js", "*.php", "*.html"]
     });
 });
