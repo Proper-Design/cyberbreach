@@ -1,7 +1,7 @@
 {
   "name": "properbear",
   "version": "1.0.0",
-  "description": "Proper Bear",
+  "description": "HTML5 Reset is a simple set of *WordPress* best practices to get web projects off on the right foot.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,7 +27,8 @@
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "~1.2.0",
     "gulp-svg-sprite": "^1.2.19",
-    "gulp-uglify": "^1.0.1",
+    "gulp-uglify": "~1.0.1",
+    "gulp-uglifyjs": "^0.6.2",
     "main-bower-files": "^2.11.1"
   },
   "keywords": [
