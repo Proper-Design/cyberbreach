@@ -11,4 +11,3 @@ node_modules/
 npm-debug.log
 sublime-gulp.log
 .sublime-gulp.cache
-styleguide/
