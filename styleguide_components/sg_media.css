@@ -1,0 +1,29 @@
+/*doc
+---
+name: Media
+title: Media
+category: Media
+---
+*/
+/*doc
+---
+parent: Media
+name: Images
+title: Images
+---
+
+```html_example
+<img alt="Placeholder image" src="http://placehold.it/600x400">
+```
+*/
+/*doc
+---
+parent: Media
+name: VideoEmbed
+title: VideoEmbed
+---
+
+```html_example
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>
+```
+*/

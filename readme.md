@@ -97,7 +97,7 @@ Now that hologram is installed, you can add the SCSS components in /_/scss/style
 Finally, to build the styleguide (manually), navigate to:
 
 ````
-$ {theme_folder}/_/styleguide_templates
+$ {project_directory}/_/styleguide_templates/lib/template
 ````
 
 Then execute:
