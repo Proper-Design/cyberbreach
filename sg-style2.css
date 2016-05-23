@@ -421,6 +421,21 @@ html {
   clear: both;
 }
 
+.tablist {
+  list-style: none;
+  padding: 0;
+}
+
+.tablist .tab {
+  cursor: pointer;
+  display: inline-block;
+}
+
+[aria-hidden='true'],
+.hidden {
+  display: none;
+}
+
 .menu-link, .menu-item a, .menu-toggle {
   display: block;
 }
@@ -468,6 +483,13 @@ nav .menu {
   transition: 1s;
 }
 
+.sg-button, .sg-nav-item, [role="tab"] {
+  padding: 0.5em 0.75em;
+  color: white;
+  background-color: #222;
+  border: solid thin #222;
+}
+
 .site-header {
   background: #222;
   padding: 1em 2em;
@@ -497,12 +519,38 @@ nav .menu {
   display: none;
 }
 
+.sg-nav-item {
+  text-decoration: none;
+}
+
+.sg-nav-item.sg-current {
+  color: #222;
+  background-color: white;
+}
+
 .site-content-wrapper {
   padding: 2em;
 }
 
+[role="tablist"] {
+  border-bottom: solid thin;
+}
+
+[role="tab"] {
+  border-bottom: none;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+[aria-selected="true"] {
+  background-color: white;
+  color: #222;
+}
+
 section {
   padding: 2.5em 0;
+}
+section + section {
   border-top: 1px solid #EEE;
 }
 
@@ -524,10 +572,10 @@ section {
   vertical-align: top;
 }
 
-div[class^="sg-color-"] {
-  display: inline-block;
+.sg-color {
   width: 5em;
   height: 5em;
+  display: inline-block;
   border: solid thick white;
 }
 
@@ -535,6 +583,12 @@ div[class^="sg-color-"] {
   display: inline-block;
   background: #eee;
   padding: 0.5em;
+}
+
+.sg-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
 }
 
 .sg-color-1 {
