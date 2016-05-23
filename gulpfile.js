@@ -101,11 +101,9 @@ gulp.task('scripts', function() {
             }))
         .pipe(concat('themefunctions.js'))
         .pipe(gulp.dest('_/js/'))
-        .pipe(uglify('themefunctions.min.js', {
-          outSourceMap: true,
-          sourceRoot: '../../'
-        }))
-        .pipe(gulp.dest('_/js/'));
+        .pipe(rename('themefunctions.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('_/js/'));;
 });
 
 
@@ -137,7 +135,7 @@ gulp.task('sass', function() {
 // Browsersync
 gulp.task('browser-sync', function() {
     browserSync({
-        proxy: "localhost/proper-bear",
+        proxy: "localhost/proper bear",
         files: ["style.css", "*.js", "*.php", "*.html"]
     });
 });

@@ -17,6 +17,27 @@
 		$('.site-nav-wrapper').squishMenu();
 		$('.site-content-wrapper').fitVids();
 
+
+		// Accessible tabs
+		// http://accessibility.athena-ict.com/aria/examples/tabpanel2.shtml
+		$("[role='tab']").click(function(){
+        //deselect all the tabs
+        $("li[role='tab']").attr("aria-selected","false");
+
+        // select this tab
+        $(this).attr("aria-selected","true");
+
+        //find out what tab panel this tab controls
+        var tabpanid= $(this).attr("aria-controls");
+        var tabpan = $("#"+tabpanid);
+
+        //hide all the panels
+        $("div[role='tabpanel']").attr("aria-hidden","true");
+
+        // show our panel
+        tabpan.attr("aria-hidden","false");
+     });
+
 		/* EU Cookie Law */
 		/* Uncomment to add meesage
 		/* TODO - CSS :)
