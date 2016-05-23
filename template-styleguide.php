@@ -17,9 +17,21 @@
 			<?php the_title('<h1>', '</h1>'); ?>
       <?php the_content(); ?>
 
-      <?php get_template_part('styleguide', 'custom' ); ?>
-      <?php get_template_part('styleguide', 'tags' ); ?>
-      <?php get_template_part('styleguide', 'forms' ); ?>
+      <ul class="tablist" role="tablist">
+        <li id="sg-tab1" class="tab" aria-controls="sg-panel1" role="tab" aria-selected="true">Brand</li>
+        <li id="sg-tab2" class="tab" aria-controls="sg-panel2" role="tab" aria-selected="false">HTML Elements</li>
+        <li id="sg-tab3" class="tab" aria-controls="sg-panel3" role="tab" aria-selected="false">Forms</li>
+      </ul>
+
+      <div id="sg-panel1" class="sg-tabpanel" aria-labelledby="sg-tab1" role="tabpanel" aria-hidden="false">
+        <?php get_template_part('styleguide', 'custom' ); ?>
+      </div>
+       <div id="sg-panel2" class="sg-tabpanel" aria-labelledby="sg-tab2" role="tabpanel" aria-hidden="true">
+        <?php get_template_part('styleguide', 'tags' ); ?>
+      </div>
+       <div id="sg-panel3" class="sg-tabpanel" aria-labelledby="sg-tab2" role="tabpanel" aria-hidden="true">
+        <?php get_template_part('styleguide', 'forms' ); ?>
+      </div>
 
       <?php wp_link_pages(array('before' => __('Pages: ','properbear'), 'next_or_number' => 'number')); ?>
 			<?php edit_post_link(__('Edit this entry','properbear'), '<p>', '</p>'); ?>
