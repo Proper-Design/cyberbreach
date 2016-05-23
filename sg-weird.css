@@ -1,14 +1,3 @@
-/*
-Theme Name: Proper Bear
-Theme URI: http://properdesign.rs
-Description: Proper Design starter theme
-Author: Proper Design
-Author URI: http://properdesign.rs
-Version: 9999.0
-Tags:
-
-Based on HTML5 Reset Theme by Monkey Do! + @ckhicks http://monkeydo.biz
-*/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -417,7 +406,6 @@ textarea:-moz-placeholder {
   color: #a9a9a9;
 }
 
-/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
 html {
   box-sizing: border-box;
 }
@@ -430,164 +418,6 @@ html {
   content: "";
   display: table;
   clear: both;
-}
-
-a {
-  color: #1B75BB;
-}
-a:visited {
-  color: #652D90;
-}
-
-body {
-  font-family: Helmet, Freesans, sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  word-wrap: break-word;
-}
-
-/*doc
----
-parent: Typography
-name: Paragraph
-title: Paragraph Text
----
-
-Basic paragraph text within the site in a system sans-serif font.
-
-```html_example
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti fugiat, natus velit voluptas animi laborum rerum eligendi, iusto, temporibus minima quis ipsa reiciendis sequi minus saepe dolorem consequuntur quasi, magnam.</p>
-```
-
-*/
-p {
-  word-wrap: break-word;
-  line-height: 1.5;
-}
-
-/*doc
----
-parent: Typography
-name: Blockquote
-title: Blockquote
----
-
-```html_example
-<blockquote>This is an example of a blockquote</blockquote>
-```
-*/
-table {
-  margin: 1rem 0;
-  text-align: left;
-}
-
-thead {
-  background: #252525;
-  color: #F0EFEB;
-}
-
-tr:nth-child(even) {
-  background: #e4e3df;
-}
-
-td, th {
-  vertical-align: top;
-  padding: 0.5em 0 0.5em 0.75em;
-}
-td:last-child, th:last-child {
-  padding-right: 0.75em;
-}
-
-.site-wrapper {
-  padding: 2rem;
-}
-
-img[class*='wp-image-'], .wp-caption {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.alignleft {
-  float: left;
-  margin: 0 1em 1em 0;
-}
-
-.alignright {
-  float: right;
-  margin: 0 0 1em 1em;
-}
-
-.gallery {
-  margin: 1em -0.5em;
-}
-
-.gallery-item {
-  padding: 0.5em;
-  margin: 0;
-  display: inline-block;
-  position: relative;
-  vertical-align: top;
-}
-
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.gallery-item figcaption {
-  margin-top: 0.5em;
-}
-
-.gallery-columns-1 .gallery-item {
-  width: 100%;
-}
-
-.gallery-columns-2 .gallery-item {
-  width: 50%;
-}
-
-.gallery-columns-3 .gallery-item {
-  width: 33.33333%;
-}
-
-.gallery-columns-4 .gallery-item {
-  width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-  width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-  width: 16.66667%;
-}
-
-.gallery-columns-7 .gallery-item {
-  width: 14.28571%;
-}
-
-.gallery-columns-8 .gallery-item {
-  width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-  width: 11.11111%;
-}
-
-.featured-image {
-  max-width: 100%;
-  height: auto;
-}
-
-.site-nav-wrapper {
-  margin-bottom: 1rem;
 }
 
 .menu-link, .menu-item a, .menu-toggle {
@@ -643,4 +473,41 @@ nav .menu {
   max-height: 60em;
   -webkit-transition: 1s;
           transition: 1s;
+}
+
+html {
+  padding: 1em;
+}
+
+section {
+  padding: 1em 0;
+  border-top: solid thin;
+}
+
+.sg-logo-image {
+  width: 180px;
+  height: auto;
+}
+
+.sg-accent {
+  width: 180px;
+  height: auto;
+  vertical-align: top;
+}
+
+.sg-color {
+  width: 3em;
+  height: 3em;
+  border: solid thick white;
+}
+
+.sg-word {
+  display: inline-block;
+  background: #eee;
+  padding: 0.5em;
+}
+
+h1 {
+  font-weight: 200;
+  color: plum;
 }

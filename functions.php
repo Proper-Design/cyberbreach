@@ -42,6 +42,14 @@ function properbear_scripts_styles() {
 	// Load Stylesheet
 	wp_enqueue_style( 'proper-bear-styles', get_stylesheet_uri() );
 
+  // Styleguide CSS
+  if(is_page_template('template-styleguide.php') && function_exists('get_field')){
+      wp_dequeue_style( 'proper-bear-styles' );
+    if(get_field('sg_handle')){
+      $sg_style = get_field('sg_handle');
+      wp_enqueue_style( $sg_style, get_stylesheet_directory_uri() . '/sg-' . $sg_style . '.css' );
+    }
+  }
 	// Load Comments
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );

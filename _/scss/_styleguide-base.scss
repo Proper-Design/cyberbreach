@@ -1,0 +1,36 @@
+@import "global/normalize";
+@import "global/global";
+@import "navigation/squish-menu";
+
+
+html{
+  padding:1em;
+}
+
+section{
+  padding:1em 0;
+  border-top:solid thin;
+}
+
+.sg-logo-image{
+  width:180px;
+  height:auto;
+}
+
+.sg-accent{
+  width:180px;
+  height:auto;
+  vertical-align:top;
+}
+
+.sg-color{
+  width:3em;
+  height:3em;
+  border:solid thick white;
+}
+
+.sg-word{
+  display:inline-block;
+  background:#eee;
+  padding:0.5em;
+}
