@@ -2,18 +2,37 @@
 @import "global/global";
 @import "navigation/squish-menu";
 
+//Header
 
-html{
-  padding:1em;
+.site-header { background: #222; padding: 1em 2em; width: 100%;}
+.site-header a, .site-header a:visited {text-decoration: none; color: white;}
+.site-header a:hover, .site-header a:focus {color: #feb620; text-decoration: none; border-bottom: 1px solid #feb620;}
+.site-header h1 { display: inline-block; margin-right: 3em; font-weight: 600; font-size: 1em; margin-bottom: 0;}
+
+//Navigation
+
+.site-nav-wrapper {
+  display: none;
+}
+
+.site-content-wrapper {
+  padding: 2em;
 }
 
 section{
-  padding:1em 0;
-  border-top:solid thin;
+  padding:2.5em 0;
+  border-top:1px solid #EEE;
+}
+
+.sg-section-header {
+  margin: 0 0 1em 0;
+  font-weight: 100;
+  font-size: 1em;
+  color: grey;
 }
 
 .sg-logo-image{
-  width:180px;
+  width:200px;
   height:auto;
 }
 
@@ -23,9 +42,12 @@ section{
   vertical-align:top;
 }
 
-.sg-color{
-  width:3em;
-  height:3em;
+//Colors
+
+div[class^="sg-color-"]{
+  display: inline-block;
+  width:5em;
+  height:5em;
   border:solid thick white;
 }
 

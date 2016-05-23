@@ -1,0 +1,41 @@
+@import "styleguide-base";
+
+//Variables
+@import url(https://fonts.googleapis.com/css?family=Roboto+:400,700,600,300);
+
+$color-blue-dark: #003b6d;
+$color-blue-med: #006594;
+$color-blue-light: #3384a9;
+$color-orange-med: #f16628;
+$color-orange-light: #ffad89;
+$color-grey: #424242;
+$color-grey-light: #FCFCFC;
+$color-red: #A30C00;
+$color-green: #448300;
+
+$font-body: "Roboto", sans-serif;
+
+//Colours
+
+.sg-color-1 { background-color: $color-blue-dark; }
+.sg-color-2 { background-color: $color-blue-med; }
+.sg-color-3 { background-color: $color-blue-light; }
+.sg-color-4 { background-color: $color-orange-med; }
+.sg-color-5 { background-color: $color-orange-light; }
+.sg-color-6 { background-color: $color-grey; }
+.sg-color-7 { background-color: $color-red; }
+.sg-color-8 { background-color: $color-green; }
+
+//Global
+
+body {
+  background-color: $color-grey-light;
+  font-family: $font-body;
+}
+
+//Typography
+
+h1 {
+  font-weight: 300;
+  font-size: 3em;
+}
