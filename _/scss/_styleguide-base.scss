@@ -75,8 +75,17 @@ section{
   border:solid thick white;
 }
 
+//Adjectives
+
 .sg-word{
   display:inline-block;
   background:#eee;
   padding:0.5em;
+}
+
+//Imagery
+.sg-image{
+  width:100%;
+  max-width: 500px;
+  height:auto;
 }

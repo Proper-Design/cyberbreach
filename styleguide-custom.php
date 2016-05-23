@@ -4,6 +4,8 @@
 
 ?>
 
+
+<?php if(function_exists('get_field')): ?>
 <section class="sg-section sg-logo">
   <h2 class="sg-section-header">Logo</h2>
   <img class="sg-logo-image" src="<?=get_field('sg_logo')['url']; ?>" alt="">
@@ -29,8 +31,23 @@
 
 <?php if(have_rows('sg_words')): ?>
   <section class="sg-section sg-words">
-  <?php while(have_rows('sg_words')): the_row(); ?>
-    <span class="sg-word"><?=get_sub_field('sg_word'); ?></span>
-  <?php endwhile;?>
+    <h2 class="sg-section-header">Descriptive adjectives</h2>
+    <?php while(have_rows('sg_words')): the_row(); ?>
+      <span class="sg-word"><?=get_sub_field('sg_word'); ?></span>
+    <?php endwhile;?>
   </section>
 <?php endif; ?>
+
+<?php if(have_rows('sg_images')): ?>
+  <section class="sg-section sg-images">
+    <h2 class="sg-section-header">Imagery</h2>
+    <?php while(have_rows('sg_images')): the_row(); ?>
+      <img class="sg-image" src="<?=get_sub_field('sg_image')['url']; ?>">
+    <?php endwhile; ?>
+  </section>
+<?php endif; ?>
+
+<?php else: ?>
+  <h1>Sorry!</h1>
+  <p>This template doesn't work without <a href="https://www.advancedcustomfields.com/">Advanced Custom Fields</a>!</p>
+<?php endif;?>
