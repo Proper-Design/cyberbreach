@@ -28,9 +28,9 @@ $sg-ground:#222;
 }
 
 [role="tab"]{
-  padding:0.5em;
-  background-color:$sg-ground;
+  padding:0.5em 0.75em;
   color:white;
+  background-color:$sg-ground;
   border:solid thin $sg-ground;
   border-bottom:none;
   transform:translateY(1px);
