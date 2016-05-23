@@ -5,6 +5,14 @@
 
 
 $sg-ground:#222;
+$sg-grey:#eee;
+
+.sg-button{
+  padding:0.5em 0.75em;
+  color:white;
+  background-color:$sg-ground;
+  border:solid thin $sg-ground;
+}
 
 //Header
 
@@ -19,6 +27,16 @@ $sg-ground:#222;
   display: none;
 }
 
+.sg-nav-item{
+  @extend .sg-button;
+  text-decoration:none;
+}
+
+.sg-nav-item.sg-current{
+  color:$sg-ground;
+  background-color:white;
+}
+
 .site-content-wrapper {
   padding: 2em;
 }
@@ -28,10 +46,7 @@ $sg-ground:#222;
 }
 
 [role="tab"]{
-  padding:0.5em 0.75em;
-  color:white;
-  background-color:$sg-ground;
-  border:solid thin $sg-ground;
+  @extend .sg-button;
   border-bottom:none;
   transform:translateY(1px);
 }
@@ -79,7 +94,7 @@ section{
 
 .sg-word{
   display:inline-block;
-  background:#eee;
+  background:$sg-grey;
   padding:0.5em;
 }
 
