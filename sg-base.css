@@ -467,7 +467,7 @@ nav .menu {
 
 .too-small ul {
   -ms-flex-direction: column;
-  flex-direction: column;
+      flex-direction: column;
   max-height: 0;
   overflow: hidden;
   transition: 0.5s;
