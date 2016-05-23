@@ -1,6 +1,10 @@
 @import "global/normalize";
 @import "global/global";
+@import "global/tabs";
 @import "navigation/squish-menu";
+
+
+$sg-ground:#222;
 
 //Header
 
@@ -19,9 +23,29 @@
   padding: 2em;
 }
 
+[role="tablist"]{
+  border-bottom:solid thin;
+}
+
+[role="tab"]{
+  padding:0.5em;
+  background-color:$sg-ground;
+  color:white;
+  border:solid thin $sg-ground;
+  border-bottom:none;
+  transform:translateY(1px);
+}
+
+[aria-selected="true"]{
+  background-color:white;
+  color:$sg-ground;
+}
+
 section{
   padding:2.5em 0;
-  border-top:1px solid #EEE;
+  + section{
+    border-top:1px solid #EEE;
+  }
 }
 
 .sg-section-header {
@@ -44,10 +68,10 @@ section{
 
 //Colors
 
-div[class^="sg-color-"]{
-  display: inline-block;
+.sg-color{
   width:5em;
   height:5em;
+  display: inline-block;
   border:solid thick white;
 }
 
