@@ -81,6 +81,51 @@ section{
   vertical-align:top;
 }
 
+//Prototype
+
+.prototype-device {
+  margin: 0 auto;
+  &:before {
+    display: block;
+    content: "";
+    height: 3em;
+    width: 100%;
+    background-color: black;
+    border-radius: 2em 2em 0 0;
+  }
+
+  &:after {
+    display: block;
+    content: "";
+    height: 3em;
+    width: 100%;
+    background-color: black;
+    border-radius: 0 0 2em 2em;
+  }
+}
+
+.prototype-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-left: .5em solid;
+  border-right: .5em solid;
+}
+
+//Prototype Devices
+
+$iphone6width: 1334px;
+$ipadair2width: 2048px;
+
+.iphone6 {
+  width: $iphone6width / 4;
+}
+
+.ipadair2 {
+  width: $ipadair2width / 2;
+}
+
+
 //Colors
 
 .sg-color{
@@ -103,4 +148,10 @@ section{
   width:100%;
   max-width: 500px;
   height:auto;
+}
+
+//Footer
+
+footer {
+  padding: 2em;
 }

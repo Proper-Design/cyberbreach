@@ -571,6 +571,42 @@ section + section {
   vertical-align: top;
 }
 
+.prototype-device {
+  margin: 0 auto;
+}
+.prototype-device:before {
+  display: block;
+  content: "";
+  height: 3em;
+  width: 100%;
+  background-color: black;
+  border-radius: 2em 2em 0 0;
+}
+.prototype-device:after {
+  display: block;
+  content: "";
+  height: 3em;
+  width: 100%;
+  background-color: black;
+  border-radius: 0 0 2em 2em;
+}
+
+.prototype-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-left: .5em solid;
+  border-right: .5em solid;
+}
+
+.iphone6 {
+  width: 333.5px;
+}
+
+.ipadair2 {
+  width: 1024px;
+}
+
 .sg-color {
   width: 5em;
   height: 5em;
@@ -588,4 +624,8 @@ section + section {
   width: 100%;
   max-width: 500px;
   height: auto;
+}
+
+footer {
+  padding: 2em;
 }
