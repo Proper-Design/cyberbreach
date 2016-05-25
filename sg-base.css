@@ -574,12 +574,12 @@ section + section {
   border-right: .5em solid;
 }
 
-.iphone6 {
-  width: 333.5px;
+.mobile-device {
+  max-width: 333.5px;
 }
 
-.ipadair2 {
-  width: 1024px;
+.tablet-desktop-device {
+  max-width: 1024px;
 }
 
 .sg-color {

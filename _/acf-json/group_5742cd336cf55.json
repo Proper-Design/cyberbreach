@@ -178,6 +178,74 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_574585b3e32ce",
+            "label": "Prototypes",
+            "name": "sg_prototypes",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_574585c3e32cf",
+                    "label": "Device",
+                    "name": "sg_device",
+                    "type": "select",
+                    "instructions": "These will also be used as CSS classes, keep to one word and only label the type of device.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Mobile": "Mobile",
+                        "Tablet\/Desktop": "Tablet\/Desktop"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_5745864815988",
+                    "label": "URL",
+                    "name": "sg_prototype_url",
+                    "type": "text",
+                    "instructions": "Get the shareable file code from the folder \/Prototypes from Google Drive",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "https:\/\/drive.google.com\/uc?export=download&id=",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
         }
     ],
     "location": [
@@ -197,5 +265,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1464021106
+    "modified": 1464178733
 }

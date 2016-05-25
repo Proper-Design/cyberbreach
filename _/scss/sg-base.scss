@@ -20,9 +20,6 @@ $sg-grey:#eee;
   display: none;
 }
 
-//
-
-
 .sg-nav-item{
   @extend .sg-button;
   text-decoration:none;
@@ -110,15 +107,15 @@ section{
 
 //Prototype Devices
 
-$iphone6width: 1334px;
-$ipadair2width: 2048px;
+$mobile-width: 1334px;
+$tablet-desktop-width: 2048px;
 
-.iphone6 {
-  width: $iphone6width / 4;
+.mobile-device {
+  max-width: $mobile-width / 4;
 }
 
-.ipadair2 {
-  width: $ipadair2width / 2;
+.tablet-desktop-device {
+  max-width: $tablet-desktop-width / 2;
 }
 
 
