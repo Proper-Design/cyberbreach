@@ -1,14 +1,3 @@
-/*
-Theme Name: Proper Bear
-Theme URI: http://properdesign.rs
-Description: Proper Design starter theme
-Author: Proper Design
-Author URI: http://properdesign.rs
-Version: 9999.0
-Tags:
-
-Based on HTML5 Reset Theme by Monkey Do! + @ckhicks http://monkeydo.biz
-*/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -417,7 +406,6 @@ textarea:-moz-placeholder {
   color: #a9a9a9;
 }
 
-/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
 html {
   box-sizing: border-box;
 }
@@ -432,145 +420,19 @@ html {
   clear: both;
 }
 
-a {
-  color: #1B75BB;
-}
-a:visited {
-  color: #652D90;
-}
-
-.site-content-wrapper {
-  line-height: 1.5;
-}
-
-table {
-  margin: 1rem 0;
-  text-align: left;
-}
-
-thead {
-  background: #252525;
-  color: #F0EFEB;
-}
-
-tr:nth-child(even) {
-  background: #e4e3df;
-}
-
-td, th {
-  vertical-align: top;
-  padding: 0.5em 0 0.5em 0.75em;
-}
-td:last-child, th:last-child {
-  padding-right: 0.75em;
-}
-
-.site-wrapper {
-  padding: 2rem;
-}
-
-.input-wrapper {
-  margin-bottom: 1em;
-}
-
-.input-list {
-  margin: 0;
-  padding: 0;
+.tablist {
   list-style: none;
+  padding: 0;
 }
 
-label {
-  display: block;
-}
-
-label[for="checkbox"], [for="radio"] {
+.tablist .tab {
+  cursor: pointer;
   display: inline-block;
 }
 
-input[type="checkbox"], [type="radio"] {
-  display: inline-block;
-}
-
-img[class*='wp-image-'], .wp-caption {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.alignleft {
-  float: left;
-  margin: 0 1em 1em 0;
-}
-
-.alignright {
-  float: right;
-  margin: 0 0 1em 1em;
-}
-
-.gallery {
-  margin: 1em -0.5em;
-}
-
-.gallery-item {
-  padding: 0.5em;
-  margin: 0;
-  display: inline-block;
-  position: relative;
-  vertical-align: top;
-}
-
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.gallery-item figcaption {
-  margin-top: 0.5em;
-}
-
-.gallery-columns-1 .gallery-item {
-  width: 100%;
-}
-
-.gallery-columns-2 .gallery-item {
-  width: 50%;
-}
-
-.gallery-columns-3 .gallery-item {
-  width: 33.33333%;
-}
-
-.gallery-columns-4 .gallery-item {
-  width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-  width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-  width: 16.66667%;
-}
-
-.gallery-columns-7 .gallery-item {
-  width: 14.28571%;
-}
-
-.gallery-columns-8 .gallery-item {
-  width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-  width: 11.11111%;
-}
-
-.featured-image {
-  max-width: 100%;
-  height: auto;
-}
-
-.site-nav-wrapper {
-  margin-bottom: 1rem;
+[aria-hidden='true'],
+.hidden {
+  display: none;
 }
 
 .menu-link, .menu-item a, .menu-toggle {
@@ -618,4 +480,123 @@ nav .menu {
 .too-small.is-open ul {
   max-height: 60em;
   transition: 1s;
+}
+
+.sg-button, .sg-nav-item, [role="tab"] {
+  padding: 0.5em 0.75em;
+  color: white;
+  background-color: #222;
+  border: solid thin #222;
+}
+
+.site-header-wrapper, .site-nav-wrapper, .site-footer-wrapper {
+  display: none;
+}
+
+.sg-nav-item {
+  text-decoration: none;
+}
+
+.sg-nav-item.sg-current {
+  color: #222;
+  background-color: white;
+}
+
+.site-content-wrapper {
+  padding: 2em;
+}
+
+[role="tablist"] {
+  border-bottom: solid thin;
+}
+
+[role="tab"] {
+  border-bottom: none;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+[aria-selected="true"] {
+  background-color: white;
+  color: #222;
+}
+
+section {
+  padding: 2.5em 0;
+}
+section + section {
+  border-top: 1px solid #EEE;
+}
+
+.sg-section-header {
+  margin: 0 0 1em 0;
+  font-weight: 100;
+  font-size: 1em;
+  color: grey;
+}
+
+.sg-logo-image {
+  width: 200px;
+  height: auto;
+}
+
+.sg-accent {
+  width: 180px;
+  height: auto;
+  vertical-align: top;
+}
+
+.prototype-device {
+  margin: 0 auto;
+}
+.prototype-device:before {
+  display: block;
+  content: "";
+  height: 3em;
+  width: 100%;
+  background-color: black;
+  border-radius: 2em 2em 0 0;
+}
+.prototype-device:after {
+  display: block;
+  content: "";
+  height: 3em;
+  width: 100%;
+  background-color: black;
+  border-radius: 0 0 2em 2em;
+}
+
+.prototype-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-left: .5em solid;
+  border-right: .5em solid;
+}
+
+.mobile-device {
+  max-width: 333.5px;
+}
+
+.tablet-desktop-device {
+  max-width: 1024px;
+}
+
+.sg-color {
+  width: 5em;
+  height: 5em;
+  display: inline-block;
+  border: solid thick white;
+}
+
+.sg-word {
+  display: inline-block;
+  background: #eee;
+  padding: 0.5em;
+}
+
+.sg-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
 }

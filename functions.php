@@ -33,7 +33,7 @@ function properbear_scripts_styles() {
 
 	// Third party styles:
 	// a single minified CSS stylesheet compiled from included bower_components (bower.json)
-	// wp_enqueue_style( 'proper-bear-thirdparty-styles', get_template_directory_uri() . '/_/css/thirdparty.min.css' );	
+	// wp_enqueue_style( 'proper-bear-thirdparty-styles', get_template_directory_uri() . '/_/css/thirdparty.min.css' );
 
 	// Theme scripts
 	// This is the compiled JS file compiled and minified from the contents of _/js/src
@@ -41,6 +41,15 @@ function properbear_scripts_styles() {
 
 	// Load Stylesheet
 	wp_enqueue_style( 'proper-bear-styles', get_stylesheet_uri() );
+
+  // Styleguide CSS
+  if(is_page_template('template-styleguide.php') && function_exists('get_field')){
+
+      $sg_handle = get_field('sg_handle');
+      wp_dequeue_style( 'proper-bear-styles' );
+      wp_enqueue_style( 'styleguide-base', get_stylesheet_directory_uri() . '/sg-base.css');
+      wp_enqueue_style( $sg_handle, get_stylesheet_directory_uri() . '/sg-' .  $sg_handle . '.css');
+  }
 
 	// Load Comments
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
