@@ -439,49 +439,10 @@ a:visited {
   color: #652D90;
 }
 
-body {
-  font-family: Helmet, Freesans, sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  word-wrap: break-word;
-}
-
-/*doc
----
-parent: Typography
-name: Paragraph
-title: Paragraph Text
----
-
-Basic paragraph text within the site in a system sans-serif font.
-
-```html_example
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti fugiat, natus velit voluptas animi laborum rerum eligendi, iusto, temporibus minima quis ipsa reiciendis sequi minus saepe dolorem consequuntur quasi, magnam.</p>
-```
-
-*/
-p {
-  word-wrap: break-word;
+.site-content-wrapper {
   line-height: 1.5;
 }
 
-/*doc
----
-parent: Typography
-name: Blockquote
-title: Blockquote
----
-
-```html_example
-<blockquote>This is an example of a blockquote</blockquote>
-```
-*/
 table {
   margin: 1rem 0;
   text-align: left;
@@ -506,6 +467,28 @@ td:last-child, th:last-child {
 
 .site-wrapper {
   padding: 2rem;
+}
+
+.input-wrapper {
+  margin-bottom: 1em;
+}
+
+.input-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+label {
+  display: block;
+}
+
+label[for="checkbox"], [for="radio"] {
+  display: inline-block;
+}
+
+input[type="checkbox"], [type="radio"] {
+  display: inline-block;
 }
 
 img[class*='wp-image-'], .wp-caption {
@@ -605,7 +588,7 @@ nav .menu {
 
 .menu-item {
   -ms-flex-negative: 0;
-          flex-shrink: 0;
+      flex-shrink: 0;
 }
 .menu-item + .menu-item {
   margin-left: 0.5em;
@@ -622,7 +605,7 @@ nav .menu {
 
 .too-small ul {
   -ms-flex-direction: column;
-          flex-direction: column;
+      flex-direction: column;
   max-height: 0;
   overflow: hidden;
   transition: 0.5s;

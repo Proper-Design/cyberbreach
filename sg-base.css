@@ -489,32 +489,7 @@ nav .menu {
   border: solid thin #222;
 }
 
-.site-header {
-  background: #222;
-  padding: 1em 2em;
-  width: 100%;
-}
-
-.site-header a, .site-header a:visited {
-  text-decoration: none;
-  color: white;
-}
-
-.site-header a:hover, .site-header a:focus {
-  color: #feb620;
-  text-decoration: none;
-  border-bottom: 1px solid #feb620;
-}
-
-.site-header h1 {
-  display: inline-block;
-  margin-right: 3em;
-  font-weight: 600;
-  font-size: 1em;
-  margin-bottom: 0;
-}
-
-.site-nav-wrapper {
+.site-header-wrapper, .site-nav-wrapper, .site-footer-wrapper {
   display: none;
 }
 
@@ -624,8 +599,4 @@ section + section {
   width: 100%;
   max-width: 500px;
   height: auto;
-}
-
-footer {
-  padding: 2em;
 }
