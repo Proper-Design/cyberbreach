@@ -203,7 +203,7 @@
                     "label": "Device",
                     "name": "sg_device",
                     "type": "select",
-                    "instructions": "These will also be used as CSS classes, keep to one word and only label the type of device.",
+                    "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -265,5 +265,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1464178733
+    "modified": 1464182157
 }
