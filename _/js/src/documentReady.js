@@ -47,7 +47,7 @@
 		//   );
 
 		//   $( '#accept-cookie' ).click(function () {
-		//     Cookies( 'cookie-pop', 'set' );
+		//     Cookies.set( 'cookie-pop', 'set' );
 		//     $( '.cookie-pop' ).remove();
 		//   });
 		// }
