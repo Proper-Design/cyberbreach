@@ -40,23 +40,18 @@
 
 		/* EU Cookie Law */
 		/* Uncomment to add meesage
-		/* TODO - CSS :)
-		if ( 'set' !== $.cookie( 'cookie-pop' ) ) {
-		  
-		  $('body').prepend(
-		    '<div class="cookie-pop site-notice"><svg class="site-notice-icon"><use xlink:href="#notice"></use></svg><span class="cookie-law">Our site uses Cookies</span><button class="button" id="accept-cookie">OK?</button></div>'
-		  );
+		/* TODO - CSS :) */
+		// if ( !Cookies( 'cookie-pop' ) ) {
+		//   $('body').prepend(
+		//     '<div class="cookie-pop site-notice"><svg class="site-notice-icon"><use xlink:href="#notice"></use></svg><span class="cookie-law">Our site uses Cookies</span><button class="button" id="accept-cookie">OK?</button></div>'
+		//   );
 
-		  $( '#accept-cookie' ).click(function () {
+		//   $( '#accept-cookie' ).click(function () {
+		//     Cookies( 'cookie-pop', 'set' );
+		//     $( '.cookie-pop' ).remove();
+		//   });
+		// }
 
-		    $.cookie( 'cookie-pop', 'set' );
-		    $( '.cookie-pop' ).remove();
-
-		  });
-		
-		}
-
-		*/
 
 	});
 
