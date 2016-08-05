@@ -40,5 +40,5 @@
 
 		<?php get_template_part('menu', 'primary' ); ?>
 
-		<main class="site-content-wrapper">
+		<div class="site-content-wrapper">
 
