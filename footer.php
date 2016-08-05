@@ -6,7 +6,7 @@
  */
 ?>
 
-    </div>
+    </main>
     <?php //Closes .site-content-wrapper ?>
 
 		<div class="site-footer-wrapper">
