@@ -27,17 +27,8 @@ add_action( 'after_setup_theme', 'properbear_setup' );
 // Uncomment as required
 function properbear_scripts_styles() {
 
-	// Third party scripts:
-	// a single minified scripts file based on bower_components (bower.json)
-	wp_enqueue_script( 'proper-bear-thirdparty', get_template_directory_uri() . '/_/js/thirdparty.min.js' );
-
-	// Third party styles:
-	// a single minified CSS stylesheet compiled from included bower_components (bower.json)
-	// wp_enqueue_style( 'proper-bear-thirdparty-styles', get_template_directory_uri() . '/_/css/thirdparty.min.css' );
-
-	// Theme scripts
-	// This is the compiled JS file compiled and minified from the contents of _/js/src
-	wp_enqueue_script('theme-functions', get_stylesheet_directory_uri() . '/_/js/themefunctions.min.js');
+	// a single minified scripts file based for all theme and third-party scripts
+	wp_enqueue_script( 'proper-bear-thirdparty', get_template_directory_uri() . '/_/js/bundle.js' );
 
 	// Load Stylesheet
 	wp_enqueue_style( 'proper-bear-styles', get_stylesheet_uri() );
