@@ -4,6 +4,10 @@
 // Normalize
 @import "global/normalize";
 
+// Third party and built by Webpack
+@import "external/builtbywebpack";
+@import "external/thirdparty";
+
 // Site wide globals
 @import "global/variables";
 @import "global/global";

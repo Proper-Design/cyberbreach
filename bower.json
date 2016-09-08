@@ -19,8 +19,6 @@
   "dependencies": {
     "squishMenu": "latest",
     "FitVids": "latest",
-    "jquery.cookie": "~1.4.1",
-    "modernizr" : "components/modernizr",
-    "js-cookie" : "latest"
+    "jquery.cookie": "~1.4.1"
   }
 }

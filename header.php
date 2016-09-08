@@ -22,7 +22,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<?php get_template_part( 'favicon' );?>
 
 	<?php if (is_search()) echo '<meta name="robots" content="noindex, nofollow" />';?>
 	<?php wp_head(); ?>
