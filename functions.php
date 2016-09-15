@@ -16,7 +16,7 @@ function properbear_setup() {
 
 	// Enable support fot featured-images
 	//add_theme_support( 'post-thumbnails' );
-	
+
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array('comment-list','search-form','comment-form','gallery',) );
 }
@@ -28,7 +28,7 @@ add_action( 'after_setup_theme', 'properbear_setup' );
 function properbear_scripts_styles() {
 
 	// a single minified scripts file based for all theme and third-party scripts
-	wp_enqueue_script( 'proper-bear-thirdparty', get_template_directory_uri() . '/_/js/bundle.js' );
+	wp_enqueue_script( 'proper-bear-thirdparty', get_template_directory_uri() . '/_/js/bundle.js' , null, null, true);
 
 	// Load Stylesheet
 	wp_enqueue_style( 'proper-bear-styles', get_stylesheet_uri() );
