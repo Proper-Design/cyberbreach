@@ -4,8 +4,7 @@ import squishMenu from 'squishMenu';
 
 $(document).ready(function(){
 
-	// $('.site-nav-wrapper').squishMenu();
-	$('#app').squishMenu();
+	$('.site-nav-wrapper').squishMenu();
 	fitVids('.site-content-wrapper');
 
 	// Accessible tabs
