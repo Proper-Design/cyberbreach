@@ -28,10 +28,10 @@ function the_proper_icon($name){
 
 function get_proper_svg($name, $classname = null, $id = null, $viewbox = null){
 	return sprintf(
-		'<svg class="%s" id="%s" viewBox="%s">%s</svg>',
+		'<svg class="%s" id="%s" %s>%s</svg>',
 		$classname,
 		$id,
-		$viewbox,
+		$viewbox ? "viewBox=\"$viewbox\"" : "",
 		get_proper_icon($name)
 		);
 }
