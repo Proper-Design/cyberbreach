@@ -25,6 +25,8 @@
 
 	<?php if (is_search()) echo '<meta name="robots" content="noindex, nofollow" />';?>
 	<?php wp_head(); ?>
+
+	<?php proper_deliver_mail(); ?>
 </head>
 
 <body <?php body_class(); ?>>
