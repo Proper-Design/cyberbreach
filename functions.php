@@ -51,7 +51,7 @@ add_action( 'wp_enqueue_scripts', 'properbear_scripts_styles' );
 
 // Include all PHP files in the inc folder
 
-foreach (glob( get_template_directory() . '/_/inc/php/*.php') as $filename)
+foreach (glob( get_template_directory() . '/_/php/*.php') as $filename)
 {
     require_once $filename;
 }
