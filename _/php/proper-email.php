@@ -104,8 +104,9 @@ function proper_email_form() {
 
 		<div class="email-message">
 			<label for="email-message"><?php _e('Your Message','properbear') ?></label>
-			<textarea
-				name="email-message"><?php echo( isset( $_POST["email-message"] ) ? esc_attr( $_POST["email-message"] ) : '' ) ?></textarea>
+			<textarea name="email-message">
+				<?php echo( isset( $_POST["email-message"] ) ? esc_attr( $_POST["email-message"] ) : '' ) ?>
+			</textarea>
 		</div>
 
 		<input type="submit" name="email-submitted" value="<?php _e('Send','properbear') ?>"/>
