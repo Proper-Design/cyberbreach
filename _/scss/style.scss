@@ -1,36 +1,5 @@
-// # scss structure
-//
-// * wordpress
-// * global
-//   * helpers
-//   * variables
-// * base
-//   * typography
-//     * all
-//     * headings
-//     * paragraph
-//     * lists
-//   * tables
-//   * forms
-//     * text
-//     * number
-//     * datetime
-//     * options
-//     * buttons
-//   * media
-// * modules
-//   * header
-//   * footer
-// * templates
-//
-
-
-// WordPress theme header
-@import "wordpress/theme-header";
-@import "wordpress/wordpress";
-
-@import "global/all";
-@import "base/all";
-
-// Modules
-@import "modules/all"
+@import "1-thirdparty/all";
+@import "2-global/all";
+@import "3-base/all";
+@import "4-modules/all";
+@import "5-templates/all";
