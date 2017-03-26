@@ -10,19 +10,15 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<?php get_template_part('post', 'content' ); ?>
-		</article>
+		<main <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+			<?php get_template_part( 'post', 'content' ); ?>
+		</main>
 
-	<?php endwhile; ?>
+		<?php comments_template(); ?>
+
+	<?php endwhile; endif; ?>
 
 	<?php proper_post_navigation(); ?>
-
-	<?php else : ?>
-
-		<h1><?php _e('Nothing Found','properbear'); ?></h1>
-
-	<?php endif; ?>
 
 </div>
 
