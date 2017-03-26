@@ -35,7 +35,8 @@
 
 			<?php } ?>
 
-			<?php proper_post_navigation(); ?>
+			<?php the_posts_pagination(); ?>
+
 
 			<?php while (have_posts()) : the_post(); ?>
 
@@ -43,7 +44,7 @@
 
 						<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 
-						<?php posted_on(); ?>
+						<?php the_date(); ?>
 
 						<div class="entry">
 							<?php the_excerpt(); ?>
@@ -53,7 +54,7 @@
 
 			<?php endwhile; ?>
 
-			<?php proper_post_navigation(); ?>
+			<?php the_posts_pagination(); ?>
 
 	<?php else : ?>
 

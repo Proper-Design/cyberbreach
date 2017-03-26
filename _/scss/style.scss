@@ -1,28 +1,36 @@
+// # scss structure
+//
+// * wordpress
+// * global
+//   * helpers
+//   * variables
+// * base
+//   * typography
+//     * all
+//     * headings
+//     * paragraph
+//     * lists
+//   * tables
+//   * forms
+//     * text
+//     * number
+//     * datetime
+//     * options
+//     * buttons
+//   * media
+// * modules
+//   * header
+//   * footer
+// * templates
+//
+
+
 // WordPress theme header
 @import "wordpress/theme-header";
-
-// Normalize
-@import "global/normalize";
-
-// Third party and built by Webpack
-@import "external/builtbywebpack";
-@import "external/thirdparty";
-
-// Site wide globals
-@import "global/variables";
-@import "global/global";
-@import "global/links";
-@import "global/typography";
-@import "global/tables";
-@import "global/scaffold";
-@import "global/forms";
-
-// Style classes from the WP WYSIWYG
 @import "wordpress/wordpress";
 
-// Media elements
-@import "media/images";
+@import "global/all";
+@import "base/all";
 
-// SquishMenu default styles
-@import "navigation/navigation";
-@import "navigation/squish-menu";
+// Modules
+@import "modules/all"
