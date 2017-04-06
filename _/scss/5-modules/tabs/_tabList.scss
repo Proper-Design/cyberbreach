@@ -1,14 +1,14 @@
-.tablist{
+.tabList{
   list-style: none;
   padding: 0;
 }
 
-.tablist .tab{
+.tabList .tab{
   cursor:pointer;
   display:inline-block;
 }
 
-.tablist li[aria-selected='true'] {
+.tabList li[aria-selected='true'] {
 }
 
 [aria-hidden='true'],
