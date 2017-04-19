@@ -39,7 +39,7 @@
 			</header>
 		</div>
 
-		<?php get_template_part('header', 'menu' ); ?>
+		<?php get_template_part('header', 'nav' ); ?>
 
 		<div class="siteContent-wrapper">
 
