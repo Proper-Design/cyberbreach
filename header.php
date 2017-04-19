@@ -31,15 +31,15 @@
 
 <body <?php body_class(); ?>>
 
-	<div class="site-wrapper">
+	<div class="siteWrapper">
 
-		<div class="site-header-wrapper">
-			<header class="site-header" role="banner">
+		<div class="siteHeader-wrapper">
+			<header class="siteHeader" role="banner">
 				<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			</header>
 		</div>
 
 		<?php get_template_part('header', 'menu' ); ?>
 
-		<div class="site-content-wrapper">
+		<div class="siteContent-wrapper">
 

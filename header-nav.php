@@ -3,14 +3,14 @@
 // The primary menu as defined in functions.php
 
 ?>
-<div class="site-nav-wrapper">
+<div class="siteNav-wrapper">
 	<?php
-		$toggle = '<div class="menu-toggle">' . __('Menu', 'properbear') . '</div>';
+		$toggle = '<div class="menuToggle">' . __('Menu', 'properbear') . '</div>';
 		// Limits the menu to one level by default.
 		$args = array(
 			'theme_location' => 'primary',
 			'container' => 'nav',
-			'container_class' => 'site-nav',
+			'container_class' => 'siteNav',
 			'container_id' => '',
 			'menu_class' => 'menu',
 			'menu_id' => '',

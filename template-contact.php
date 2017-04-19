@@ -9,9 +9,9 @@
 
 get_header(); ?>
 
-<div class="site-content">
+<div class="siteContent">
 
-<div class="site-content-main">
+<div class="siteContent-main">
 
 	<?php while ( have_posts() ) : the_post(); ?>
     <?php get_template_part('featured', 'media'); ?>
