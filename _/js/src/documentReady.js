@@ -4,8 +4,8 @@ import squishMenu from 'squishMenu';
 
 $(document).ready(function(){
 
-	$('.site-nav-wrapper').squishMenu();
-	fitVids('.site-content-wrapper');
+	$('.siteNav-wrapper').squishMenu();
+	fitVids('.siteContent-wrapper');
 
 	// Accessible tabs
 	// http://accessibility.athena-ict.com/aria/examples/tabpanel2.shtml
