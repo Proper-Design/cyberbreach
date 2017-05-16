@@ -9,12 +9,12 @@ $cats_label = __('Posted in: ','properbear');
 
 
 
-<footer class="post-meta">
-	<div class="post-meta-tags">
+<footer class="postMeta">
+	<div class="postMeta-tags">
 		<?php the_tags( $tags_label , ', '); ?>
 	</div>
 
-	<div class="post-meta-cats">
+	<div class="postMeta-cats">
 		<?php echo $cats_label; the_category( ', ') ?>
 	</div>
 
