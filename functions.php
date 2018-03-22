@@ -23,7 +23,7 @@ add_action( 'after_setup_theme', 'properbear_setup' );
 function properbear_scripts_styles() {
 
   // a single minified scripts file based for all theme and third-party scripts
-  wp_enqueue_script( 'proper-bear-thirdparty', get_template_directory_uri() . '/_/js/bundle.js' , null, null, true);
+  wp_enqueue_script('properbear-theme', get_template_directory_uri() . '/_/js/bundle.js', array('jquery'), null, true); // Put this guy in the footer
 
   // Load Stylesheet
   wp_enqueue_style( 'proper-bear-styles', get_stylesheet_uri() );
