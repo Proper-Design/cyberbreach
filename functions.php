@@ -41,3 +41,5 @@ foreach (glob( get_template_directory() . '/_/php/*.php') as $filename)
 {
     require_once $filename;
 }
+
+add_theme_support( 'post-thumbnails' );
