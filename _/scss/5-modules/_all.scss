@@ -1,7 +1,13 @@
 //Modules
 
 //Header
-@import "header/siteNav";
+@import "header/siteHeader";
+
+//Nav
+@import "navigation/siteNav";
+
+//Footer
+@import "footer/siteFooter";
 
 //Tabs
 @import "tabs/tabList";
