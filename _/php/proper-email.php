@@ -1,6 +1,9 @@
 <?php
 /*
- Displays a simple contact form
+ * Displays a simple contact form which sends to the site administrator
+ * Can be extended with ACF fields
+ * 
+ * Version 2.0
  */
 
 function proper_email_form()
