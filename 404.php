@@ -10,6 +10,4 @@
  		<h2><?php _e('Error 404 - Page Not Found','properbear'); ?></h2>
  	</main>
 
-<?php get_sidebar(); ?>
-
 <?php get_footer(); ?>
