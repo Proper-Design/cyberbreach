@@ -25,9 +25,9 @@ function properbear_scripts_styles()
 {
 
   // a single minified scripts file based for all theme and third-party scripts
-  wp_enqueue_script('properbear-theme', get_template_directory_uri() . '/_/js/bundle.js', null, null, true); // Put this guy in the footer
+  wp_enqueue_script('properbear-theme', get_template_directory_uri() . '/_/js/dist/bundle.js', null, null, true); // Put this guy in the footer
   // Swap the above for this line if you need jQuery
-  // wp_enqueue_script('properbear-theme', get_template_directory_uri() . '/_/js/bundle.js', array('jquery'), null, true); // Put this guy in the footer
+  // wp_enqueue_script('properbear-theme', get_template_directory_uri() . '/_/js/dist/bundle.js', array('jquery'), null, true); // Put this guy in the footer
 
   // Load Stylesheet
   wp_enqueue_style('proper-bear-styles', get_stylesheet_uri());
