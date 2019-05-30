@@ -90,7 +90,7 @@ class Form extends Component {
                 </div>
                 <div className="field-wrapper">
                   <ReCAPTCHA
-                    sitekey="6LcDS6YUAAAAAHX1V2SZg34gey9yxbMATnFq_ybF"
+                    sitekey=""
                     onChange={value => {
                       setFieldValue("recaptcha", value);
                     }}
