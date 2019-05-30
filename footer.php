@@ -6,20 +6,25 @@
  */
 ?>
 
+</div>
+<?php
+?>
+
+<div class="siteFooter-wrapper">
+  <footer id="footer" class="siteFooter">
+    <div class="source-org vcard copyright" role="contentinfo">
+      &copy;<?php echo date("Y");
+            echo " ";
+            bloginfo('name'); ?>
     </div>
-    <?php //Closes .site-content-wrapper ?>
+    <?php get_template_part('module', 'contact'); ?>
+    <div id="share-root"></div>
+  </footer>
+</div>
 
-		<div class="siteFooter-wrapper">
-      <footer id="footer" class="siteFooter">
-        <div class="source-org vcard copyright" role="contentinfo">
-          &copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?>
-        </div>
-      </footer>
-    </div>
+</div>
 
-	</div>
-
-	<?php wp_footer(); ?>
+<?php wp_footer(); ?>
 
 </body>
 
