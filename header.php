@@ -17,16 +17,14 @@
 <!--<![endif]-->
 
 <head>
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<title><?php wp_title('|', true, 'right'); ?></title>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>">
+	<meta name="title" content="<?php wp_title('|', true, 'right'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<?php if (is_search()) echo '<meta name="robots" content="noindex, nofollow" />';?>
+	<?php if (is_search()) echo '<meta name="robots" content="noindex, nofollow" />'; ?>
 	<?php wp_head(); ?>
-
-	<?php proper_deliver_mail(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -35,11 +33,10 @@
 
 		<div class="siteHeader-wrapper">
 			<header class="siteHeader" role="banner">
-				<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
 			</header>
 		</div>
 
-		<?php get_template_part('header', 'nav' ); ?>
+		<?php get_template_part('header', 'nav'); ?>
 
 		<div class="siteContent-wrapper">
-
