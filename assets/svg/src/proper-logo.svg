@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 270">
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path d="M0,0V270H270V0ZM99,99h36v72H99ZM90,252H54a36,36,0,1,1,36-36Zm0-117a36,36,0,0,1-36,36H18V135A36,36,0,0,1,54,99H90Zm0-81A36,36,0,0,1,54,90H18V18H54A36,36,0,0,1,90,54Zm81,198L99,180h72Zm0-162H99V18h72Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

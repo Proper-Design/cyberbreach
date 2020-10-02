@@ -1,0 +1,41 @@
+{
+    "log": "info",
+    "shape": {
+        "id": {
+            "separator": "-"
+        }
+    },
+    "transform": [{
+        "svgo": {
+            "plugins": [{
+                    "moveGroupAttrsToElems": true
+                },
+                {
+                    "removeRasterImages": true
+                }
+            ]
+        }
+    }],
+    "svg": {
+        "dimensionAttributes": false
+    },
+    "mode": {
+        "css": {
+            "dest": "_/",
+            "layout": "horizontal",
+            "prefix": ".icon-%s",
+            "bust": false,
+            "render": {
+                "scss": {
+                    "dest": "scss/1-thirdparty/_icon-sprite.scss"
+                }
+            }
+        },
+        "symbol": {
+            "dest": "_/svg",
+            "sprite": "sprite.symbol.svg",
+            "inline": true,
+            "example": true
+        }
+    }
+}

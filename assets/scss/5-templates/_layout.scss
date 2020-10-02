@@ -1,0 +1,45 @@
+.siteWrapper {
+    display: grid;
+    grid-template-rows: min-content min-content 1fr min-content;
+    grid-template-areas: "header" "menu" "content" "footer";
+    min-height: 100vh;
+    // fix for WordPress' admin bar
+    .admin-bar & {
+        min-height: calc(100vh - 32px);
+        @media screen and (max-width: 782px) {
+            min-height: calc(100vh - 46px);
+        }
+    }
+}
+
+.siteHeader-wrapper {
+    background: $color-blue;
+    color: white;
+    overflow: hidden;
+    padding: 1rem;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.siteContent-wrapper {
+    grid-area: content;
+    padding: 2em;
+}
+
+.siteFooter-wrapper {
+    background: black;
+    color: white;
+    overflow: hidden;
+    padding: 1rem;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    grid-area: footer;
+}
