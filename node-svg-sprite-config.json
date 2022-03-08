@@ -21,7 +21,7 @@
     },
     "mode": {
         "css": {
-            "dest": "_/",
+            "dest": "assets/",
             "layout": "horizontal",
             "prefix": ".icon-%s",
             "bust": false,
@@ -32,7 +32,7 @@
             }
         },
         "symbol": {
-            "dest": "_/svg",
+            "dest": "assets/svg",
             "sprite": "sprite.symbol.svg",
             "inline": true,
             "example": true
