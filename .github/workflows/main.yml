@@ -6,16 +6,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Install npm dependencies
-    run: npm install
-    - name: Run build task
-    run: npm run build --if-present
-    - name: Deploy to Server
-    uses: easingthemes/ssh-deploy@v2.1.5
-    env:
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      REMOTE_HOST: ssh.getflywheel.com
-      REMOTE_USER: ${{ secrets.REMOTE_USER }}
-      ARGS: -rltgoDzvO --exclude .git --exclude .github
-      TARGET: /www/wp-content/themes/${{ github.event.repository.name }}
+      - uses: actions/checkout@v2
+      - name: Install npm dependencies
+        run: npm install
+      - name: Run build task
+        run: npm run build --if-present
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ssh.getflywheel.com
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          ARGS: -rltgoDzvO --exclude .git --exclude .github
+          TARGET: /www/wp-content/themes/${{ github.event.repository.name }}
