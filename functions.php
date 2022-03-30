@@ -12,11 +12,10 @@ function properbear_setup()
 {
   load_theme_textdomain('properbear', get_template_directory() . '/languages');
 
-  // Register a menu location
-  register_nav_menu('primary', __('Navigation Menu', 'properbear'));
-
-  // Enable support for HTML5 markup.
   add_theme_support('html5', array('comment-list', 'search-form', 'comment-form', 'gallery',));
+  add_post_type_support('page', 'excerpt');
+  
+  register_nav_menu('primary', __('Navigation Menu', 'properbear'));
 }
 add_action('after_setup_theme', 'properbear_setup');
 
