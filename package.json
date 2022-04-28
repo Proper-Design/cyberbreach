@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"homepage": "",
 	"scripts": {
-		"start": "npm run wpscripts & npm run styles & npm run styles -- -w ",
+		"start": "npm run wpscripts & npm run styles & npm run svg & npm run styles -- -w ",
 		"wpscripts": "wp-scripts start",
 		"styles": "node-sass assets/scss/style.scss style.css",
 		"svg": "svg-sprite -C node-svg-sprite-config.json assets/svg/src/**/*.svg && echo \"Wrote SVG to SVG Dest\" || echo \"SVG build failed (have you npm installed or are there no files in src folder\"",

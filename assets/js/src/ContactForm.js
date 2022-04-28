@@ -2,26 +2,26 @@ const { useState, useEffect } = wp.element;
 import Form from './FormBuilder/RenderForm';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
-const ContactForm = ( { formConfig } ) => {
+const ContactForm = ({ formConfig }) => {
 	const { executeRecaptcha } = useGoogleReCaptcha();
-	const [ token, setToken ] = useState( '' );
-	const [ sending, setSending ] = useState( false );
-	const [ complete, setComplete ] = useState( false );
+	const [token, setToken] = useState('');
+	const [sending, setSending] = useState(false);
+	const [complete, setComplete] = useState(false);
 
-	useEffect( () => {
-		if ( ! executeRecaptcha ) {
+	useEffect(() => {
+		if (!executeRecaptcha) {
 			return;
 		}
 
 		const handleReCaptchaVerify = async () => {
 			const newToken = await executeRecaptcha();
-			setToken( newToken );
+			setToken(newToken);
 		};
 
 		handleReCaptchaVerify();
-	}, [ executeRecaptcha ] );
+	}, [executeRecaptcha]);
 
-	const sendEmail = ( { formConfig, formValues } ) => {
+	const sendEmail = ({ formValues }) => {
 		const email = {
 			recipient: formConfig.recipient ? formConfig.recipient : undefined,
 			sender_name: formValues.name,
@@ -30,45 +30,44 @@ const ContactForm = ( { formConfig } ) => {
 			email_subject: formConfig.subject,
 		};
 
-		if ( token ) {
+		if (token) {
 			wp.ajax
-				.post( 'proper_send_mail', email )
-				.done( () => {
-					setSending( false );
-					setComplete( true );
-				} )
-				.fail( ( err ) => {
-					console.log( err.rawResponse );
-					setSending( false );
-					setComplete( true );
-				} );
-		} else alert( 'Sorry, there has been an error. Recaptcha not found' );
+				.post('proper_send_mail', email)
+				.done(() => {
+					setSending(false);
+					setComplete(true);
+				})
+				.fail(() => {
+					setSending(false);
+					setComplete(true);
+				});
+		}
 	};
 
 	return (
 		<div>
-			{ ! sending && ! complete && (
+			{!sending && !complete && (
 				<Form
-					formConfig={ formConfig }
-					onSubmit={ ( values ) =>
-						sendEmail( {
-							formConfig: formConfig,
+					formConfig={formConfig}
+					onSubmit={(values) =>
+						sendEmail({
+							formConfig,
 							formValues: values,
-						} )
+						})
 					}
-					submitting={ sending }
+					submitting={sending}
 				/>
-			) }
-			{ sending && (
+			)}
+			{sending && (
 				<div>
 					<p>Sending Email</p>
 				</div>
-			) }
-			{ complete && (
+			)}
+			{complete && (
 				<div>
 					<p>Thanks for your Email</p>
 				</div>
-			) }
+			)}
 		</div>
 	);
 };
