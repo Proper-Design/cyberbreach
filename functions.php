@@ -22,7 +22,7 @@ add_action('after_setup_theme', 'properbear_setup');
 // Scripts & Styles
 function properbear_scripts_styles()
 {
-
+    $version = filemtime(get_stylesheet_uri());
     wp_enqueue_script(
     'properbear-theme',
     get_stylesheet_directory_uri() . '/assets/js/build/index.js',
@@ -32,10 +32,10 @@ function properbear_scripts_styles()
     );
 
   // a single minified scripts file based for all theme and third-party scripts
-  wp_enqueue_script('properbear-theme', get_template_directory_uri() . '/assets/js/build/bundle.js', array('jquery'), time(), true); // Put this guy in the footer
+  wp_enqueue_script('properbear-theme', get_template_directory_uri() . '/assets/js/build/bundle.js', array('jquery'), $version, true); // Put this guy in the footer
 
   // Load Stylesheet
-  wp_enqueue_style('proper-bear-styles', get_stylesheet_uri());
+  wp_enqueue_style('proper-bear-styles', get_stylesheet_uri(),array(), $version);
 
   // Load Comments
   if (is_singular() && comments_open() && get_option('thread_comments'))
