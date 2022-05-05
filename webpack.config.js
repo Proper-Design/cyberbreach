@@ -22,7 +22,7 @@ module.exports = {
 				'./assets/scss/**/*.scss',
 			],
 			host: 'proper-bear.local',
-			proxy: { target: 'proper-bear.local' },
+			proxy: { target: 'https://proper-bear.local' },
 			open: 'external',
 		}),
 	],
