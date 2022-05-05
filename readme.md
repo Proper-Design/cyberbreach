@@ -1,8 +1,8 @@
-#Proper Bear
+# Proper Bear
 
 ProperDesign.rs (almost) completely bare starter theme.
 
-##First things first - writing this readme.md
+## First things first - writing this readme.md
 
 This readme.md file should exist as a living manual and todo list for the development of the theme. Structured in the following way.
 
@@ -23,17 +23,17 @@ The idea is to map out where template developent should start and identify commo
 
 Below is a brief version of this structure for a basic site with a static front page and blog.
 
-##Types & Taxes
+## Types & Taxes
 
-###Pages (type)
+### Pages (type)
 
 General page content
 
-###Post (type)
+### Post (type)
 
 Blog posts
 
-##Site Map
+## Site Map
 
 * Home (front-page.php)
 	* About (page.php)
@@ -41,13 +41,13 @@ Blog posts
 	* Blog (home.php)
 		* Post (single.php)
 
-##Templates
+## Templates
 
-###front-page.php
+### front-page.php
 
 Front page of the site
 
-###page.php
+### page.php
 
 Standard WP page
 
@@ -55,7 +55,7 @@ Standard WP page
 * content
 * media (images/video)
 
-###template-contact.php
+### template-contact.php
 
 Standard page template with contact form
 
@@ -63,7 +63,7 @@ Standard page template with contact form
 * content
 * contact form
 
-###home.php
+### home.php
 
 List of posts
 
@@ -71,7 +71,7 @@ List of posts
 * posts
 * pagination
 
-###single.php
+### single.php
 
 Standard WP post
 
