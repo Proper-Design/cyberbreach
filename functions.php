@@ -27,7 +27,7 @@ function properbear_scripts_styles()
     wp_enqueue_script(
     'properbear-theme',
     get_stylesheet_directory_uri() . '/assets/js/build/index.js',
-    ['wp-element'],
+    ['wp-element', 'wp-util'],
     $version,
     true
     );
