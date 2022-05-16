@@ -16,7 +16,7 @@ document.querySelectorAll('.contactForm').forEach((target) => {
 	render(
 		<GoogleReCaptchaProvider
 			useRecaptchaNet
-			reCaptchaKey="6LfuqVAdAAAAADkkMHgfBkLIDVAlcgM2X11XKfAB"
+			reCaptchaKey="Change-me"
 			scriptProps={{ async: true, defer: true, appendTo: 'body' }}
 		>
 			<ContactForm formConfig={window.contactFormConfig} />
