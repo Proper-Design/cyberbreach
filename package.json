@@ -1,46 +1,47 @@
 {
-  "name": "my-project",
-  "version": "0.0.1",
-  "description": "",
-  "main": "src/index.js",
-  "author": "Proper Design",
-  "license": "MIT",
-  "homepage": "",
-  "scripts": {
-    "start": "npm run wpscripts & npm run styles & npm run styles -- -w ",
-    "wpscripts": "wp-scripts start",
-    "styles": "node-sass assets/scss/style.scss style.css",
-    "svg": "svg-sprite -C node-svg-sprite-config.json assets/svg/src/**/*.svg && echo \"Wrote SVG to SVG Dest\" || echo \"No SVG source files in source directory\""
-  },
-  "babel": {
-    "presets": [
-      "@wordpress/babel-preset-default"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties"
-    ]
-  },
-  "dependencies": {
-    "browser-sync": "^2.26.12",
-    "fitvids": "latest",
-    "formik": "^1.5.8",
-    "react-cookie-consent": "^7.3.1",
-    "react-file-base64": "^1.0.3",
-    "react-google-recaptcha": "^1.1.0",
-    "react-modal": "^3.14.4",
-    "react-share": "^4.4.0",
-    "squishMenu": "latest",
-    "svg4everybody": "^2.1.9"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@wordpress/babel-preset-default": "^4.18.0",
-    "@wordpress/eslint-plugin": "^7.2.0",
-    "@wordpress/scripts": "^12.2.0",
-    "browser-sync-webpack-plugin": "^2.2.2",
-    "node-sass": "^7.0.1",
-    "svg-sprite": "^1.5.0",
-    "webpack-cli": "^3.3.12"
-  }
+	"name": "my-project",
+	"version": "0.0.1",
+	"description": "",
+	"main": "src/index.js",
+	"author": "Proper Design",
+	"license": "MIT",
+	"homepage": "",
+	"scripts": {
+		"start": "npm run wpscripts & npm run styles & npm run svg & npm run styles -- -w ",
+		"wpscripts": "wp-scripts start",
+		"styles": "node-sass assets/scss/style.scss style.css",
+		"svg": "svg-sprite -C node-svg-sprite-config.json assets/svg/src/**/*.svg && echo \"Wrote SVG to SVG Dest\" || echo \"SVG build failed (have you npm installed or are there no files in src folder\"",
+		"build": "wp-scripts build & npm run styles & npm run svg"
+	},
+	"babel": {
+		"presets": [
+			"@wordpress/babel-preset-default"
+		],
+		"plugins": [
+			"@babel/plugin-proposal-class-properties"
+		]
+	},
+	"dependencies": {
+		"browser-sync": "^2.26.12",
+		"fitvids": "latest",
+		"formik": "^2.2.9",
+		"react-cookie-consent": "^7.3.1",
+		"react-file-base64": "^1.0.3",
+		"react-google-recaptcha-v3": "^1.9.7",
+		"react-modal": "^3.14.4",
+		"react-share": "^4.4.0",
+		"squishMenu": "latest",
+		"svg4everybody": "^2.1.9"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.17.8",
+		"@babel/plugin-proposal-class-properties": "^7.16.7",
+		"@wordpress/babel-preset-default": "^6.6.1",
+		"@wordpress/eslint-plugin": "^11.0.1",
+		"@wordpress/scripts": "^22.2.1",
+		"browser-sync-webpack-plugin": "^2.3.0",
+		"node-sass": "^7.0.1",
+		"svg-sprite": "^1.5.4",
+		"webpack-cli": "^4.9.2"
+	}
 }

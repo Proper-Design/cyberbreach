@@ -12,31 +12,31 @@ function properbear_setup()
 {
   load_theme_textdomain('properbear', get_template_directory() . '/languages');
 
-  // Register a menu location
-  register_nav_menu('primary', __('Navigation Menu', 'properbear'));
-
-  // Enable support for HTML5 markup.
   add_theme_support('html5', array('comment-list', 'search-form', 'comment-form', 'gallery',));
+  add_post_type_support('page', 'excerpt');
+  
+  register_nav_menu('primary', __('Navigation Menu', 'properbear'));
 }
 add_action('after_setup_theme', 'properbear_setup');
 
 // Scripts & Styles
 function properbear_scripts_styles()
 {
+    $version = filemtime(get_template_directory() . '/style.css');
 
     wp_enqueue_script(
     'properbear-theme',
     get_stylesheet_directory_uri() . '/assets/js/build/index.js',
-    ['wp-element'],
-    time(), // Change this to null for production
+    ['wp-element', 'wp-util'],
+    $version,
     true
     );
 
-  // a single minified scripts file based for all theme and third-party scripts
-  wp_enqueue_script('properbear-theme', get_template_directory_uri() . '/assets/js/build/bundle.js', array('jquery'), time(), true); // Put this guy in the footer
-
-  // Load Stylesheet
-  wp_enqueue_style('proper-bear-styles', get_stylesheet_uri());
+  wp_enqueue_style(
+    'proper-bear-styles',
+    get_stylesheet_uri(),
+    array(),
+    $version);
 
   // Load Comments
   if (is_singular() && comments_open() && get_option('thread_comments'))
