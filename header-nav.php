@@ -4,10 +4,9 @@
 
 ?>
 <div id="siteNav-wrapper" class="siteNav-wrapper">
-	<nav class="siteNav" role="navigation">
-
-		<?php
-		$toggle = '<div id="siteNav-toggle" class="siteNav-toggle">' . __('Menu', 'properbear') . '</div>';
+    <nav class="siteNav" role="navigation">
+        <button id="siteNav-toggle" class="siteNav-toggle"><?php _e('Menu', 'properbear'); ?></button>
+        <?php
 		// Limits the menu to one level by default.
 		$args = array(
 			'theme_location' => 'primary',
@@ -21,11 +20,10 @@
 			'after' => '',
 			'link_before' => '',
 			'link_after' => '',
-			'items_wrap' => $toggle . '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
 			'depth' => 1,
 			'walker' => ''
 		);
 		wp_nav_menu($args); ?>
 
-	</nav>
+    </nav>
 </div>

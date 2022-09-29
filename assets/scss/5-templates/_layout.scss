@@ -9,33 +9,10 @@
 	}
 }
 
-.siteHeader-wrapper {
-	background: $color-blue;
-	color: white;
-	overflow: hidden;
-	padding: 1rem;
-	a {
-		color: white;
-		text-decoration: none;
-	}
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
 .siteContent-wrapper {
 	padding: 2em;
 }
 
 .siteFooter-wrapper {
 	position: sticky;
-	top: 100%;
-	background: black;
-	color: white;
-	overflow: hidden;
-	padding: 1rem;
-	a {
-		color: white;
-		text-decoration: none;
-	}
 }
