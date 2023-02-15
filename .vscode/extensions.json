@@ -1,0 +1,7 @@
+{
+	"recommendations": [
+		"ikappas.phpcs",
+		"shevaua.phpcs",
+		"persoderlind.vscode-phpcbf"
+	]
+}
