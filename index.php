@@ -1,13 +1,13 @@
 <?php
 /**
+ * The fallback template file for single posts or post-types.
+ *
  * @package WordPress
- * @subpackage Proper-Bear-WordPress-Theme
- * @since Proper Bear 1.0
  */
+
 get_header(); ?>
 
-<div class="siteContent">
-
+<div>
 	<?php
 	if ( have_posts() ) :
 		while ( have_posts() ) :

@@ -1,13 +1,13 @@
 <?php
 /**
+ * Core functions file for Proper Bear.
+ *
  * @package WordPress
- * @subpackage Proper-Bear-WordPress-Theme
- * @since Proper Bear 1.0
  */
 
-
-// Theme Setup
-
+/**
+ * Theme setup function
+ */
 function properbear_setup() {
 	load_theme_textdomain( 'properbear', get_template_directory() . '/languages' );
 
@@ -18,7 +18,9 @@ function properbear_setup() {
 }
 add_action( 'after_setup_theme', 'properbear_setup' );
 
-// Scripts & Styles
+/**
+ * Scripts & Styles
+ */
 function properbear_scripts_styles() {
 	$version = filemtime( get_template_directory() . '/style.css' );
 
@@ -37,23 +39,28 @@ function properbear_scripts_styles() {
 		$version
 	);
 
-	// Load Comments
+	/**
+	* Load Comments
+	*/
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'properbear_scripts_styles' );
 
-// Include all PHP files in the inc folder
-
+	/**
+	* Include all PHP files in the inc folder
+	*/
 foreach ( glob( get_template_directory() . '/inc/*.php' ) as $filename ) {
 	require_once $filename;
 }
 
 add_theme_support( 'post-thumbnails' );
 
-// image sizes
-add_image_size( 'hero-large', 2400, 1200, true );
+/**
+ * Set Image sizes
+*/
+add_image_size( 'hero-large', 1920, 1080, true );
 add_image_size( 'hero', 1280, 720, true );
 add_image_size( 'hero-small', 800, 450, true );
 add_image_size( 'thumbnail-large', 800, 800, true );
