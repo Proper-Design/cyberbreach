@@ -1,10 +1,10 @@
 <?php
 /**
+ * Template for pages
  *
  * @package WordPress
- * @subpackage Proper-Bear-WordPress-Theme
- * @since Proper Bear 1.0
  */
+
 get_header(); ?>
 
 <div class="siteContent">

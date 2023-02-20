@@ -1,11 +1,11 @@
 <?php
 
-if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && 'comments.php' == basename( wp_unslash( $_SERVER['SCRIPT_FILENAME'] ) ) ) {
 	die( 'Please do not load this page directly. Thanks!' );
 }
 
 if ( post_password_required() ) { ?>
-		<?php _e( 'This post is password protected. Enter the password to view comments.', 'properbear' ); ?>
+		<?php esc_html_e( 'This post is password protected. Enter the password to view comments.', 'properbear' ); ?>
 	<?php
 	return;
 }
@@ -35,7 +35,7 @@ if ( post_password_required() ) { ?>
 		<!-- If comments are open, but there are no comments. -->
 
 	<?php else : // comments are closed ?>
-		<p><?php _e( 'Comments are closed.', 'properbear' ); ?></p>
+		<p><?php esc_html_e( 'Comments are closed.', 'properbear' ); ?></p>
 
 	<?php endif; ?>
 
@@ -52,14 +52,14 @@ if ( post_password_required() ) { ?>
 	</div>
 
 	<?php if ( get_option( 'comment_registration' ) && ! is_user_logged_in() ) : ?>
-		<p><?php _e( 'You must be', 'properbear' ); ?> <a href="<?php echo wp_login_url( get_permalink() ); ?>"><?php _e( 'logged in', 'properbear' ); ?></a> <?php _e( 'to post a comment.', 'properbear' ); ?></p>
+		<p><?php esc_html_e( 'You must be', 'properbear' ); ?> <a href="<?php echo wp_login_url( get_permalink() ); ?>"><?php esc_html_e( 'logged in', 'properbear' ); ?></a> <?php esc_html_e( 'to post a comment.', 'properbear' ); ?></p>
 	<?php else : ?>
 
 	<form action="<?php echo get_option( 'siteurl' ); ?>/wp-comments-post.php" method="post" id="commentform">
 
 		<?php if ( is_user_logged_in() ) : ?>
 
-			<p><?php _e( 'Logged in as', 'properbear' ); ?> <a href="<?php echo get_option( 'siteurl' ); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Log out of this account"><?php _e( 'Log out', 'properbear' ); ?> &raquo;</a></p>
+			<p><?php esc_html_e( 'Logged in as', 'properbear' ); ?> <a href="<?php echo get_option( 'siteurl' ); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Log out of this account"><?php esc_html_e( 'Log out', 'properbear' ); ?> &raquo;</a></p>
 
 		<?php else : ?>
 
@@ -70,7 +70,7 @@ if ( post_password_required() ) { ?>
 																					echo "aria-required='true'";}
 																				?>
 				/>
-				<label for="author"><?php _e( 'Name', 'properbear' ); ?> <?php
+				<label for="author"><?php esc_html_e( 'Name', 'properbear' ); ?> <?php
 				if ( $req ) {
 					echo '(required)';}
 				?>
@@ -84,7 +84,7 @@ if ( post_password_required() ) { ?>
 																				echo "aria-required='true'";}
 																			?>
 				/>
-				<label for="email"><?php _e( 'Mail (will not be published)', 'properbear' ); ?> <?php
+				<label for="email"><?php esc_html_e( 'Mail (will not be published)', 'properbear' ); ?> <?php
 				if ( $req ) {
 					echo '(required)';}
 				?>
@@ -93,7 +93,7 @@ if ( post_password_required() ) { ?>
 
 			<div>
 				<input type="text" name="url" id="url" value="<?php echo esc_attr( $comment_author_url ); ?>" size="22" tabindex="3" />
-				<label for="url"><?php _e( 'Website', 'properbear' ); ?></label>
+				<label for="url"><?php esc_html_e( 'Website', 'properbear' ); ?></label>
 			</div>
 
 		<?php endif; ?>
@@ -105,7 +105,7 @@ if ( post_password_required() ) { ?>
 		</div>
 
 		<div>
-			<input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e( 'Submit Comment', 'properbear' ); ?>" />
+			<input name="submit" type="submit" id="submit" tabindex="5" value="<?php esc_html_e( 'Submit Comment', 'properbear' ); ?>" />
 			<?php comment_id_fields(); ?>
 		</div>
 		
@@ -113,7 +113,7 @@ if ( post_password_required() ) { ?>
 
 	</form>
 
-	<?php endif; // If registration required and not logged in ?>
+	<?php endif; // If registration required and not logged in. ?>
 	
 </div>
 

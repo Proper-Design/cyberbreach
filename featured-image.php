@@ -4,9 +4,9 @@
 
 // Don't link on single pages
 if ( ! is_singular() ) {
-	$link = true;
+	$image_link = true;
 } else {
-	$link = false;
+	$image_link = false;
 }
 
 $featured_img = get_the_image(
@@ -14,7 +14,7 @@ $featured_img = get_the_image(
 		'featured'     => true,
 		'size'         => 'large',
 		'image_class'  => 'featuredImage',
-		'link_to_post' => $link,
+		'link_to_post' => $image_link,
 		'echo'         => false,
 	)
 );

@@ -18,7 +18,6 @@
 			bloginfo( 'name' );
 		?>
 	</div>
-	<?php // get_template_part('module', 'contact'); ?>
 	<div id="share-root"></div>
 	</footer>
 </div>

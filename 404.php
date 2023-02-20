@@ -7,7 +7,7 @@
 get_header(); ?>
 
 	<main class="siteContent">
-		<h2><?php _e( 'Error 404 - Page Not Found', 'properbear' ); ?></h2>
+		<h2><?php esc_html_e( 'Error 404 - Page Not Found', 'properbear' ); ?></h2>
 	</main>
 
 <?php get_footer(); ?>
