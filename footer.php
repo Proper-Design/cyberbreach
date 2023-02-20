@@ -1,9 +1,10 @@
 <?php
 /**
+ * The theme footer component.
+ *
  * @package WordPress
- * @subpackage Proper-Bear-WordPress-Theme
- * @since Proper Bear 1.0
  */
+
 ?>
 
 </div>
@@ -13,7 +14,7 @@
 	<div class="source-org vcard copyright" role="contentinfo">
 		&copy;
 		<?php
-		echo date( 'Y' );
+		echo esc_attr( gmdate( 'Y' ) );
 			echo ' ';
 			bloginfo( 'name' );
 		?>

@@ -5,8 +5,7 @@
  * Template Name: Contact Form
  *
  * @package WordPress
- * @subpackage Proper-Bear-WordPress-Theme
- * @since Proper Bear 1.0
+ 
  */
 get_header();
 
@@ -52,7 +51,7 @@ wp_localize_script( 'properbear-theme', 'contactFormConfig', $contact_form_confi
 
 ?>
 
-<div class="siteContent">
+<div  >
 
 	<?php
 	if ( have_posts() ) :

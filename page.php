@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<div class="siteContent">
+<div  >
 
 	<?php
 	if ( have_posts() ) :
