@@ -1,7 +1,3 @@
 {
-	"recommendations": [
-		"ikappas.phpcs",
-		"shevaua.phpcs",
-		"persoderlind.vscode-phpcbf"
-	]
+	"recommendations": ["shevaua.phpcs", "persoderlind.vscode-phpcbf"]
 }
