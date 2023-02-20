@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<?php if ( have_posts() ) : ?>
 
-		<h2><?php _e( 'Search Results', 'properbear' ); ?></h2>
+		<h2><?php esc_html_e( 'Search Results', 'properbear' ); ?></h2>
 		<?php the_posts_pagination(); ?>
 
 		<?php
@@ -30,7 +30,7 @@ get_header(); ?>
 
 	<?php else : ?>
 
-		<h2><?php _e( 'Nothing Found', 'properbear' ); ?></h2>
+		<h2><?php esc_html_e( 'Nothing Found', 'properbear' ); ?></h2>
 
 	<?php endif; ?>
 

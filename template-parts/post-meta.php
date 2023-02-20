@@ -17,7 +17,7 @@ $cats_label = __( 'Posted in: ', 'properbear' );
 	<div class="postMeta-cats">
 		<?php
 		echo esc_attr( $cats_label );
-		the_categor( ', ' );
+		the_category( ', ' );
 		?>
 	</div>
 

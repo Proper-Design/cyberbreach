@@ -9,9 +9,9 @@ function reverse_oembed( $iframe ) {
 	preg_match( '/src="(.+?)"/', $iframe, $matches );
 	$src = $matches[1];
 
-	$video_service = str_ireplace( 'www.', '', parse_url( $src, PHP_URL_HOST ) );
+	$video_service = str_ireplace( 'www.', '', wp_parse_url( $src, PHP_URL_HOST ) );
 
-	if ( substr( $video_service, 0, 5 ) == 'youtu' ) {
+	if ( substr( $video_service, 0, 5 ) === 'youtu' ) {
 
 		// Trim away some of ACF's oembed code
 		$src = rtrim( $src, '?feature=oembedvideo' );

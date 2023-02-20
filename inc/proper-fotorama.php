@@ -1,14 +1,24 @@
 <?php
+/**
+ * Description
+ *
+ * @package WordPress
+ * @file
+ * Function fotorama.
+ */
 
-// http://fotorama.io
-
+/**
+ * Render a fotorama gallery.
+ *
+ * Link http://fotorama.io
+ */
 function proper_fotorama() {
 
 	if ( function_exists( 'get_field' ) ) {
 
 		$field = get_field( 'media' );
 
-		// Prepare an array to populate before encoding as a JSON object for FOTORAMA
+		// Prepare an array to populate before encoding as a JSON object for FOTORAMA.
 		$fotorama_ready = array();
 		$i              = 0;
 
@@ -16,7 +26,7 @@ function proper_fotorama() {
 			the_row();
 
 			if ( get_sub_field( 'video' ) ) :
-				// Get the iframe -- contains iframe markup
+				// Get the iframe -- contains iframe markup.
 				$iframe = get_sub_field( 'video' );
 				$src    = reverse_oembed( $iframe );
 
@@ -46,7 +56,7 @@ function proper_fotorama() {
 				'<div class="fotorama"></div>' .
 
 				'<script>
-                var data = ' . json_encode( $fotorama_ready ) . ';
+                var data = ' . wp_json_encode( $fotorama_ready ) . ';
                 $(".fotorama").fotorama({ 
                   "data": data,
                   "nav": "thumbs",

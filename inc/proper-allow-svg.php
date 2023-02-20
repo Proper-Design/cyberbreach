@@ -7,7 +7,7 @@ add_filter(
 	function ( $data, $file, $filename, $mimes ) {
 
 		global $wp_version;
-		if ( $wp_version !== '4.7.1' ) {
+		if ( '4.7.1' !== $wp_version ) {
 			return $data;
 		}
 

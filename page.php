@@ -1,9 +1,10 @@
 <?php
 /**
+ * Template for pages
  *
  * @package WordPress
- 
  */
+
 get_header(); ?>
 
 <div  >
