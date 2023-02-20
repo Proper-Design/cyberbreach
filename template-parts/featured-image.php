@@ -1,30 +1,27 @@
 <?php
+/**
+ * Template Part for a featured image with a caption.
+ * Don't link on single pages.
+ *
+ * @package WordPress
+ */
 
-// Display a large featured image
-
-// Don't link on single pages
 if ( ! is_singular() ) {
-	$link = true;
+	$link_to_post = true;
 } else {
-	$link = false;
+	$link_to_post = false;
 }
-
 $featured_img = get_the_image(
 	array(
 		'featured'     => true,
 		'size'         => 'large',
 		'image_class'  => 'featuredImage',
-		'link_to_post' => $link,
+		'link_to_post' => $link_to_post,
 		'echo'         => false,
 	)
 );
-
 if ( $featured_img ) : ?>
-
 	<div class="featuredImage-wrapper">
-		<?php echo $featured_img; ?>
+		<?php echo esc_attr( $featured_img ); ?>
 	</div>
-
-<?php endif;
-
-?>
+<?php endif; ?>

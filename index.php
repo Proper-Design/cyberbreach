@@ -1,36 +1,24 @@
 <?php
 /**
- * The fallback template file for single posts or post-types.
+ * The fallback template file for singles and archives.
  *
  * @package WordPress
  */
 
 get_header(); ?>
 
-<div>
-	<?php
-	if ( have_posts() ) :
-		while ( have_posts() ) :
-			the_post();
-			?>
+<?php if ( have_posts() ) : ?>
+	<ol class="archiveGrid">
+		<?php	while ( have_posts() ) : ?>
+			<?php the_post(); ?>
+		<li>
+			<?php get_template_part( 'template-parts/post-teaser' ); ?>
+		</li>
+		<?php	endwhile; ?>
+	</ol>
+	<?php endif; ?>
+<?php proper_post_navigation(); ?>
 
-		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			<?php the_date(); ?>
-			<?php the_excerpt(); ?>
-			<?php edit_post_link( __( 'Edit this entry', 'properbear' ), '<p>', '</p>' ); ?>
-			<?php get_template_part( 'post', 'meta' ); ?>
-		</article>
 
-			<?php comments_template(); ?>
-
-			<?php
-	endwhile;
-endif;
-	?>
-
-	<?php proper_post_navigation(); ?>
-
-</div>
-
-<?php get_footer(); ?>
+<?php
+get_footer();

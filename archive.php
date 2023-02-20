@@ -22,15 +22,20 @@ get_header(); ?>
 		<?php /* If this is an author archive */ } elseif ( is_author() ) { ?>
 			<h2 class="pagetitle"><?php esc_html_e( 'Author Archive', 'properbear' ); ?></h2>
 		<?php } ?>
+
+		<ol class="archiveGrid">
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
-				<?php get_template_part( 'template-parts/post-teaser' ); ?>
-			<?php endwhile; ?>
-			<?php the_posts_pagination(); ?>
-	<?php else : ?>
-
-		<h2><?php esc_html_e( 'Nothing Found', 'properbear' ); ?></h2>
-
+				<li>
+					<?php get_template_part( 'template-parts/post-teaser' ); ?>
+				</li>
+				<?php endwhile; ?>
+			</ol>
+				<?php the_posts_pagination(); ?>
+				<?php else : ?>
+					
+					<h2><?php esc_html_e( 'Nothing Found', 'properbear' ); ?></h2>
+					
 	<?php endif; ?>
 
 </div>

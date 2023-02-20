@@ -1,0 +1,38 @@
+@mixin padder($axis: both) {
+	@if $axis == both {
+		padding: 1rem;
+		@media (min-width: 60rem) {
+			padding: 2rem;
+		}
+	} @else if $axis == h {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		@media (min-width: 60rem) {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+	} @else if $axis == v {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		@media (min-width: 60rem) {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+	}
+}
+
+@mixin gutter($size: large) {
+	@if $size == large {
+		gap: 1rem;
+		@media (min-width: 60rem) {
+			gap: 2rem;
+		}
+	}
+
+	@if $size == small {
+		gap: 0.5rem;
+		@media (min-width: 60rem) {
+			gap: 1rem;
+		}
+	}
+}

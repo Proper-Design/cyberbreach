@@ -1,157 +1,187 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Proper-Bear-WordPress-Theme\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-16 17:00+0100\n"
-"PO-Revision-Date: \n"
+"Project-Id-Version: change-me\n"
+"POT-Creation-Date: 2023-02-20 16:50+0000\n"
+"PO-Revision-Date: 2023-02-20 16:51+0000\n"
 "Last-Translator: \n"
-"Language-Team: fxbenard <fxbenard@gmail.com>\n"
+"Language-Team: \n"
 "Language: cy\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n==3 ? "
+"3 : n==6 ? 4 : 5);\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 2.0.2\n"
-"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : (n != 8 && n != "
-"11) ? 2 : 3;\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: 404.php:10
+#: 404.php:11
 msgid "Error 404 - Page Not Found"
 msgstr "Gwall 404 - Tudalen Heb Ganfod"
 
-#: _/php/proper-email.php:65
-msgid "Who would you like to contact?"
-msgstr "Beth hoffech chi ei ganfod?"
-
-#: _/php/proper-email.php:87
-msgid "Your Name"
-msgstr "Eich Enw"
-
-#: _/php/proper-email.php:97
-msgid "Your Email"
-msgstr "Cyfeiriad E-bost"
-
-#: _/php/proper-email.php:106
-msgid "Your Message"
-msgstr "Eich Neges"
-
-#: _/php/proper-email.php:112
-msgid "Send"
-msgstr "Anfon"
-
-#: archive.php:16
+#: archive.php:13
 msgid "Archive for the"
 msgstr "Archif ar gyfer y"
 
-#: archive.php:16
+#: archive.php:13
 msgid "Category"
 msgstr "Categori"
 
-#: archive.php:19
+#: archive.php:15
 msgid "Posts Tagged"
 msgstr "Swyddi wedi'u tagio"
 
-#: archive.php:22 archive.php:25 archive.php:28
+#: archive.php:17 archive.php:19 archive.php:21
 msgid "Archive for"
 msgstr "Archif ar gyfer"
 
-#: archive.php:31
+#: archive.php:23
 msgid "Author Archive"
 msgstr "Archif awdur"
 
-#: archive.php:34
-msgid "Blog Archives"
-msgstr "Archifau blog"
-
-#: archive.php:55 search.php:31
+#: archive.php:38 search.php:33
 msgid "Nothing Found"
 msgstr "Nothing Found"
 
-#: comments.php:7
+#: comments.php:13
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 "Mae’r cynnwys hwn wedi ei ddiogelu gan gyfrinair. I’w weld, rhowch y "
 "cyfrinair isod."
 
-#: comments.php:15
+#: comments.php:20
 msgid "No Responses"
 msgstr "Dim ymatebion"
 
-#: comments.php:15
+#: comments.php:20
 msgid "One Response"
 msgstr "Un ymateb"
 
-#: comments.php:15
+#: comments.php:20
 msgid "% Responses"
 msgstr "% Ymateb"
 
-#: comments.php:37
+#: comments.php:43
 msgid "Comments are closed."
 msgstr "Sylwadau wedi cau."
 
-#: comments.php:47
+#: comments.php:56
 msgid "Leave a Reply"
 msgstr "Gadael ymateb"
 
-#: comments.php:47
+#: comments.php:56
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "Gadael ymateb i %s"
 
-#: comments.php:54
+#: comments.php:65
 msgid "You must be"
 msgstr "Mae'n rhaid eich bod chi"
 
-#: comments.php:54
+#: comments.php:65
 msgid "logged in"
 msgstr "wedi mewngofnodi"
 
-#: comments.php:54
+#: comments.php:65
 msgid "to post a comment."
 msgstr "er mwyn postio sylw."
 
-#: comments.php:61
+#: comments.php:72
 msgid "Logged in as"
 msgstr "Wedi mewngofnodi fel"
 
-#: comments.php:61
+#: comments.php:72
 msgid "Log out"
 msgstr "Allgofnodi"
 
-#: comments.php:67
+#: comments.php:87
 msgid "Name"
 msgstr "Enw"
 
-#: comments.php:72
+#: comments.php:101
 msgid "Mail (will not be published)"
 msgstr "E-bost (ni fydd eich cyfeiriad e-bost yn cael ei gyhoeddi)"
 
-#: comments.php:77
+#: comments.php:110
 msgid "Website"
 msgstr "Gwefan"
 
-#: comments.php:89
+#: comments.php:122
 msgid "Submit Comment"
 msgstr "Anfon sylw"
 
-#: functions.php:15
+#: functions.php:17
 msgid "Navigation Menu"
 msgstr "Dewislen Llywio"
 
-#: header-menu.php:8
+#: header-nav.php:8
 msgid "Menu"
 msgstr "Dewislen"
 
-#: index.php:17 page.php:18 single.php:18
-msgid "Edit this entry"
-msgstr "Golygu'r eitem hon"
+#: module-cookies.php:1
+msgid "Ok, got it"
+msgstr ""
 
-#: page.php:17 single.php:19
+#: module-cookies.php:2
+msgid ""
+"We use cookies from third-party services to help us improve our website."
+msgstr ""
+
+#: page-contact.php:13
+#, fuzzy
+#| msgid "Website"
+msgid "Website Contact"
+msgstr "Gwefan"
+
+#: page-contact.php:14
+msgid "Send"
+msgstr "Anfon"
+
+#: page-contact.php:15
+msgid "There a problem with your form"
+msgstr ""
+
+#: page-contact.php:16
+msgid "You will need to complete this field"
+msgstr ""
+
+#: page-contact.php:17
+msgid "Sending..."
+msgstr ""
+
+#: page-contact.php:18
+msgid "Your message has been sent."
+msgstr ""
+
+#: page-contact.php:27
+msgid "Your Name"
+msgstr "Eich Enw"
+
+#: page-contact.php:33
+#, fuzzy
+#| msgid "Your Email"
+msgid "Your Email Address"
+msgstr "Cyfeiriad E-bost"
+
+#: page-contact.php:39
+msgid "Your Message"
+msgstr "Eich Neges"
+
+#: page-contact.php:69 page.php:23 single.php:25
 msgid "Pages: "
 msgstr "Tudalennau: "
+
+#: page-contact.php:74 page.php:28 single.php:21
+msgid "Edit this entry"
+msgstr "Golygu'r eitem hon"
 
 #: post-meta.php:5
 msgid "Tagged: "
@@ -161,7 +191,7 @@ msgstr "Tagiwyd: "
 msgid "Posted in: "
 msgstr "Bostio yn: "
 
-#: search.php:13
+#: search.php:12
 msgid "Search Results"
 msgstr "Canlyniadau chwilio"
 
@@ -172,3 +202,30 @@ msgstr "Chwilio am:"
 #: searchform.php:5
 msgid "Search"
 msgstr "Chwilio"
+
+#. Theme Name of the plugin/theme
+msgid "change-me"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://properdesign.rs"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "ChangeMe Wordpress Theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Proper Design"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Contact Form"
+msgstr ""
+
+#~ msgid "Who would you like to contact?"
+#~ msgstr "Beth hoffech chi ei ganfod?"
+
+#~ msgid "Blog Archives"
+#~ msgstr "Archifau blog"
