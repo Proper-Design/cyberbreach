@@ -10,10 +10,7 @@
   display: flex;
   align-content: center;
   justify-content: center;
-  padding: 2rem;
-  @include media(momma) {
-    padding: 3rem;
-  }
+  @include padder;
 }
 .formModal {
   position: relative;

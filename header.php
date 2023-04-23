@@ -35,10 +35,9 @@
 	<div class="siteWrapper">
 	<div class="siteHeader-wrapper">
 		<header class="siteHeader" role="banner">
-		<h1>
+		<h1 class="siteHeader-title">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
 			title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<svg width="1.5em" height="1.5em" viewBox="0 0 100 100"><?php the_proper_icon( 'proper-logo' ); ?></svg>
 			<?php bloginfo( 'name' ); ?></a>
 		</h1>
 		</header>

@@ -1,6 +1,9 @@
+.page-wrapper{
+  @include padder;
+}
+
 .page-content {
   max-width: 50rem;
-  padding: 2rem;
   background-color: white;
   position: relative;
   z-index: 2;

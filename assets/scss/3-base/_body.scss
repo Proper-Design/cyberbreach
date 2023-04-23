@@ -9,6 +9,7 @@ html {
 	-ms-text-size-adjust: 100%; /* 2 */
 	-webkit-text-size-adjust: 100%; /* 2 */
 	box-sizing: border-box;
+  font-weight: 300;
 }
 *,
 *:before,
@@ -19,4 +20,5 @@ html {
 body {
 	margin: 0;
 	padding: 0;
+  line-height: 1.4;
 }

@@ -1,11 +1,10 @@
 <?php
 /**
  * @package WordPress
- 
  */
 get_header(); ?>
 
-<div  >
+<div class="page-wrapper">
 
 	<?php
 	if ( have_posts() ) :

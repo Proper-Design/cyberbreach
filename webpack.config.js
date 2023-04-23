@@ -16,10 +16,9 @@ module.exports = {
 	plugins: [
 		new BrowserSyncPlugin({
 			files: [
-				'./*.php',
-				'./inc/*.php',
+				'./**/*.php',
 				'./assets/js/build/*',
-				'./assets/scss/**/*.scss',
+				'./**/*.css',
 			],
 			host: 'proper-bear.local',
 			proxy: { target: 'https://proper-bear.local' },

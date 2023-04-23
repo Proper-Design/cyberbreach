@@ -7,14 +7,13 @@
 
 get_header(); ?>
 
-<div  >
+<div  class="page-wrapper" >
 
 	<?php
 	if ( have_posts() ) :
 		while ( have_posts() ) :
 			the_post();
 			?>
-
 		<main <?php post_class(); ?> id="page-<?php the_ID(); ?>">
 			<?php the_title( '<h1>', '</h1>' ); ?>
 			<?php the_content(); ?>
