@@ -5,25 +5,31 @@
  * @package WordPress
  */
 
-get_header(); ?>
+get_header();
 
-<div>
-	<?php if ( have_posts() ) : ?>
-		<?php /* If this is a category archive */ if ( is_category() ) { ?>
-			<h2><?php esc_html_e( 'Archive for the', 'properbear' ); ?> &#8216;<?php single_cat_title(); ?>&#8217; <?php esc_html_e( 'Category', 'properbear' ); ?></h2>
-		<?php /* If this is a tag archive */ } elseif ( is_tag() ) { ?>
-			<h2><?php esc_html_e( 'Posts Tagged', 'properbear' ); ?> &#8216;<?php single_tag_title(); ?>&#8217;</h2>
-		<?php /* If this is a daily archive */ } elseif ( is_day() ) { ?>
-			<h2><?php esc_html_e( 'Archive for', 'properbear' ); ?> <?php the_time( 'F jS, Y' ); ?></h2>
-		<?php /* If this is a monthly archive */ } elseif ( is_month() ) { ?>
-			<h2><?php esc_html_e( 'Archive for', 'properbear' ); ?> <?php the_time( 'F, Y' ); ?></h2>
-		<?php /* If this is a yearly archive */ } elseif ( is_year() ) { ?>
-			<h2 class="pagetitle"><?php esc_html_e( 'Archive for', 'properbear' ); ?> <?php the_time( 'Y' ); ?></h2>
-		<?php /* If this is an author archive */ } elseif ( is_author() ) { ?>
-			<h2 class="pagetitle"><?php esc_html_e( 'Author Archive', 'properbear' ); ?></h2>
-		<?php } ?>
+$archive = get_queried_object();
+// print_r($archive);
 
-		<ol class="archiveGrid">
+
+if (is_tax() || is_category() || is_tag()) {
+	$tax = $archive->taxonomy;
+	$title = $archive->name;
+	$type = null;
+} else {
+	$type = $archive->name;
+	$title = $archive->labels->archives;
+	$tax = null;
+}
+
+
+?>
+
+
+<div class="page-wrapper">
+<h1><?php echo $title; ?></h1>	
+
+<?php if ( have_posts() ) : ?>
+			<ol class="archiveGrid">
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
 				<li>
