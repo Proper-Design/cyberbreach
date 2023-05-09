@@ -1,6 +1,5 @@
 const { render } = wp.element;
 import squishMenu from 'squishMenu';
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 // Squish
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
+
+import CookiesNotice from "./CookiesNotice";
+
+const cookiesRoot = document.getElementById('cookiesRoot');
+const cookieStrings = window.cookieStrings;
+
+render(
+	<CookiesNotice strings={cookieStrings}/>,
+	cookiesRoot
+	);
+	
+	
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import ContactForm from './ContactForm';
 
 document.querySelectorAll('.contactForm').forEach((target) => {

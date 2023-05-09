@@ -32,6 +32,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<?php get_template_part( 'template-parts/cookies-notice' ); ?>
 	<div class="siteWrapper">
 	<div class="siteHeader-wrapper">
 		<header class="siteHeader" role="banner">

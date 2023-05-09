@@ -5,7 +5,13 @@
  * @package WordPress
  */
 
+$cookie_strings = array(
+	'message'    => __( 'We use cookies from third-party services to help us improve our website.', 'properbear' ),
+	'buttonText' => __( 'Ok, got it', 'properbear' ),
+);
+
+wp_localize_script( 'properbear-theme', 'cookieStrings', $cookie_strings );
+
 ?>
-<div id="cookies-root" location="bottom" disableStyles="false" buttonText="<?php esc_html_e( 'Ok, got it' ); ?>">
-	<span><?php esc_html_e( 'We use cookies from third-party services to help us improve our website.', 'properbear' ); ?></span>
-</div>
+ 
+<div id="cookiesRoot"></div>
