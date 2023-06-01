@@ -9,14 +9,14 @@
 
 	.siteNav-toggle {
 		display: none;
-    background-color: transparent;
-    border: solid thin;
+		background-color: transparent;
+		border: solid thin;
 	}
 
 	.menu-item {
 		min-width: max-content;
 		white-space: nowrap;
-    padding: .5rem;
+		padding: 0.5rem;
 	}
 
 	.menu-item.current-menu-item {
@@ -28,38 +28,33 @@
 }
 
 // pre hiding
-.siteNav-wrapper.squish-ready{
-  .menu{
-    flex-wrap: wrap;
-  }
+.siteNav-wrapper.squish-ready {
+	.menu {
+		flex-wrap: wrap;
+	}
 }
 
-.siteNav-wrapper.too-small{
-
-  .siteNav-toggle{
-    display: block;
-  }
-  .menu{
-    overflow: hidden;
-    width: 1px;
-    height: 1px;
-  }
+.siteNav-wrapper.too-small {
+	.siteNav-toggle {
+		display: block;
+	}
+	.menu {
+		overflow: hidden;
+		width: 1px;
+		height: 1px;
+	}
 }
 
-.siteNav-wrapper.too-small.is-open{
-
-
- .menu{
-margin: auto;
-  @include padder;
-  background-color: rgba(black, .8);
-  position: fixed;
-  inset: 2rem;
-  width: max-content;
-  height: max-content;
-  flex-direction: column;
-  text-align:center ;
-}
-
-
+.siteNav-wrapper.too-small.is-open {
+	.menu {
+		margin: auto;
+		padding: var(--proper-length-spacer);
+		background-color: rgba(black, 0.8);
+		position: fixed;
+		inset: 2rem;
+		width: max-content;
+		height: max-content;
+		flex-direction: column;
+		text-align: center;
+	}
 }

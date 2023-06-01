@@ -1,11 +1,5 @@
 // Colors
-$color-red: #f45657;
-$color-orange: #ff965d;
-$color-yellow: #ffc233;
-$color-green: #51d8b0;
-$color-blue: #2874ff;
-$color-purple: #843fff;
-$color-black: #252525;
+
 :root {
 	--proper-color-red: #f45657;
 	--proper-color-orange: #ff965d;
@@ -14,4 +8,5 @@ $color-black: #252525;
 	--proper-color-blue: #2874ff;
 	--proper-color-purple: #843fff;
 	--proper-color-black: #252525;
+	--proper-length-spacer: clamp(1rem, 0.5rem + 1vw, 2rem);
 }

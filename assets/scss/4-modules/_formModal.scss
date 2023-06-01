@@ -1,88 +1,88 @@
 .formModal-wrapper {
-  position: fixed;
-  z-index: 15;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  overflow-y: scroll;
-  background: rgba(255, 255, 255, 0.5);
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  @include padder;
+	position: fixed;
+	z-index: 15;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	overflow-y: scroll;
+	background: rgba(255, 255, 255, 0.5);
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	padding: var(--proper-length-spacer);
 }
 .formModal {
-  position: relative;
-  max-width: 50rem;
-  background: white;
+	position: relative;
+	max-width: 50rem;
+	background: white;
 
-  form {
-    padding: 2rem;
-    background: white;
-  }
+	form {
+		padding: 2rem;
+		background: white;
+	}
 
-  fieldset {
-    display: block;
-    border: none;
-    padding: 0;
-  }
-  label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
+	fieldset {
+		display: block;
+		border: none;
+		padding: 0;
+	}
+	label {
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
 
-  .field-wrapper {
-    margin-bottom: 1rem;
-  }
-  .field-help {
-    padding: 0.25rem;
-    background-color: #efefea;
-    margin: 0.5rem 0;
-  }
+	.field-wrapper {
+		margin-bottom: 1rem;
+	}
+	.field-help {
+		padding: 0.25rem;
+		background-color: #efefea;
+		margin: 0.5rem 0;
+	}
 
-  .field-error {
-    padding: 0.25rem;
-    background-color: $color-red;
-    color: white;
-    margin: 0.5rem 0;
-  }
+	.field-error {
+		padding: 0.25rem;
+		background-color: var(--proper-color-red);
+		color: white;
+		margin: 0.5rem 0;
+	}
 
-  [type="text"],
-  [type="url"],
-  [type="email"],
-  textarea {
-    width: 100%;
-    max-width: 40rem;
-    border: solid thin black;
-    padding: 0.75rem;
-  }
+	[type='text'],
+	[type='url'],
+	[type='email'],
+	textarea {
+		width: 100%;
+		max-width: 40rem;
+		border: solid thin black;
+		padding: 0.75rem;
+	}
 }
 .formModal-close {
-  position: absolute;
-  top: 1rem;
-  right: 2rem;
+	position: absolute;
+	top: 1rem;
+	right: 2rem;
 }
 
 .formModal-title {
-  background-color: $color-blue;
-  color: white;
-  padding: 2rem;
-  margin: 0;
+	background-color: var(--proper-color-blue);
+	color: white;
+	padding: 2rem;
+	margin: 0;
 }
 
 .formModal-message {
-  padding: 2rem;
+	padding: 2rem;
 }
 // .fileUploader {
 // }
 
 .fileUploader-preview {
-  border: 1px dashed grey;
-  margin-top: 1em;
-  padding: 1em;
-  img {
-    max-height: 15em;
-    width: auto;
-  }
+	border: 1px dashed grey;
+	margin-top: 1em;
+	padding: 1em;
+	img {
+		max-height: 15em;
+		width: auto;
+	}
 }

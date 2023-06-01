@@ -19,10 +19,12 @@ module.exports = {
 				'./**/*.php',
 				'./assets/js/build/*',
 				'./**/*.css',
+				'./assets/svg/src/**/*.svg',
 			],
 			host: 'proper-bear.local',
 			proxy: { target: 'https://proper-bear.local' },
 			open: 'external',
+			https: true,
 		}),
 	],
 };

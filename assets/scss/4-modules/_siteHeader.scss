@@ -1,6 +1,6 @@
 //Site Header partial
 .siteHeader-wrapper {
-	background-color: $color-blue;
+	background-color: var(--proper-color-blue);
 	color: white;
 	padding: 1rem;
 	a {
@@ -10,7 +10,7 @@
 }
 .siteHeader-title {
 	margin: 0;
-  font-weight: 300;
+	font-weight: 300;
 }
 .siteHeader-logo {
 	display: block;

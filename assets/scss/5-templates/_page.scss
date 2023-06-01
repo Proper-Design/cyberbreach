@@ -1,10 +1,10 @@
-.page-wrapper{
-  @include padder;
+.page-wrapper {
+	padding: var(--proper-length-spacer);
 }
 
 .page-content {
-  max-width: 50rem;
-  background-color: white;
-  position: relative;
-  z-index: 2;
+	max-width: 50rem;
+	background-color: white;
+	position: relative;
+	z-index: 2;
 }
