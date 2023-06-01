@@ -1,9 +1,17 @@
-
 // Colors
-$color-red:		#F45657;
-$color-orange:	#FF965D;
-$color-yellow:	#FFC233;
-$color-green:	#51D8B0;
-$color-blue:	#2874FF;
-$color-purple:	#843FFF;
-$color-black:	#252525;
+$color-red: #f45657;
+$color-orange: #ff965d;
+$color-yellow: #ffc233;
+$color-green: #51d8b0;
+$color-blue: #2874ff;
+$color-purple: #843fff;
+$color-black: #252525;
+:root {
+	--proper-color-red: #f45657;
+	--proper-color-orange: #ff965d;
+	--proper-color-yellow: #ffc233;
+	--proper-color-green: #51d8b0;
+	--proper-color-blue: #2874ff;
+	--proper-color-purple: #843fff;
+	--proper-color-black: #252525;
+}
