@@ -1,19 +1,19 @@
 name: Flywheel SSH Deploy
 on:
   push:
-     tags:
+    tags:
       - 'prod/*'
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install npm dependencies
         run: npm install
       - name: Run build task
         run: npm run build --if-present
       - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@v2.1.5
+        uses: easingthemes/ssh-deploy@v4.1.9
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ssh.getflywheel.com
