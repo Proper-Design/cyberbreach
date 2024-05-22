@@ -26,15 +26,6 @@
 		}
 	},
 	"styles": {
-		"color": {
-			"background": "white",
-			"text": "black"
-		},
-
-		"typography": {
-			"fontFamily": "proxima-nova, sans-serif",
-			"fontSize": "large"
-		},
 		"blocks": {
 			"core/paragraph": {
 				"spacing": {

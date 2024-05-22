@@ -51,7 +51,7 @@ wp_localize_script( 'properbear-theme', 'contactFormConfig', $contact_form_confi
 
 ?>
 
-<div  >
+<div class="page-wrapper" >
 
 	<?php
 	if ( have_posts() ) :
@@ -59,7 +59,7 @@ wp_localize_script( 'properbear-theme', 'contactFormConfig', $contact_form_confi
 			the_post();
 			?>
 
-	<main <?php post_class(); ?> id="page-<?php the_ID(); ?>">
+		<main <?php post_class(); ?> id="page-<?php the_ID(); ?>">
 			<?php the_title( '<h1>', '</h1>' ); ?>
 			<?php the_content(); ?>
 		<div class="contactForm"></div>

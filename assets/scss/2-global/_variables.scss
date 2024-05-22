@@ -1,12 +1,75 @@
-// Colors
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@300&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-	--proper-color-red: #f45657;
-	--proper-color-orange: #ff965d;
-	--proper-color-yellow: #ffc233;
-	--proper-color-green: #51d8b0;
-	--proper-color-blue: #2874ff;
-	--proper-color-purple: #843fff;
-	--proper-color-black: #252525;
-	--proper-length-spacer: clamp(1rem, 0.5rem + 1vw, 2rem);
+	// Primitives
+	--color-turquoise: #29b4aa;
+	--color-green: #89eb3c;
+	--color-teal: #0a3739;
+
+	--color-turquoise-900: color-mix(
+		in srgb,
+		var(--color-turquoise) 20%,
+		var(--color-teal)
+	);
+	--color-turquoise-800: color-mix(
+		in srgb,
+		var(--color-turquoise) 40%,
+		var(--color-teal)
+	);
+	--color-turquoise-700: color-mix(
+		in srgb,
+		var(--color-turquoise) 60%,
+		var(--color-teal)
+	);
+	--color-turquoise-600: color-mix(
+		in srgb,
+		var(--color-turquoise) 80%,
+		var(--color-teal)
+	);
+	--color-turquoise-500: var(--color-turquoise);
+	--color-turquoise-400: color-mix(in srgb, var(--color-turquoise) 80%, white);
+	--color-turquoise-300: color-mix(in srgb, var(--color-turquoise) 60%, white);
+	--color-turquoise-200: color-mix(in srgb, var(--color-turquoise) 40%, white);
+	--color-turquoise-100: color-mix(in srgb, var(--color-turquoise) 20%, white);
+
+	--color-green-900: color-mix(in srgb, var(--color-green) 20%, black);
+	--color-green-800: color-mix(in srgb, var(--color-green) 40%, black);
+	--color-green-700: color-mix(in srgb, var(--color-green) 60%, black);
+	--color-green-600: color-mix(in srgb, var(--color-green) 80%, black);
+	--color-green-500: var(--color-green);
+	--color-green-400: color-mix(in srgb, var(--color-green) 80%, white);
+	--color-green-300: color-mix(in srgb, var(--color-green) 60%, white);
+	--color-green-200: color-mix(in srgb, var(--color-green) 40%, white);
+	--color-green-100: color-mix(in srgb, var(--color-green) 20%, white);
+
+	--color-neutral-900: var(--color-teal);
+	--color-neutral-800: color-mix(in srgb, var(--color-teal) 80%, white);
+	--color-neutral-700: color-mix(in srgb, var(--color-teal) 70%, white);
+	--color-neutral-600: color-mix(in srgb, var(--color-teal) 60%, white);
+	--color-neutral-500: color-mix(in srgb, var(--color-teal) 50%, white);
+	--color-neutral-400: color-mix(in srgb, var(--color-teal) 40%, white);
+	--color-neutral-300: color-mix(in srgb, var(--color-teal) 30%, white);
+	--color-neutral-200: color-mix(in srgb, var(--color-teal) 20%, white);
+	--color-neutral-100: color-mix(in srgb, var(--color-teal) 10%, white);
+
+	--img-gradient: linear-gradient(transparent 80%, black);
+	--img-hex: url('./assets/svg/src/hex-tile.svg');
+
+	// Tokens
+	--font-body: 'Work Sans', sans-serif;
+	--font-body-height: 1.4;
+
+	--font-headings: 'Tomorrow', sans-serif;
+
+	--color-surface: var(--color-neutral-900);
+	--color-text: var(--color-neutral-100);
+
+	--color-brand: var(--color-turquoise-500);
+	--color-accent: var(--color-green-500);
+
+	--shadow-low: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+
+	--length-spacer: clamp(1rem, 0.5rem + 1vw, 2rem);
+	--length-pageMax: 60ch;
+	--length-corners: 0.2rem;
 }

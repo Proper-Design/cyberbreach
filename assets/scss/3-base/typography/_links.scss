@@ -6,7 +6,8 @@
  */
 
 a {
-  background: transparent;
+	color: var(--color-brand);
+	background: transparent;
 }
 
 /**
@@ -15,5 +16,5 @@ a {
 
 a:active,
 a:hover {
-  outline: 0;
+	outline: 0;
 }

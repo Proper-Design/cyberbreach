@@ -5,11 +5,11 @@
  */
 
 html {
-	font-family: sans-serif; /* 1 */
 	-ms-text-size-adjust: 100%; /* 2 */
 	-webkit-text-size-adjust: 100%; /* 2 */
+	font-size: clamp(1rem, calc(0.5rem + 2vw), 1.2rem);
 	box-sizing: border-box;
-  font-weight: 300;
+	background-color: var(--color-surface);
 }
 *,
 *:before,
@@ -18,7 +18,15 @@ html {
 }
 
 body {
+	font-family: var(--font-body);
+	font-optical-sizing: auto;
+	font-weight: 300;
 	margin: 0;
 	padding: 0;
-  line-height: 1.4;
+	line-height: 1.5;
+	color: var(--color-text);
+	background-image: var(--img-gradient), var(--img-hex);
+	background-size: cover, 2rem;
+	background-position: 50%;
+	background-attachment: fixed;
 }

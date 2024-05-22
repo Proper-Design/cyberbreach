@@ -1,10 +1,13 @@
 .page-wrapper {
-	padding: var(--proper-length-spacer);
+	padding: var(--length-spacer);
 }
 
 .page-content {
-	max-width: 50rem;
-	background-color: white;
-	position: relative;
-	z-index: 2;
+	padding: var(--length-spacer);
+	background-color: var(--color-surface);
+	color: var(--color-text);
+	box-shadow: var(--shadow-low);
+	max-width: var(--length-pageMax);
+	margin: auto;
+	border-radius: var(--length-corners);
 }
