@@ -19,7 +19,7 @@ jobs:
         with:
           # Deploy vars
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
-          WPE_ENV: ${{ github.event.repository.name }}
+          WPE_ENV: cyberbreach
           # Deploy Options
-          REMOTE_PATH: wp-content/themes/${{ github.event.repository.name }}
+          REMOTE_PATH: 'wp-content/themes/cyberbreach'
           FLAGS: -azvr --inplace --delete --exclude='.git'
