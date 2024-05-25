@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<div  class="page-wrapper" >
+<div class="page-wrapper">
 
 	<?php
 	if ( have_posts() ) :
@@ -15,24 +15,24 @@ get_header(); ?>
 			the_post();
 			?>
 		<main <?php post_class('page-content'); ?> id="page-<?php the_ID(); ?>">
-			<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-			<?php the_content(); ?>
-			<?php
+		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+		<?php the_content(); ?>
+		<?php
 			wp_link_pages(
 				array(
 					'before'         => __( 'Pages: ', 'properbear' ),
 					'next_or_number' => 'number',
-				)
-			);
-			?>
+					)
+				);
+				?>
 					<?php edit_post_link( __( 'Edit this entry', 'properbear' ), '<p>', '</p>' ); ?>
-		</main>
-
+				</main>
+				
 				<?php
 		endwhile;
-endif;
+	endif;
 	?>
+	</div>
 
-</div>
 
 <?php get_footer(); ?>

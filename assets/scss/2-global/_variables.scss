@@ -70,6 +70,13 @@
 	--shadow-low: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
 
 	--length-spacer: clamp(1rem, 0.5rem + 1vw, 2rem);
-	--length-pageMax: 60ch;
-	--length-corners: 0.2rem;
+	--length-pageMax: 100ch;
+	--length-wide: 140ch;
+	--length-borderRadius: 0.2rem;
+
+	--length-admin-bar: 32px;
+
+	@media (width <= 782px) {
+		--length-admin-bar: 46px;
+	}
 }

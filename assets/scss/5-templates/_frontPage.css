@@ -1,0 +1,39 @@
+.frontPage-hero {
+	background-color: var(--color-surface);
+	display: grid;
+	align-items: center;
+
+	@media (width > 60rem) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+.frontPage-hero-image {
+	height: 100%;
+	object-fit: cover;
+}
+.frontPage-hero-content {
+	padding: var(--length-spacer);
+}
+
+.frontPage-products-wrapper {
+	padding: var(--length-spacer);
+}
+
+.frontPage-products-title {
+	padding: var(--length-spacer);
+	margin: 0;
+	text-align: center;
+}
+
+.frontPage-products {
+	margin: auto;
+	max-width: var(--length-wide);
+	list-style: none;
+	padding: 0;
+	display: grid;
+	gap: var(--length-spacer);
+
+	@media (width > 40rem) {
+		grid-template-columns: 1fr 1fr;
+	}
+}

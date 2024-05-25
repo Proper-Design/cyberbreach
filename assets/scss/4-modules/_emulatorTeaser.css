@@ -1,0 +1,22 @@
+.emulatorTeaser-wrapper {
+	padding: var(--length-spacer);
+}
+
+.emulatorTeaser {
+	margin: auto;
+	max-width: var(--length-wide);
+	background-color: var(--color-surface);
+	box-shadow: var(--shadow-low);
+
+	border-radius: var(--length-borderRadius);
+	overflow: clip;
+	display: grid;
+
+	@media (width > 50ch) {
+		grid-template-columns: 1fr 2fr;
+	}
+}
+.emulatorTeaser-content {
+	align-content: center;
+	padding: var(--length-spacer);
+}

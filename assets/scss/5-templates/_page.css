@@ -9,5 +9,5 @@
 	box-shadow: var(--shadow-low);
 	max-width: var(--length-pageMax);
 	margin: auto;
-	border-radius: var(--length-corners);
+	border-radius: var(--length-borderRadius);
 }

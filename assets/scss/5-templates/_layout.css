@@ -1,6 +1,7 @@
 .siteWrapper {
 	min-height: 100vh;
-	// fix for WordPress' admin bar
+
+	/* fix for WordPress' admin bar */
 	.admin-bar & {
 		min-height: calc(100vh - 32px);
 		@media screen and (max-width: 782px) {

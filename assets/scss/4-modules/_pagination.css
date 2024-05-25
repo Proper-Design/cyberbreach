@@ -1,0 +1,5 @@
+.pagination {
+	padding: var(--length-spacer);
+	display: flex;
+	justify-content: center;
+}
