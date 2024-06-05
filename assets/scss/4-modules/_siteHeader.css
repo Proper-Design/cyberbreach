@@ -10,6 +10,6 @@
 }
 .siteHeader-logo {
 	display: block;
-	width: 4em;
+	width: clamp(6rem, calc(6rem + 5vw), 20vw);
 	height: auto;
 }

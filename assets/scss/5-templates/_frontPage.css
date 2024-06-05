@@ -15,25 +15,29 @@
 	padding: var(--length-spacer);
 }
 
-.frontPage-products-wrapper {
-	padding: var(--length-spacer);
-}
-
-.frontPage-products-title {
-	padding: var(--length-spacer);
-	margin: 0;
-	text-align: center;
-}
-
-.frontPage-products {
+.frontPageGrid {
 	margin: auto;
 	max-width: var(--length-wide);
 	list-style: none;
-	padding: 0;
+	padding: var(--length-spacer);
 	display: grid;
 	gap: var(--length-spacer);
+	container-type: inline-size;
 
 	@media (width > 40rem) {
 		grid-template-columns: 1fr 1fr;
 	}
+}
+
+.frontPageGrid-title {
+	text-shadow: var(--shadow-low);
+	padding: var(--length-spacer);
+	margin: 0;
+	text-align: center;
+	grid-column: 1/-1;
+	color: var(--color-accent);
+}
+
+.emulatorTeaser {
+	grid-column: 1/-1;
 }

@@ -4,6 +4,7 @@
 	overflow: clip;
 	box-shadow: var(--shadow-low);
 }
+
 .productTeaser-content {
 	padding: var(--length-spacer);
 }

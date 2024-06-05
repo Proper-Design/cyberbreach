@@ -1,0 +1,15 @@
+.benefitsTable {
+	background-color: var(--color-turquoise-900);
+	padding: var(--length-spacer);
+	display: grid;
+	gap: var(--length-spacer);
+	grid-template-columns: 1fr 1fr;
+
+	@media (width > 60rem) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+.benefitsTable-header {
+	grid-column: 1/-1;
+}
