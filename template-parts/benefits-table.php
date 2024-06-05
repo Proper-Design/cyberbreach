@@ -41,7 +41,7 @@ $benefits = [
 <div class="benefitsTable">
 
 <header class="benefitsTable-header">
-	<h2>Benefits</h2>
+	<h2>> Benefits _</h2>
 </header>
 	
 

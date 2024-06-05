@@ -5,6 +5,7 @@
 
 	@media (width > 60rem) {
 		grid-template-columns: 1fr 1fr;
+		gap: var(--length-spacer);
 	}
 }
 .frontPage-hero-image {
@@ -13,6 +14,8 @@
 }
 .frontPage-hero-content {
 	padding: var(--length-spacer);
+
+	max-width: calc(var(--length-wide) / 2);
 }
 
 .frontPageGrid {
@@ -24,7 +27,7 @@
 	gap: var(--length-spacer);
 	container-type: inline-size;
 
-	@media (width > 40rem) {
+	@media (width > 80ch) {
 		grid-template-columns: 1fr 1fr;
 	}
 }

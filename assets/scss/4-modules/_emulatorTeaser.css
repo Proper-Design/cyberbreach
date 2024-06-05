@@ -3,16 +3,19 @@
 	max-width: var(--length-wide);
 	background-color: var(--color-surface);
 	box-shadow: var(--shadow-low);
-
+	align-items: center;
 	border-radius: var(--length-borderRadius);
 	overflow: clip;
 	display: grid;
 
 	@container (width > 50ch) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@container (width > 80ch) {
 		grid-template-columns: 1fr 2fr;
 	}
 }
 .emulatorTeaser-content {
-	align-content: center;
 	padding: var(--length-spacer);
 }
