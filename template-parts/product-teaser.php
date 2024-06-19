@@ -1,6 +1,6 @@
 <article class="productTeaser">
 
-	<?php echo has_post_thumbnail() ? get_the_post_thumbnail(array('class'=>'productTeaser-image')) :
+	<?php echo has_post_thumbnail() ? get_the_post_thumbnail(get_the_id(), 'hero-small',array('class'=>'productTeaser-image')) :
 		'<img class="productTeaser-image" src="https://place-hold.it/800x450" alt="">';
 	 ?>
 	<div class="productTeaser-content">

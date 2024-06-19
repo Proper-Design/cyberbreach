@@ -6,9 +6,11 @@ h5,
 h6 {
 	margin: 0;
 	font-family: var(--font-headings);
+	font-weight: normal;
+	color: var(--color-brand);
+	text-wrap: balance;
 }
 
-h1 {
-	font-weight: 300;
-	color: var(--color-brand);
+h3 {
+	color: var(--color-accent);
 }

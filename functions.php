@@ -39,6 +39,8 @@ function properbear_scripts_styles() {
 		$version
 	);
 
+	add_editor_style(get_stylesheet_uri() );
+
 	/**
 	* Load Comments
 	*/

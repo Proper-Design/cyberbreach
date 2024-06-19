@@ -19,3 +19,9 @@
 .emulatorTeaser-content {
 	padding: var(--length-spacer);
 }
+.emulatorTeaser-image {
+	display: block;
+	aspect-ratio: 16/9;
+	width: 100%;
+	height: auto;
+}

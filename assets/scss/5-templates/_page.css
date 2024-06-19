@@ -11,3 +11,14 @@
 	margin: auto;
 	border-radius: var(--length-borderRadius);
 }
+
+.page-image {
+	display: block;
+	aspect-ratio: 3/1;
+	border-radius: var(--length-borderRadius);
+	background-color: black;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	margin-block: var(--length-spacer);
+}

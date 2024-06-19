@@ -5,6 +5,11 @@
 	box-shadow: var(--shadow-low);
 }
 
+.productTeaser-image {
+	width: 100%;
+	height: auto;
+}
+
 .productTeaser-content {
 	padding: var(--length-spacer);
 }

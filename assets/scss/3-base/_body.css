@@ -7,7 +7,7 @@
 html {
 	-ms-text-size-adjust: 100%; /* 2 */
 	-webkit-text-size-adjust: 100%; /* 2 */
-	font-size: clamp(1rem, calc(0.5rem + 2vw), 1.2rem);
+	font-size: clamp(1.2rem, calc(0.5rem + 2vw), 1.5rem);
 	box-sizing: border-box;
 	background-color: var(--color-surface);
 }
