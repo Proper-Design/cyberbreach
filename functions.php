@@ -66,3 +66,36 @@ add_image_size( 'hero-large', 1920, 1080, true );
 add_image_size( 'hero', 1280, 720, true );
 add_image_size( 'hero-small', 800, 450, true );
 add_image_size( 'thumbnail-large', 800, 800, true );
+
+
+function cyberbreach_register_acf_blocks() {
+    /**
+     * We register our block's with WordPress's handy
+     * register_block_type();
+     *
+     * @link https://developer.wordpress.org/reference/functions/register_block_type/
+     */
+    register_block_type( get_template_directory() .'/blocks/next-event' );
+}
+// Here we call our cyberbreach_register_acf_block() function on init.
+add_action( 'init', 'cyberbreach_register_acf_blocks' );
+
+function cyberbreach_get_event_data() {
+
+	if( get_transient( 'eventData' ) ) {
+    $eventData = get_transient( 'eventData' );
+} else {
+    $response = wp_remote_get( 'https://crimson-cloud-1110.tines.com/api/v1/records?record_field_ids%5B%5D=35646&record_field_ids%5B%5D=35648&story_ids%5B%5D=65490',
+array(
+		'headers' => array('Authorization' => 'Bearer k5TSzdCiYAJ_vYg7xTPS'),
+));
+    
+
+		$body     = json_decode( wp_remote_retrieve_body( $response ) );
+    $eventData = $body->record_results;
+    set_transient( 'eventData', $eventData, DAY_IN_SECONDS );
+}
+
+}
+
+add_action( 'init', 'cyberbreach_get_event_data' );
