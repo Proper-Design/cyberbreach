@@ -1,0 +1,15 @@
+{
+	"name": "cyberbreach/event-list",
+	"title": "Event List",
+	"description": "A custom block to show the event list",
+	"category": "text",
+	"icon": "calendar",
+	"keywords": ["event"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "event-list.php"
+	},
+	"supports": {
+		"anchor": true
+	}
+}

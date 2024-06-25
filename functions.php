@@ -75,8 +75,10 @@ function cyberbreach_register_acf_blocks() {
      *
      * @link https://developer.wordpress.org/reference/functions/register_block_type/
      */
+    register_block_type( get_template_directory() .'/blocks/event-list' );
     register_block_type( get_template_directory() .'/blocks/next-event' );
-}
+
+	}
 // Here we call our cyberbreach_register_acf_block() function on init.
 add_action( 'init', 'cyberbreach_register_acf_blocks' );
 
@@ -91,9 +93,12 @@ array(
 ));
     
 
-		$body     = json_decode( wp_remote_retrieve_body( $response ) );
+		$body = json_decode( wp_remote_retrieve_body( $response ) );
     $eventData = $body->record_results;
-    set_transient( 'eventData', $eventData, DAY_IN_SECONDS );
+		$dates = array_column($eventData, 'Date');
+		array_multisort($dates, SORT_ASC, $eventData);
+    
+		set_transient( 'eventData', $eventData, DAY_IN_SECONDS );
 }
 
 }

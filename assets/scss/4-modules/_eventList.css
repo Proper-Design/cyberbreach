@@ -1,0 +1,23 @@
+.eventsList {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: var(--length-spacer);
+}
+
+.eventTeaser {
+	background: var(--color-surface);
+	padding: calc(var(--length-spacer) / 2);
+	box-shadow: var(--shadow-low);
+	border-top: solid thin var(--color-accent);
+
+	@media (width > 40em) {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&.past {
+		opacity: 0.5;
+	}
+}
