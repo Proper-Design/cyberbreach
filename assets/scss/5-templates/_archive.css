@@ -1,21 +1,8 @@
-.archiveHero-wrapper {
-	display: grid;
-	padding: var(--length-spacer);
-	gap: var(--length-spacer);
-	background-color: silver;
-	@media (min-width: 40rem) {
-		grid-template-columns: 2fr 1fr;
-	}
-	width: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 .archiveHero {
-	background: rgba(white, 0.8);
-	grid-column: 1/2;
 	padding: var(--length-spacer);
 
 	h1 {
+		color: var(--color-accent);
 		margin: 0;
 	}
 }

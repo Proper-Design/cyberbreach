@@ -8,7 +8,7 @@ function create_workshop_cpt() {
 		'singular_name' => _x( 'Workshop', 'Post Type Singular Name', 'properbear' ),
 		'menu_name' => _x( 'Workshops', 'Admin Menu text', 'properbear' ),
 		'name_admin_bar' => _x( 'Workshop', 'Add New on Toolbar', 'properbear' ),
-		'archives' => __( 'Workshop Archives', 'properbear' ),
+		'archives' => __( 'Our Workshops', 'properbear' ),
 		'attributes' => __( 'Workshop Attributes', 'properbear' ),
 		'parent_item_colon' => __( 'Parent Workshop:', 'properbear' ),
 		'all_items' => __( 'All Workshops', 'properbear' ),

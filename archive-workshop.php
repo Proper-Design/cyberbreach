@@ -25,23 +25,22 @@ if (is_tax() || is_category() || is_tag()) {
 ?>
 
 
+<div class="archiveHero">
+	<h1><?php echo $title; ?></h1>	
+</div>
 <div class="page-wrapper">
-<h1><?php echo $title; ?></h1>	
+
 
 <?php if ( have_posts() ) : ?>
 			<ol class="archiveGrid">
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
 				<li>
-					<?php get_template_part( 'template-parts/post-teaser' ); ?>
+					<?php get_template_part( 'template-parts/workshop-teaser' ); ?>
 				</li>
 				<?php endwhile; ?>
 			</ol>
-				<?php the_posts_pagination(); ?>
-				<?php else : ?>
-					
-					<h2><?php esc_html_e( 'Nothing Found', 'properbear' ); ?></h2>
-					
+				<?php the_posts_pagination(); ?>			
 	<?php endif; ?>
 
 </div>

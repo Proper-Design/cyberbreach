@@ -1,10 +1,19 @@
 .siteNav-wrapper {
+	padding: calc(var(--length-spacer) / 2);
+
+	@media (width <= 50rem) {
+		border-top: solid thin var(--color-accent);
+	}
+
 	.menu {
 		list-style: none;
 		padding: 0;
 		margin: 0;
 		display: flex;
 		flex-wrap: nowrap;
+		@media (width > 50rem) {
+			justify-content: flex-end;
+		}
 	}
 
 	.siteNav-toggle {
@@ -16,7 +25,7 @@
 	.menu-item {
 		min-width: max-content;
 		white-space: nowrap;
-		padding: 0.5rem;
+		padding: calc(var(--length-spacer) / 2);
 	}
 
 	.menu-item.current-menu-item {
