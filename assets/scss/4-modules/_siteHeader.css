@@ -1,8 +1,16 @@
 .siteHeader-wrapper {
+	display: grid;
+	gap: var(--length-spacer);
+	padding: var(--length-spacer);
+
 	background-color: var(--color-surface);
 	background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
 	color: white;
-	padding: 1rem;
+
+	@media (width>60rem) {
+		grid-template-columns: max-content 1fr;
+		align-items: center;
+	}
 	a {
 		color: currentColor;
 		text-decoration: none;

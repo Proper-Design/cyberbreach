@@ -1,39 +1,39 @@
 <?php
 
-// Register Custom Post Type Product
-function create_product_cpt() {
+// Register Custom Post Type Workshop
+function create_workshop_cpt() {
 
 	$labels = array(
-		'name' => _x( 'Products', 'Post Type General Name', 'properbear' ),
-		'singular_name' => _x( 'Product', 'Post Type Singular Name', 'properbear' ),
-		'menu_name' => _x( 'Products', 'Admin Menu text', 'properbear' ),
-		'name_admin_bar' => _x( 'Product', 'Add New on Toolbar', 'properbear' ),
-		'archives' => __( 'Product Archives', 'properbear' ),
-		'attributes' => __( 'Product Attributes', 'properbear' ),
-		'parent_item_colon' => __( 'Parent Product:', 'properbear' ),
-		'all_items' => __( 'All Products', 'properbear' ),
-		'add_new_item' => __( 'Add New Product', 'properbear' ),
+		'name' => _x( 'Workshops', 'Post Type General Name', 'properbear' ),
+		'singular_name' => _x( 'Workshop', 'Post Type Singular Name', 'properbear' ),
+		'menu_name' => _x( 'Workshops', 'Admin Menu text', 'properbear' ),
+		'name_admin_bar' => _x( 'Workshop', 'Add New on Toolbar', 'properbear' ),
+		'archives' => __( 'Workshop Archives', 'properbear' ),
+		'attributes' => __( 'Workshop Attributes', 'properbear' ),
+		'parent_item_colon' => __( 'Parent Workshop:', 'properbear' ),
+		'all_items' => __( 'All Workshops', 'properbear' ),
+		'add_new_item' => __( 'Add New Workshop', 'properbear' ),
 		'add_new' => __( 'Add New', 'properbear' ),
-		'new_item' => __( 'New Product', 'properbear' ),
-		'edit_item' => __( 'Edit Product', 'properbear' ),
-		'update_item' => __( 'Update Product', 'properbear' ),
-		'view_item' => __( 'View Product', 'properbear' ),
-		'view_items' => __( 'View Products', 'properbear' ),
-		'search_items' => __( 'Search Product', 'properbear' ),
+		'new_item' => __( 'New Workshop', 'properbear' ),
+		'edit_item' => __( 'Edit Workshop', 'properbear' ),
+		'update_item' => __( 'Update Workshop', 'properbear' ),
+		'view_item' => __( 'View Workshop', 'properbear' ),
+		'view_items' => __( 'View Workshops', 'properbear' ),
+		'search_items' => __( 'Search Workshop', 'properbear' ),
 		'not_found' => __( 'Not found', 'properbear' ),
 		'not_found_in_trash' => __( 'Not found in Trash', 'properbear' ),
 		'featured_image' => __( 'Featured Image', 'properbear' ),
 		'set_featured_image' => __( 'Set featured image', 'properbear' ),
 		'remove_featured_image' => __( 'Remove featured image', 'properbear' ),
 		'use_featured_image' => __( 'Use as featured image', 'properbear' ),
-		'insert_into_item' => __( 'Insert into Product', 'properbear' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this Product', 'properbear' ),
-		'items_list' => __( 'Products list', 'properbear' ),
-		'items_list_navigation' => __( 'Products list navigation', 'properbear' ),
-		'filter_items_list' => __( 'Filter Products list', 'properbear' ),
+		'insert_into_item' => __( 'Insert into Workshop', 'properbear' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Workshop', 'properbear' ),
+		'items_list' => __( 'Workshops list', 'properbear' ),
+		'items_list_navigation' => __( 'Workshops list navigation', 'properbear' ),
+		'filter_items_list' => __( 'Filter Workshops list', 'properbear' ),
 	);
 	$args = array(
-		'label' => __( 'Product', 'properbear' ),
+		'label' => __( 'Workshop', 'properbear' ),
 		'description' => __( '', 'properbear' ),
 		'labels' => $labels,
 		'menu_icon' => 'dashicons-tag',
@@ -52,8 +52,9 @@ function create_product_cpt() {
 		'show_in_rest' => true,
 		'publicly_queryable' => true,
 		'capability_type' => 'post',
+		'rewrite' => array('slug' => 'workshops')
 	);
-	register_post_type( 'product', $args );
+	register_post_type( 'workshop', $args );
 
 }
-add_action( 'init', 'create_product_cpt', 0 );
+add_action( 'init', 'create_workshop_cpt', 0 );
