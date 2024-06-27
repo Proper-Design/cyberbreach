@@ -14,7 +14,10 @@
 	display: grid;
 	gap: var(--length-spacer);
 	list-style: none;
-	grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+
+	@container (width > 22rem) {
+		grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+	}
 }
 
 .archiveList {

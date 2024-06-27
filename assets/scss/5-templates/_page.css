@@ -1,5 +1,6 @@
 .page-wrapper {
 	padding: var(--length-spacer);
+	container-type: inline-size;
 }
 
 .page-content {
