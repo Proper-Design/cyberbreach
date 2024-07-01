@@ -25,14 +25,15 @@ if (is_tax() || is_category() || is_tag()) {
 ?>
 
 
-<div class="archiveHero">
-	<h1><?php echo $title; ?></h1>	
-</div>
-<div class="page-wrapper">
+	<div class="page-wrapper">
+
+	<div class="archiveHero">
+		<h1><?php echo $title; ?></h1>	
+	</div>
 
 
 <?php if ( have_posts() ) : ?>
-			<ol class="archiveGrid">
+			<ol class="archive-grid">
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
 				<li>

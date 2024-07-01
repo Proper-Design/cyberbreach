@@ -1,6 +1,8 @@
 .page-wrapper {
 	padding: var(--length-spacer);
 	container-type: inline-size;
+	max-width: var(--length-pageMax);
+	margin: auto;
 }
 
 .page-content {

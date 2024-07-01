@@ -1,5 +1,5 @@
 .siteNav-wrapper {
-	padding: calc(var(--length-spacer) / 2);
+	padding-inline: calc(var(--length-spacer) / 2);
 
 	@media (width <= 50rem) {
 		border-top: solid thin var(--color-accent);
