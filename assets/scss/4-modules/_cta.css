@@ -1,0 +1,17 @@
+/* Optional wrapper to make the CTA stick to the bottom */
+.cta-wrapper {
+	padding: calc(var(--length-spacer) / 2);
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(2px);
+	position: sticky;
+	bottom: 0;
+	container-type: inline-size;
+}
+.cta-button {
+	display: block;
+	margin: auto;
+	@container (width < 50ch) {
+		width: 100%;
+	}
+}

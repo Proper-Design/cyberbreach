@@ -13,6 +13,7 @@ get_header(); ?>
 <?php	the_post(); ?>
 <?php get_template_part('template-parts/front-page-hero');?>
 
+
 <?php endwhile; ?>
 <?php	endif; ?>
 	<?php get_template_part('template-parts/front-page-grid');?>

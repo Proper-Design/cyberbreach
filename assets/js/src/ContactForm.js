@@ -1,12 +1,14 @@
 const { useState, useEffect } = wp.element;
 import Form from './FormBuilder/RenderForm';
+import Modal from 'react-modal';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
-const ContactForm = ({ formConfig }) => {
+const ContactForm = ({ formConfig, label }) => {
 	const { executeRecaptcha } = useGoogleReCaptcha();
 	const [token, setToken] = useState('');
 	const [sending, setSending] = useState(false);
 	const [complete, setComplete] = useState(false);
+	const [modalOpen, setModalOpen] = useState(false);
 
 	useEffect(() => {
 		if (!executeRecaptcha) {
@@ -45,30 +47,46 @@ const ContactForm = ({ formConfig }) => {
 	};
 
 	return (
-		<div>
-			{!sending && !complete && (
-				<Form
-					formConfig={formConfig}
-					onSubmit={(values) =>
-						sendEmail({
-							formConfig,
-							formValues: values,
-						})
-					}
-					submitting={sending}
-				/>
-			)}
-			{sending && (
-				<div>
-					<p>Sending Email</p>
+		<>
+			<button className="cta-button" onMouseDown={() => setModalOpen(true)}>
+				{label}
+			</button>
+			<Modal
+				className="modal"
+				appElement={document.querySelector('.siteWrapper')}
+				overlayClassName="modal-overlay"
+				isOpen={modalOpen}
+				onRequestClose={() => setModalOpen(false)}
+			>
+				<div className="modal-header">
+					<button onMouseDown={() => setModalOpen(false)}>X</button>
 				</div>
-			)}
-			{complete && (
-				<div>
-					<p>Thanks for your Email</p>
+				<div className="modal-content">
+					{!sending && !complete && (
+						<Form
+							formConfig={formConfig}
+							onSubmit={(values) =>
+								sendEmail({
+									formConfig,
+									formValues: values,
+								})
+							}
+							submitting={sending}
+						/>
+					)}
+					{sending && (
+						<div>
+							<p>Sending Email</p>
+						</div>
+					)}
+					{complete && (
+						<div>
+							<p>Thanks for your Email</p>
+						</div>
+					)}
 				</div>
-			)}
-		</div>
+			</Modal>
+		</>
 	);
 };
 

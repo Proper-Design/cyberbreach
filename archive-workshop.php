@@ -28,7 +28,7 @@ if (is_tax() || is_category() || is_tag()) {
 	<div class="page-wrapper">
 
 	<div class="archiveHero">
-		<h1><?php echo $title; ?></h1>	
+		<h1>> Cyber Breach Workshops <</h1>	
 	</div>
 
 
@@ -43,7 +43,7 @@ if (is_tax() || is_category() || is_tag()) {
 			</ol>
 				<?php the_posts_pagination(); ?>			
 	<?php endif; ?>
-
+	
 </div>
 
 <?php get_footer(); ?>

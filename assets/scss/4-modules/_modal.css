@@ -1,0 +1,15 @@
+.modal-overlay {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+	align-content: center;
+	padding: var(--length-spacer);
+}
+
+.modal {
+	margin: auto;
+	max-width: 60ch;
+	background: var(--color-surface);
+	padding: var(--length-spacer);
+}

@@ -1,5 +1,7 @@
 .archiveHero {
 	padding: var(--length-spacer);
+	text-align: center;
+	text-shadow: var(--shadow-low);
 
 	h1 {
 		color: var(--color-accent);
@@ -15,7 +17,7 @@
 	gap: var(--length-spacer);
 	list-style: none;
 
-	@container (width > 22rem) {
+	@container (width > 40rem) {
 		grid-template-columns: 1fr 1fr;
 	}
 }

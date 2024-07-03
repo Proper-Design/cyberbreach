@@ -2,7 +2,7 @@
 	"name": "cyberbreach/event-list",
 	"title": "Event List",
 	"description": "A custom block to show the event list",
-	"category": "text",
+	"category": "cyberbreach",
 	"icon": "calendar",
 	"keywords": ["event"],
 	"acf": {

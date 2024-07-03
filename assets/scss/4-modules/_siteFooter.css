@@ -1,3 +1,6 @@
 .siteFooter-wrapper {
 	padding: var(--length-spacer);
 }
+.siteFooter-hcard-logo {
+	height: 3rem;
+}

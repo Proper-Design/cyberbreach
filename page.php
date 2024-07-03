@@ -28,12 +28,12 @@ get_header(); ?>
 				);
 				?>
 					<?php edit_post_link( __( 'Edit this entry', 'properbear' ), '<p>', '</p>' ); ?>
+					<?php get_template_part('template-parts/sticky-cta');?>
+
 				</main>
 				
-				<?php
-		endwhile;
-	endif;
-	?>
+				<?php endwhile; ?>
+		<?php endif; ?>
 	</div>
 
 

@@ -10,7 +10,7 @@ $workshops = new WP_Query(
 
 <div class="frontPageGrid">
 
-<h2 class="frontPageGrid-title">> Workshop Products <</h2>
+<h2 class="frontPageGrid-title">> Cyber Breach Workshops <</h2>
 
 <?php if($workshops->have_posts()):?>
 <?php while ($workshops->have_posts()):

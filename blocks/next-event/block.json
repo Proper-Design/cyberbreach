@@ -2,7 +2,7 @@
 	"name": "cyberbreach/next-event",
 	"title": "Next Event",
 	"description": "A custom block to query endpoint and display next event.",
-	"category": "text",
+	"category": "Cyber Breach",
 	"icon": "calendar",
 	"keywords": ["event"],
 	"acf": {

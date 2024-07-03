@@ -9,18 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
-
-import CookiesNotice from "./CookiesNotice";
+import CookiesNotice from './CookiesNotice';
 
 const cookiesRoot = document.getElementById('cookiesRoot');
 const cookieStrings = window.cookieStrings;
 
-render(
-	<CookiesNotice strings={cookieStrings}/>,
-	cookiesRoot
-	);
-	
-	
+render(<CookiesNotice strings={cookieStrings} />, cookiesRoot);
+
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import ContactForm from './ContactForm';
 
@@ -28,11 +23,14 @@ document.querySelectorAll('.contactForm').forEach((target) => {
 	render(
 		<GoogleReCaptchaProvider
 			useRecaptchaNet
-			reCaptchaKey="Change-me"
+			reCaptchaKey="6LeOnAUqAAAAAG6oJ_miaq9JQnDkMEsDvqp1sZdk"
 			scriptProps={{ async: true, defer: true, appendTo: 'body' }}
 		>
-			<ContactForm formConfig={window.contactFormConfig} />
+			<ContactForm
+				formConfig={window.contactFormConfig}
+				label={target.innerText}
+			/>
 		</GoogleReCaptchaProvider>,
-		target
+		target,
 	);
 });
