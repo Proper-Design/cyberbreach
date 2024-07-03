@@ -4,13 +4,18 @@ $events = get_transient( 'eventData' );
 $today = date("Y-m-d H:i:s"); ?>
 
 
-<?php if($events):?>
+<?php if ($events):
+
+	$last_three = array_slice($events, -2);
+	
+	
+	?>
 	<ol class="eventsList">
 
 		
 		<?php
 
-foreach ($events as $event):
+foreach ($last_three  as $event):
 	
 	$date = $event->Date;
 	$location = $event->Location;

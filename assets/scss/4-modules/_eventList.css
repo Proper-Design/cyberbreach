@@ -21,3 +21,7 @@
 		opacity: 0.5;
 	}
 }
+
+.next-event {
+	color: var(--color-accent);
+}

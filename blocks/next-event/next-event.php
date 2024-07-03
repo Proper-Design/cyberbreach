@@ -16,9 +16,11 @@ endif;
 
 if($next_event): ?>
 
-<span>
+<div class="next-event">
 Our next session is <?php echo wp_date(get_option( 'date_format' ), strToTime($next_event->Date)) ?>.
-</span>
+</div>
 <?php else: ?>
-	We don't currently have any planned sessions.
+	<div class="next-event">
+		We don't currently have any planned sessions.
+	</div>
 	<?php endif; ?>
