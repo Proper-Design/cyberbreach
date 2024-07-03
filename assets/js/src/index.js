@@ -17,7 +17,7 @@ const cookieStrings = window.cookieStrings;
 render(<CookiesNotice strings={cookieStrings} />, cookiesRoot);
 
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
-import ContactForm from './ContactForm';
+import ContactModal from './ContactModal';
 
 document.querySelectorAll('.contactForm').forEach((target) => {
 	render(
@@ -26,7 +26,7 @@ document.querySelectorAll('.contactForm').forEach((target) => {
 			reCaptchaKey="6LeOnAUqAAAAAG6oJ_miaq9JQnDkMEsDvqp1sZdk"
 			scriptProps={{ async: true, defer: true, appendTo: 'body' }}
 		>
-			<ContactForm
+			<ContactModal
 				formConfig={window.contactFormConfig}
 				label={target.innerText}
 			/>

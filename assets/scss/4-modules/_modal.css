@@ -11,5 +11,34 @@
 	margin: auto;
 	max-width: 60ch;
 	background: var(--color-surface);
+	border-radius: var(--length-borderRadius);
+	overflow: clip;
+}
+
+.modal-header {
+	background-color: var(--color-accent);
+	display: grid;
+	grid-template-columns: 1fr 2rem;
+	padding: calc(var(--length-spacer) / 2) var(--length-spacer);
+}
+
+.modal-title {
+	color: var(--color-surface);
+}
+
+.modal-close {
+	padding: 0;
+	box-shadow: none;
+}
+
+.modal-close-icon {
+	display: block;
+	stroke: var(--color-surface);
+	aspect-ratio: 1;
+
+	height: auto;
+}
+
+.modal-content {
 	padding: var(--length-spacer);
 }

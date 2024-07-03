@@ -1,9 +1,10 @@
 const { useState, useEffect } = wp.element;
 import Form from './FormBuilder/RenderForm';
 import Modal from 'react-modal';
+import Close from './components/Close';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
-const ContactForm = ({ formConfig, label }) => {
+const ContactModal = ({ formConfig, label }) => {
 	const { executeRecaptcha } = useGoogleReCaptcha();
 	const [token, setToken] = useState('');
 	const [sending, setSending] = useState(false);
@@ -59,7 +60,13 @@ const ContactForm = ({ formConfig, label }) => {
 				onRequestClose={() => setModalOpen(false)}
 			>
 				<div className="modal-header">
-					<button onMouseDown={() => setModalOpen(false)}>X</button>
+					<h1 className="modal-title">Get in touch</h1>
+					<button
+						className="modal-close"
+						onMouseDown={() => setModalOpen(false)}
+					>
+						<Close className="modal-close-icon" />
+					</button>
 				</div>
 				<div className="modal-content">
 					{!sending && !complete && (
@@ -90,4 +97,4 @@ const ContactForm = ({ formConfig, label }) => {
 	);
 };
 
-export default ContactForm;
+export default ContactModal;

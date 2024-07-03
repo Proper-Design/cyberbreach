@@ -18,6 +18,10 @@ textarea {
   padding: 0.5rem;
   border: none;
   font-size: inherit;
+  border-radius: var(--length-borderRadius);
+  &:focus {
+    background-color: white;
+  }
 }
 
 textarea {

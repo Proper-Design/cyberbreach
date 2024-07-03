@@ -1,8 +1,11 @@
 .page-wrapper {
-	padding: var(--length-spacer);
 	container-type: inline-size;
 	max-width: var(--length-pageMax);
 	margin: auto;
+
+	@media (width > 30rem) {
+		padding: var(--length-spacer);
+	}
 }
 
 .page-content {

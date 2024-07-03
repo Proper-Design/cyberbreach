@@ -21,5 +21,8 @@ $benefits = get_field('benefits', 'option');
 		</div>
 
 		<?php endforeach;?>
-
-</div>
+		
+		<div class="benefitsTable-footer">
+				<?php get_template_part('template-parts/sticky-cta');?>
+		</div>
+	</div>
