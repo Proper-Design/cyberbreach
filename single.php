@@ -9,7 +9,6 @@ get_header(); ?>
 		<?php	while ( have_posts() ) : the_post(); ?>
 			<main <?php post_class('page-content'); ?> id="post-<?php the_ID(); ?>">
 			<?php the_title( '<h1>', '</h1>' ); ?>
-				<?php the_post_thumbnail( 'hero-large', array('class'=>'page-image') ); ?>
 				<?php the_content(); ?>
 
 <?php get_template_part('template-parts/sticky-cta');?>

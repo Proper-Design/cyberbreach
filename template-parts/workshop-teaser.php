@@ -1,5 +1,5 @@
 <article class="teaser">
-	<a href="<?php the_permalink();?>">
+	<a class="teaser-image-wrapper" href="<?php the_permalink();?>">
 		
 		<?php echo has_post_thumbnail() ? get_the_post_thumbnail(get_the_id(), 'hero-small',array('class'=>'teaser-image')) :
 		'<img class="teaser-image" src="https://place-hold.it/800x450" alt="">';

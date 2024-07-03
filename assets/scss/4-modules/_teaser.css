@@ -5,9 +5,18 @@
 	box-shadow: var(--shadow-low);
 }
 
+.teaser-image-wrapper {
+	background-color: var(--color-turquoise-500);
+	display: block;
+	padding: 0;
+}
+
 .teaser-image {
+	display: block;
 	width: 100%;
 	height: auto;
+	filter: grayscale();
+	mix-blend-mode: hard-light;
 }
 
 .teaser-content {
