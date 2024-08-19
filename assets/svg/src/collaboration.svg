@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150">
+  <defs>
+    <clipPath id="d">
+      <rect width="150" height="150" fill="none" stroke-width="0"/>
+    </clipPath>
+  </defs>
+  <g id="c" data-name="Layer 1">
+    <g clip-path="url(#d)">
+      <polygon points="49.74 118.75 24.48 75 42.52 43.75 71.39 43.75 89.43 75 82.22 87.5 75 87.5 78.61 93.75 85.82 93.75 96.65 75 75 37.5 46.13 37.5 38.92 37.5 17.26 75 46.13 125 103.87 125 107.48 118.75 49.74 118.75" fill="#29b4aa" stroke-width="0"/>
+      <polygon points="103.87 25 46.13 25 42.52 31.25 100.26 31.25 125.52 75 107.48 106.25 78.61 106.25 60.57 75 67.78 62.5 75 62.5 71.39 56.25 64.17 56.25 53.35 75 75 112.5 103.87 112.5 111.08 112.5 132.74 75 103.87 25" fill="#69b42e" stroke-width="0"/>
+      <polygon points="53.35 87.5 56.96 93.75 46.98 93.75 46.13 87.5 53.35 87.5" fill="#29b4aa" stroke-width="0"/>
+      <polygon points="96.65 62.5 93.04 56.25 107.48 56.25 107.35 62.5 96.65 62.5" fill="#69b42e" stroke-width="0"/>
+      <polyline points="49.74 81.25 42.52 90.63 49.74 90.63" fill="#29b4aa" stroke-width="0"/>
+      <polyline points="49.74 100 42.52 90.62 49.74 90.62" fill="#29b4aa" stroke-width="0"/>
+      <polyline points="103.87 68.75 111.08 59.38 103.87 59.38" fill="#69b42e" stroke-width="0"/>
+      <polyline points="103.87 50 111.08 59.38 103.87 59.38" fill="#69b42e" stroke-width="0"/>
+    </g>
+  </g>
+</svg>

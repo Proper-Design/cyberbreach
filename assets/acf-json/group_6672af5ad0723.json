@@ -89,6 +89,39 @@
                     "placeholder": "",
                     "new_lines": "",
                     "parent_repeater": "field_6672bae82322d"
+                },
+                {
+                    "key": "field_66c36745e7c01",
+                    "label": "icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "collaboration": "collaboration",
+                        "cultural-shift": "cultural-shift",
+                        "early-decisions": "early-decisions",
+                        "learning": "learning",
+                        "management": "management",
+                        "plan": "plan",
+                        "responsibilities": "responsibilities",
+                        "understanding": "understanding"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_6672bae82322d"
                 }
             ]
         }
@@ -111,5 +144,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718795057
+    "modified": 1724082467
 }

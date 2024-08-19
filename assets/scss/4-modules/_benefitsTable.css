@@ -7,9 +7,12 @@
 	padding: var(--length-spacer);
 	display: grid;
 	gap: var(--length-spacer);
-	grid-template-columns: 1fr 1fr;
 
-	@media (width > 80rem) {
+	@media (width > 50rem) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media (width > 100rem) {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 }
@@ -18,4 +21,21 @@
 .benefitsTable-footer {
 	z-index: 0;
 	grid-column: 1/-1;
+}
+
+.card {
+	container-type: inline-size;
+}
+
+.card-inner {
+	display: grid;
+
+	@container (width > 20rem) {
+		grid-template-columns: 6rem 1fr;
+	}
+}
+
+.card-icon {
+	aspect-ratio: 1;
+	max-width: 6rem;
 }

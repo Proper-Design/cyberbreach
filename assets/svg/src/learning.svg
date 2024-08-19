@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150">
+  <defs>
+    <clipPath id="d">
+      <rect width="150" height="150" fill="none" stroke-width="0"/>
+    </clipPath>
+  </defs>
+  <g id="c" data-name="Layer 1">
+    <g clip-path="url(#d)">
+      <rect x="68.78" y="108.37" width="12.44" height="1.29" fill="none" stroke="#69b42e" stroke-miterlimit="10" stroke-width="6.25"/>
+      <line x1="75.14" y1="83.74" x2="75" y2="69.84" fill="none" stroke="#69b42e" stroke-miterlimit="10" stroke-width="6.25"/>
+      <polygon points="103.87 25 96.65 25 125.52 75 100.26 118.75 49.74 118.75 24.48 75 53.35 25 46.13 25 17.26 75 46.13 125 103.87 125 132.74 75 103.87 25" fill="#29b4aa" stroke-width="0"/>
+      <path d="M89.43,31.25l14.43,25-14.43,25h-28.87l-14.43-25,14.43-25h28.87ZM93.04,25h-36.08l-18.04,31.25,18.04,31.25h36.08l18.04-31.25-18.04-31.25Z" fill="#69b42e" stroke-width="0"/>
+      <line x1="60.57" y1="100" x2="89.43" y2="100" fill="none" stroke="#69b42e" stroke-miterlimit="10" stroke-width="6.25"/>
+      <line x1="60.57" y1="92.11" x2="89.43" y2="92.11" fill="none" stroke="#69b42e" stroke-miterlimit="10" stroke-width="6.25"/>
+    </g>
+  </g>
+</svg>

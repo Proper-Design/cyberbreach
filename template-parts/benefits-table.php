@@ -2,6 +2,8 @@
 
 $benefits = get_field('benefits', 'option');
 
+
+
 ?>
 
 
@@ -14,10 +16,21 @@ $benefits = get_field('benefits', 'option');
 
 	<?php foreach($benefits as $benefit):?>
 		<div class="card">
-			<h3 class="card-title">
-				<?php echo $benefit['title'];?>
-			</h3>
-			<p><?php echo $benefit['content'];?></p>
+			<div class="card-inner">
+				
+			<?php
+				if( isset($benefit['icon'])){
+					the_proper_svg($benefit['icon'], 'card-icon');
+					} 
+				?>
+				<div class="card-content">
+					
+					<h3 class="card-title">
+						<?php echo $benefit['title'];?>
+					</h3>
+					<p><?php echo $benefit['content'];?></p>
+				</div>
+			</div>
 		</div>
 
 		<?php endforeach;?>
