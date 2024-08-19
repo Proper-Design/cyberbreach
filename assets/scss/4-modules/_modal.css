@@ -5,6 +5,7 @@
 	backdrop-filter: blur(5px);
 	align-content: center;
 	padding: var(--length-spacer);
+	overflow-y: scroll;
 }
 
 .modal {
