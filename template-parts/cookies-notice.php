@@ -6,7 +6,7 @@
  */
 
 $cookie_strings = array(
-	'message'    => __( 'We use cookies from third-party services to help us improve our website.', 'properbear' ),
+	'message'    => __( 'We use cookies to enhance your browsing experience, analyse site traffic, and personalize content. By continuing to use this website, you agree to our use of cookies.', 'properbear' ),
 	'buttonText' => __( 'Ok, got it', 'properbear' ),
 );
 

@@ -14,6 +14,8 @@ import CookiesNotice from './CookiesNotice';
 const cookiesRoot = document.getElementById('cookiesRoot');
 const cookieStrings = window.cookieStrings;
 
+console.log(cookieStrings);
+
 render(<CookiesNotice strings={cookieStrings} />, cookiesRoot);
 
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
