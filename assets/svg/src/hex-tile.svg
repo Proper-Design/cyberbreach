@@ -6,7 +6,7 @@
     </clipPath>
   </defs>
 
-      <g clip-path="url(#e)"  fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" opacity=".2">
+      <g clip-path="url(#e)"  fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" opacity=".05">
 
           <polygon points="53.89 91.34 19.5 91.34 2.31 121.12 19.5 150.9 53.89 150.9 71.08 121.12 53.89 91.34"/>
           <polygon points="105.47 2 71.08 2 53.89 31.78 71.08 61.56 105.47 61.56 122.66 31.78 105.47 2" />
